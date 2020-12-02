@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>float4</title>
+
+	<style>
+		*{margin: 0; padding: 0;}
+		a:link, a:visitied{text-emphasis: none;
+			color: black;}
+		li{list-style:none;}
+		.clearfix:after{content:"";display: block; clear: both;}	
+
+		div.header{background-color: lightgreen;
+				   width: 500px; margin: 0 auto;
+				   margin-bottom: 10px;}
+		div.header>div{text-align: center; 				   line-height: 40px}
+		div.header>ul>li{float: left; width: 100px; line-height: 40px;text-align: center; box-sizing: border-box;
+			border: 1px solid lightseagreen; height: 40px;}
+
+		div.slider{height: 200px;background-color: lightgrey; margin-bottom: 10px;}
+		/*div.slider>div.empty{height: 70px;}*/
+		div.slider>div{text-align: center; line-height: 30px; padding: 70px;}
+
+		div.content3{background-color: lightpink;width: 500px; margin: 0 auto; margin-bottom: 10px;}
+		div.content3>ul>li{float: left;width: 200px; height: 200px; line-height: 200px;text-align: center; box-sizing: border-box; border: 1px solid lightcoral;}
+
+		div.footer{background-color: lightgrey;  }
+		div.footer>div{width: 500px; text-align: justify; margin: 0 auto;}
+
+
+	</style>
+
+</head>
+<body>
+	<div class="header">
+		<div>
+			logo
+		</div>
+		<ul class="clearfix">
+			<li>menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+		</ul>
+	</div>
+	
+	<div class="slider">
+		<!-- <div class="empty">
+		</div> -->
+
+		<div>
+			visual<br>slider
+		</div>
+		<!-- <div class="empty">
+		</div> -->
+	</div>
+
+	<div class="content3">
+		<ul class="clearfix">
+			<li>aside</li>
+			<li style="width: 300px">content</li>
+		</ul>
+	</div>
+
+	<div class="footer">
+		<div>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem hic magni cumque sapiente ut fugiat sequi porro optio in, beatae architecto dolor blanditiis repellat necessitatibus commodi facere quasi eveniet repudiandae.
+		</div>
+		
+	</div>
+
+
+</body>
+</html>
