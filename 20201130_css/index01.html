@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>css</title>
+	<style>
+		h3, 
+		li{color:brown;}
+		body.main{}
+		.warning{}
+
+		/*같은의미*/
+		body>div>ul>li{}
+		body li{}
+
+		a[href="http://naver.com"]{color:red;}
+
+		/*p>a{text-decoration: none;}
+		p>a:link{color:black;}
+		p>a:visited{color:black;}*/
+		p>a:active{color:red;}
+		p>a:hover{font-weight: bold}
+		p>a:focus{color:blue;}
+
+		a:link, a:visited
+		{color: black; text-decoration: none;}
+
+		ul.nav>li{background-color:skyblue;}
+		ul.nav>li:first-child{background-color:blue;}
+		ul.nav>li:last-child{background-color:green;}
+		ul.nav>li:nth-child(2){background-color:#ffffff;}
+
+	</style>
+</head>
+<body class="main">
+	<h3>Lorem, ipsum dolor.</h3>
+	<hr>
+	<div>
+		<div>Lorem, ipsum, dolor.</div>
+		
+		<ul class="nav">
+			<li>html</li>
+			<li>css</li>
+			<li>javascript</li>
+		</ul>
+		
+		<div class="warning">Lorem, ipsum dolor sit amet.</div>
+		<p>
+			<a href="http://www.naver.com">naver</a> 
+			<a href="http://www.daum.net">daum</a> 
+			<a href="http://www.gabia.com">gabia</a> 
+
+		</p>
+	</div>
+</body>
+</html>

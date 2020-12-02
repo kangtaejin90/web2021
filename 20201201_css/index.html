@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>hover</title>
+
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+	<style>
+
+		*{margin: 0; padding: 0;}
+
+		body{font-family: 'Nanum Gothic', sans-serif;}
+		/*a:link{color:black; 
+			   text-decoration:none;}
+		a:visited{color:black;}*/
+		a:hover{color:red;} /*1+1*/
+
+		a:link, a:visitied{color:black; text-decoration:none;}
+
+		li{font-family: 'Major Mono Display', monospace;}
+
+
+		ul.menu>li:hover{background-color:skyblue;}
+		ul.kang>li:hover{background-color:green;}
+
+		ul.kang a:hover{color:#ffffff} /*1+10+1+1*/
+
+		h3:hover{background-color:skyblue;}
+
+		h3{text-indent:20px;}
+		h1{text-indent:-9999px;}
+
+
+	</style>
+
+</head>
+<body>
+	<h1>logo</h1>
+	<h3>title</h3>
+
+	<!-- ul>li*5>a[href="#"]>{menu$} -->
+	<ul class="menu">
+		<li><a href="#">menu1</a></li>
+		<li><a href="#">menu2</a></li>
+		<li><a href="#">menu3</a></li>
+		<li><a href="#">menu4</a></li>
+		<li><a href="#">menu5</a></li>
+	</ul>
+
+	<ul class="kang">
+		<li><a href="#">menu1</a></li>
+		<li><a href="#">menu2</a></li>
+		<li><a href="#">menu3</a></li>
+		<li><a href="#">menu4</a></li>
+		<li><a href="#">menu5</a></li>
+	</ul>
+
+</body>
+</html>
