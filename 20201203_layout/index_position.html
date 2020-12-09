@@ -16,18 +16,35 @@
 			/* background-repeat: no-repeat, repeat-x, repeat-y*/
 			}
 
-		div{width: 200px;height: 200px;}		
-		div.box1{background-color: #aaa;}	 
-		div.box2{background-color: tomato;}	 
-		div.box3{background-color: orange;}	 
-		div.box4{background-color: gold;}	 
+		div{width: 200px;height: 200px; box-sizing: border-box; padding: 10px; text-align: justify;}		
+		div.box1{background-color: #aaa;
+				 position: absolute;
+				 z-index: 1;
+				 /*position:relative;
+				 left: 100px; top: 100px*/
+				}	 
+		div.box2{background-color: tomato;
+			 	 position: absolute;
+			 	 left: 100px; top: 100px;
+			 	 z-index: 1;
+				 /*position:relative;
+				 left: 200px;*/
+				}	 
+		div.box3{background-color: orange;
+				 position: absolute;
+				 left: 200px; top: 200px;
+				 z-index: 1; }	 
+		div.box4{background-color: gold;
+				 position: absolute;
+				 left: 300px; top: 300px;
+				 z-index: 1;}	 
 
 	</style>
 </head>
 <body>
-	<div class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, blanditiis.</div>
-	<div class="box2">Dicta perspiciatis mollitia repellat iure deserunt architecto tenetur aperiam ipsa!</div>
-	<div class="box3">Cupiditate veritatis, itaque aliquid asperiores repellendus vel numquam omnis quis.</div>
-	<div class="box4">Fugiat quisquam sapiente explicabo libero praesentium optio repellat quae ratione.</div>
+	<div class="box1">1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, blanditiis.</div>
+	<div class="box2">2. Dicta perspiciatis mollitia repellat iure deserunt architecto tenetur aperiam ipsa!</div>
+	<div class="box3">3. Cupiditate veritatis, itaque aliquid asperiores repellendus vel numquam omnis quis.</div>
+	<div class="box4">4. Fugiat quisquam sapiente explicabo libero praesentium optio repellat quae ratione.</div>
 </body>
 </html>

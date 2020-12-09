@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>position4re</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+
+	<style>
+		body{background-image: url(../images/bg_grid.gif);}
+
+		/*header*/
+		#hd
+			{width: 1000px; height: 110px;
+			margin: 0 auto;
+			background-color: lightseagreen;
+			text-align: center;
+			position: relative;}
+		
+		#hd h1
+			{position: absolute;
+			top: 10px;left: 10px;
+			width: 90px;}
+		#hd h1 a
+			{display: block;
+			background-color:#ddd;}
+		#hd h1 a:hover{background-color: teal; color: #fff;}	
+		#hd h1 a img
+			{width: 100%;
+			display: block;}
+		
+		.util_menu
+			{position: absolute;
+			top: 10px; right: 10px;
+			width: 300px;}
+		.util_menu ul{}
+		.util_menu li{float: left;}
+		.util_menu a
+			{display: block; width: 100px;
+			background-color: #ddd;
+			line-height: 40px;}
+		.util_menu a:hover{background-color: teal; color: #fff;}
+
+		.gnb
+			{position: absolute;
+			bottom: 10px; right: 10px;
+			}
+		.gnb ul{width: 600px;}
+		.gnb li{float: left; width: 20%;}
+		.gnb a
+			{display: block; 
+			background-color: teal;
+			line-height: 40px;}
+		.gnb a:hover{background-color: #ddd;}
+
+		/*container1*/
+		#container1
+			{width: 1000px; height: 450px;
+			margin: 0 auto; background-color: #ddd;
+			text-align: center; padding: 40px 0;
+			box-sizing: border-box;
+			position: relative;}
+		.title1
+			{margin-bottom: 30px;
+			border-bottom: 1px solid #000;
+			box-sizing: border-box}
+		.title1 h2{height: 40px;}
+		.title1 h3{height: 40px;}
+		.notice
+			{float: left;
+			width: 320px; line-height: 260px;
+			background-color: tomato;
+			margin-right: 20px;}
+		.gallay
+			{float: left;
+			width: 320px; line-height: 260px;
+			background-color: orange;
+			margin-right: 20px;}
+		.popup
+			{float: left;
+			width: 320px; line-height: 260px;
+			background-color: gold;}
+	</style>
+
+</head>
+<body>
+	<header id="hd">
+		<h1><a href="#"><img src="../images/양키캔들 로고.jpg" alt=""></a></h1>
+		<div class="util_menu">
+			<ul class="clearfix">
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">CONTACT US</a></li>
+				<li><a href="#">SITE MAP</a></li>
+			</ul>
+		</div>
+		<nav class="gnb">
+			<ul class="clearfix">
+				<li><a href="#">MENU1</a></li>
+				<li><a href="#">MENU2</a></li>
+				<li><a href="#">MENU3</a></li>
+				<li><a href="#">MENU4</a></li>
+				<li><a href="#">MENU5</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section id="container1" class="clearfix">
+		<div class="title1">
+			<h2>CONTENT1</h2>
+			<h3>컨텐츠1</h3>
+		</div>
+		<div class="notice">notice</div>
+		<div class="gallay">gallay</div>
+		<div class="popup">popup</div>
+	</section>
+
+
+</body>
+</html>

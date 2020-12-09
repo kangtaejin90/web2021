@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>text_shadow</title>
+
+	<link rel="stylesheet" href="../css/reset.css">
+
+	<style>
+		.box{width: 300px;height: 300px;
+			background-image: url(../images/testimg.jpg);}
+		.box h3{line-height: 300px;
+			text-align: center; color: #fff;
+			text-shadow: 2px 2px 2px #000}	
+
+		.box01
+			{width: 500px; 
+			border: 1px solid #000; 
+			overflow: hidden; 
+			white-space: nowrap;
+			text-overflow: ellipsis; 
+			padding: 10px;}	
+
+		.box02
+			{display: table-cell;
+			width: 500px; height: 300px;
+			border: 1px solid #000;
+			vertical-align: middle;
+			text-align: center;}	
+
+		.box03
+			{width: 500px; height: 500px; background-color: lightseagreen; box-sizing: border-box; padding: 20px;}
+		.box03 h3
+			{_display: none;
+			visibility: hidden;}
+		.box03 p{opacity: 0.5;}	
+
+		.box04{width: 300px;height: 300px;border: 1px solid #000;
+			_overflow: hidden;
+			overflow-y: scroll;
+			padding: 20px; box-sizing: border-box;}		
+
+	</style>
+
+</head>
+<body>
+	<div class="box">
+		<h3>안녕하세요</h3>
+	</div>
+
+	<div class="box01">
+		<h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam placeat blanditiis minus provident explicabo, vel nulla quaerat veniam optio incidunt reprehenderit architecto consequuntur, sapiente illo impedit doloribus officiis. Perspiciatis, cum?</h3>
+	</div>
+
+	<div class="box02">
+		<h3>text</h3>
+	</div>
+
+	<div class="box03">
+		<h3>안녕하세요</h3>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta beatae odio molestiae. Magni optio voluptas fugiat consequatur provident unde laboriosam possimus molestias, repellat eum eaque ex quae. Laudantium, illum.</p>
+	</div>
+
+	<div class="box04">
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi blanditiis laboriosam, culpa aperiam eligendi omnis corporis suscipit ex, assumenda consectetur dicta consequatur aspernatur. Sed consectetur quas nam, vero in accusamus ullam harum praesentium, ut minima recusandae labore necessitatibus, animi dolores beatae sapiente doloribus nemo esse et corrupti reprehenderit debitis assumenda. Ipsam temporibus similique, excepturi minus aut consequatur numquam ipsum, pariatur sunt voluptates aperiam non enim repellat quasi expedita molestias, quidem eligendi dicta illo delectus! Modi, similique quis recusandae, consequatur repellendus cum consequuntur unde. Dolores minima sapiente laboriosam rerum ullam quasi nostrum quos dicta voluptas ducimus, eligendi officiis qui dolorem eos.
+		</p>
+	</div>
+</body>
+</html>

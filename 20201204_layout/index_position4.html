@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>position4</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+
+	<style>
+		
+		body{background-image: url(../images/bg_grid.gif);}
+
+		/*header*/
+		#mh
+			{width: 1000px; height: 110px;
+			background-color: lightseagreen;
+			margin: 0 auto;
+			text-align: center;
+			position: relative;}
+		#mh h1
+			{text-align: left; line-height: 90px;
+			position: absolute; top: 10px; left: 10px;
+			background-color: #ddd;}
+		#mh h1 a{display: block;}
+		#mh h1 a:hover{background-color: teal; color: #fff;}
+		.util_menu
+			{width: 300px;
+			background-color: #ddd;
+			position: absolute;
+			top: 10px; right: 10px;}
+		.util_menu ul{}
+		.util_menu li
+			{float: left;
+			width: 100px;}
+		.util_menu a{display: block;line-height: 40px}
+		.util_menu a:hover{background-color: teal; color: #fff;}
+		.gnb
+			{width: 600px;
+			line-height: 40px;
+			position: absolute;
+			bottom: 10px; right: 10px;
+			background-color: teal;}
+		.gnb ul{}
+		.gnb li
+			{float: left; width: 20%;}
+		.gnb a
+			{display: block;line-height: 40px}
+		.gnb a:hover{background-color: #ddd;}
+
+	</style>
+</head>
+<body>
+	<header id="mh">
+		<h1><a href="#">LOGO</a></h1>
+		<div class="util_menu">
+			<ul class="clearfix">
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">CONTACT US</a></li>
+				<li><a href="#">SITE MAP</a></li>
+			</ul>
+		</div>
+		<nav class="gnb">
+			<ul class="clearfix">
+				<li><a href="#">MENU1</a></li>
+				<li><a href="#">MENU2</a></li>
+				<li><a href="#">MENU3</a></li>
+				<li><a href="#">MENU4</a></li>
+				<li><a href="#">MENU5</a></li>
+			</ul>
+		</nav>
+	</header>
+</body>
+</html>
