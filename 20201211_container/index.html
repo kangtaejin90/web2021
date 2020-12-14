@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>container</title>
+
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<style>
+		.container{width: 1000px;margin: 0 auto;}
+		.container h2{}
+		.container h2:after{content: ''; width: 150px; height: 1px; background-color: #000; margin: 15px auto; display: block; }
+		.container p{}
+		.content.gall{}
+		.content.gall li{float: left; margin-right: 25px; width: 231.25px; position: relative; cursor: pointer;}
+		.content.gall li:hover .overlay{opacity: 1; transition: 0.3s;}
+		.content.gall li:hover .txt{opacity: 1; transition: 0.5s;}
+		.content.gall li:last-child{; margin-right: 0;}
+		.content.gall img{width: 100%; display: block;}
+		.gall .overlay{position: absolute; width: 100%; height: 100%; background-color: rgba(50,50,50,0.3); opacity: 0; top: 0;}
+		.gall .txt{position: absolute; top: 50%; width: 100px; height: 100px; left: 50%; margin-top: -50px; margin-left: -50px; background-color: #222; line-height: 100px; border-radius: 20px; color: #fff; opacity: 0;}
+
+		/*content news*/
+		.container.news h2{}
+		.container.news p{}
+		.content.news li{float: left; width: 180px; margin-right: 25px; position: relative; border-radius: 30px; cursor: pointer; overflow: hidden;}
+		.content.news li:last-child{margin-right: 0px;}
+		.content.news li:hover .overlay{transition: 0.5s; left: 0; top: 0; opacity: 1;}
+		.content.news img{width: 100%; display: block;}
+		.news .overlay{position: absolute; width: 100%; height: 100%; background-color: rgba(255,0,0,0.5); top: -180px; left: -180px; border-radius: 30px; transition: 0.5s; opacity: 0;}
+		.news .txt{width: 100px; height: 100px; top: 50%; left: 50%; position: absolute; margin-top: -50px; margin-left: -50px; background-color: #fff; border-radius: 50px; line-height: 100px;}
+
+
+
+
+		
+	</style>
+
+</head>
+<body>
+	<div class="container tac ptb20">
+		<h2 class="">GALLERY</h2>
+		<p class="mb20">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+		<ul class="content gall clearfix">
+			<li>
+				<img src="../images/testimg.jpg" alt="img01">
+				<div class="overlay"></div>
+				<div class="txt tac">img01</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="img02">
+				<div class="overlay"></div>
+				<div class="txt tac">img02</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="img03">
+				<div class="overlay"></div>
+				<div class="txt tac">img03</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="img04">
+				<div class="overlay"></div>
+				<div class="txt tac">img04</div>
+			</li>
+		</ul>
+	</div>
+	<div class="bgc_gray">
+		<div class="container ptb20 news">
+			<h2 class="line_ah tac">NEWS</h2>
+			<p class="tac mb20">Lorem ipsum dolor sit amet.</p>
+			<ul class="content news clearfix">
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay"><div class="txt tac">세계여행</div></div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay"><div class="txt tac">세계여행</div></div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay"><div class="txt tac">세계여행</div></div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay"><div class="txt tac">세계여행</div></div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay"><div class="txt tac">세계여행</div></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>

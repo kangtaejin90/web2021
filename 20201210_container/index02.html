@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>container01</title>
+
+	<link rel="stylesheet" href="../css/reset.css">
+
+	<style>
+		.container{width: 1200px; margin: 0 auto; text-align: center;}
+		.container h2{}
+		.container h2:after{content: ""; display: block; width: 200px; height: 1.5px; background-color: #000; margin: 0 auto; margin-top: 10px;}
+		.container p{}
+		.container ul{}
+		.container li{float: left; width: 288.75px; margin-right: 15px;  position: relative;}
+		.container li:hover .overlay{opacity: 1; transition: 0.3s;}
+		.container li:last-child{margin-right: 0;}
+		.container img{width: 100%; display: block;}
+		.overlay{position: absolute; top: 0; background-color: rgba(0,0,0,0.5);opacity: 0; width: 100%; height: 100%; line-height: 288.75px; color: #fff;}
+
+		.mt20{margin-top: 20px;}
+		.mb20{margin-bottom: 20px;}
+		.mb10{margin-bottom: 10px;}
+		.ptb20{padding: 20px 0;}
+		.bc_gray{background-color: #ccc;}
+
+	</style>
+
+</head>
+<body>
+	<div class="container mt20 mb20">
+		<h2 class="mb10 ">GALLERY</h2>
+		<p class="mb20">Lorem ipsum dolor sit amet.</p>
+		<ul class="clearfix">
+			<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">img01</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">img02</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">img03</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">img04</div>
+			</li>
+		</ul>
+	</div>
+	<div class="bc_gray ptb20">
+		<div class="container">
+			<h2 class="mb10 ">GALLERY</h2>
+			<p class="mb20">Lorem ipsum dolor sit amet.</p>
+			<ul class="clearfix">
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">img01</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">img02</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">img03</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">img04</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+</body>
+</html>

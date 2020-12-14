@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>container</title>
+
+	<link rel="stylesheet" href="../css/reset.css">
+
+	<style>
+		.container{width: 1200px; margin: 0 auto;}
+		.container h2, .container p{text-align: center;}
+		.contents{}
+		.contents ul{}
+		.contents li{float: left; width: 288.75px; margin-right: 15px; position: relative;}
+		.contents li:last-child{margin-right: 0px;}
+		.contents img{width: 100%; display: block;}
+		.contents .overlay{position: absolute; top: 0px; width: 100%; background-color: rgba(0,0,0,0.5) ; height: 100%; color: #fff; text-align: center; line-height: 288.75px; 
+			/*display: none;*/
+			opacity: 0;
+			}
+		.contents li:hover .overlay{
+				/*display: block;*/
+				opacity: 1;
+				transition:0.3s;
+				}
+
+
+		.mb20{margin-bottom: 20px !important;}
+		.mt20{margin-top: 20px !important;}
+		.pa20{padding: 20px !important;}
+		.ptb20{padding: 20px 0 !important;}
+		.ptb40{padding: 20px 0 !important;}
+		.c_gray{background-color: #ccc;}
+		.c_lsg{background-color: lightseagreen;}
+		.dot_a:after{content: "";display: block; width: 100px; height: 1px; background-color: #000; margin: 0 auto; margin-top: 20px;}
+		.dot_b:before{content: "";display: block; width: 10px; height: 10px; background-color: #000; margin: 0 auto; border-radius: 5px; margin-bottom: 20px;}
+		.line_a:after{content: "";display: block; width: 80px; height: 1px; background-color: #000; margin: 15px auto;}
+
+	</style>
+
+
+
+</head>
+<body>
+	<div class="container pa20 c_gray dot_a dot_b">
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Vitae, numquam modi possimus eveniet non corporis quidem illum vero laboriosam eum, id eos aperiam doloremque rerum, quis unde aspernatur saepe voluptatum.</p>
+	</div>
+
+	<div class="container ptb40">
+		<h2 class="line_a">GALLERY</h2>
+		<p class="mb20">Lorem ipsum dolor sit, amet.</p>
+		<div class="contents ptb20">
+			<ul class="clearfix">
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">img1</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">img2</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">img3</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">img4</div>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+
+	<div class="c_lsg">
+		<div class="container ptb40">
+			<h2 class="line_a">GALLERY</h2>
+			<p class="mb20">Lorem ipsum dolor sit, amet.</p>
+			<div class="contents ptb20">
+				<ul class="clearfix">
+					<li>
+						<img src="../images/testimg.jpg" alt="">
+						<div class="overlay">img1</div>
+					</li>
+					<li>
+						<img src="../images/testimg.jpg" alt="">
+						<div class="overlay">img2</div>
+					</li>
+					<li>
+						<img src="../images/testimg.jpg" alt="">
+						<div class="overlay">img3</div>
+					</li>
+					<li>
+						<img src="../images/testimg.jpg" alt="">
+						<div class="overlay">img4</div>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
