@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ani</title>
+
+	<style>
+		.box{width: 100px; height: 100px;background-color: #f00;
+			animation-name:ani; /*애니메이션이름*/
+			animation-duration: 1s; /*시간*/
+			animation-fill-mode: forwards; /*forwards_to에서끝 backwards_처음모습으로끝*/
+			animation-iteration-count: 3;
+			animation-direction: alternate;
+			animation-delay: 1s;
+			animation-timing-function: ease;
+		}
+		@keyframes ani{
+			from{width: 100px;} to{width: 200px;}
+			/*0{width: 100px;}
+			50%{width: 200px;}
+			10%{width: 100px;}*/
+		}	
+
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>table</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		/*reset*/
+		*{margin: 0; padding: 0; box-sizing: border-box;}
+		a:link, a:visited{text-decoration: none; color: #000;}
+		li{list-style: none;}
+		.clearfix:after{display: block; content: ''; clear: both; }
+		table{border-collapse: collapse;}
+
+		/*table*/
+		.container{width: 900px; margin: 0 auto;}
+		.container>h2{font-size: 38px; text-align: center; padding-bottom: 10px;}
+		.tablewrap{border: 2px solid #000;}
+		.tb01, .tb02, .tb03, .tb04{width: 100%; border-collapse: collapse; margin-bottom: 5px;}
+		.tb01 td, .tb02 td, .tb03 td, .tb04 td{border: 1px solid #000; text-align: center; height: 40px;}
+		.tb03{height: 120px;}
+		.tb03 td{border-top: 0 none;}
+		.tb03 ul{padding-left: 15px;}
+		.tb03 li{width: 180px; float: left; text-align: left; line-height: 25px;}
+
+		.w50{width: 50px !important;}
+		.w150{width: 150px !important;}
+		.w200{width: 200px !important;}
+		.bgc_la{background-color: lavender;}
+		.red{color: #f00;}
+		.mb0{margin-bottom: 0 !important;}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2>입학지원서(일반고)</h2>
+		<div class="tablewrap">
+			<table class="tb01">
+				<tr>
+					<td rowspan="4" class="w50"><span class="red">*</span><br>인적<br>사항</td>
+					<td class="w150 bgc_la">성&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;명</td>
+					<td>강태진</td>
+					<td class="w150 bgc_la">학&nbsp;교&nbsp;명</td>
+					<td>00고등학교</td>
+					<td rowspan="4" class="w150">사진첨부</td>
+				</tr>
+				<tr>
+					<td class="w150 bgc_la">주민등록번호</td>
+					<td></td>
+					<td class="w150 bgc_la">e - mail</td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					<td class="w150 bgc_la">휴 대 폰(C.P)</td>
+					<td></td>
+					<td class="w150 bgc_la">긴급연락처<br>(학부모)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="w150 bgc_la">주&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;소</td>
+					<td colspan="3"></td>
+				</tr>
+			</table>
+			<table class="tb02 mb0">
+				<tr>
+					<td class="w150 bgc_la"><span class="red">*</span>추천교사명</td>
+					<td class="w150"></td>
+					<td class="w150 bgc_la">연락처</td>
+					<td class="w150 "></td>
+					<td class="w150 bgc_la">학교연락처</td>
+					<td class="w150"></td>
+				</tr>
+			</table>
+			<table class="tb03 mb0">
+				<tr class="tb03_r2">
+					<td class="w50 bgc_la"><span class="red">*</span>인지<br>경로</td>
+					<td class="w200">본교를 알게된 경로는<br>(중복응답가능)</td>
+					<td>
+						<ul class="checkwrap clearfix">
+							<li><input type="checkbox"> 홈페이지검색</li>
+							<li><input type="checkbox"> 인터넷검색</li>
+							<li><input type="checkbox"> 진로담당 선생님 추천</li>
+							<li><input type="checkbox"> 지인소개</li>
+							<li><input type="checkbox"> 모바일검색</li>
+							<li><input type="checkbox"> 간판</li>
+							<li><input type="checkbox"> 지하철광고</li>
+							<li><input type="checkbox"> 포스터</li>
+							<li><input type="checkbox"> HRD-NET</li>
+							<li><input type="checkbox"> 고용지원센터소개</li>
+							<li><input type="checkbox"> 기타()</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			
+		</div>
+		<table class="tb04">
+			<tr>
+				<td rowspan="2" class="w50 bgc_la">훈련<br>사항</td>
+				<td class="w200 bgc_la">훈련참여일</td>
+				<td class="bgc_la">훈련과정명</td>
+				<td class="w200 bgc_la">훈련직종명</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

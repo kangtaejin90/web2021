@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>table</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.table{width: 500px; font-size: 10px; margin: 0 auto; margin-bottom: 50px;}
+		.table td{border: 1px solid #000;height: 100px; text-align: center; border-right: 0 none;}
+		.bl0{border-left: 0 none !important;}
+		.br0{border-right: 0 none !important;}
+		.bb0{border-bottom: 0 none !important;}
+		.bt0{border-top: 0 none !important;}
+		.bgc_lsg{background-color: lightseagreen;}
+
+		.utable{width: 500px; font-size: 10px; margin: 0 auto; text-align: center; margin-bottom: 50px;}
+		.utable li{width: 33.333%;height: 100px; border: 1px solid #000; float: left; line-height: 100px;}
+
+		.bx1tb{width: 500px;}
+		.bx1tb td, th{border: 1px solid #000; padding: 10px;}
+		
+
+	</style>
+</head>
+<body>
+	<table class="table">
+		<tr>
+			<td class="bl0">Lorem ipsum dolor sit.</td>
+			<td>Lorem ipsum dolor sit.</td>
+			<td>Lorem ipsum dolor sit.</td>
+		</tr>
+	</table>
+
+	<ul class="utable clearfix">
+		<li>Lorem, ipsum, dolor.</li>
+		<li class="br0 bl0">Laboriosam, eum quia?</li>
+		<li>Officiis, veritatis possimus?</li>
+		<li class="bt0">Similique, laboriosam, amet.</li>
+		<li class="br0 bl0 bt0">Obcaecati, excepturi, rem.</li>
+		<li class="bt0">Voluptas recusandae, similique!</li>
+	</ul>
+
+	<table class="bx1tb">
+		<tr class="bgc_lsg">
+			<th>Lorem.</th>
+			<th>Perferendis.</th>
+			<th>Perspiciatis.</th>
+			<th>Voluptatum.</th>
+		</tr>
+		<tr>
+			<td rowspan="2">Lorem.</td>
+			<td>Iste!</td>
+			<td>Vero.</td>
+			<td>Animi.</td>
+		</tr>
+		<tr>
+			<td colspan="3">Iste!</td>
+		</tr>
+	</table>
+</body>
+</html>

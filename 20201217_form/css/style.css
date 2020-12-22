@@ -10,7 +10,7 @@ body{background-color: #eee;}
 	background-position: 0 -106px;}
 #header a{display: block;line-height: 44px;}	
 
-fieldset{border: 1px solid #dadada; background-color: #fff;}
+fieldset{border: 1px solid #dadada; background-color: #fff; border-bottom: 0 none;}
 legend, .blind{display: block; position: absolute; top: -9999px;}
 
 #content fieldset{margin-bottom: 20px;}
@@ -25,6 +25,25 @@ legend, .blind{display: block; position: absolute; top: -9999px;}
 #content fieldset .field .icon.pass{background-position: 0 -466px;}
 #content fieldset .field .icon.pass2{background-position: 0 -515px;}
 
+#content fieldset .field.btn-radio{height: 49px;}
+#content fieldset .field.btn-radio input{position: relative; top: 13px; left: 50px; z-index: -1}
+#content fieldset .field .btn-label{display: block; width: 212px; height: 31px; border: 1px solid #dcdcdc; text-align: center; line-height: 31px; background: #fff; cursor: pointer; position: absolute; top: 8px; color: #777;}
+#content fieldset .field .btn-label.male{left: 15px;}
+#content fieldset .field .btn-label.female{right: 15px;}
+
+#content fieldset .field.birth label{display: block; float: left; width: 53px; height: 49px; border-right: 1px solid #eee; text-align: center; line-height: 49px; color: #999;}
+#content fieldset .field.birth select, #content fieldset .field.confirm select{width: 110px; height: 29px; border: 0 none; font-size: 15px; line-height: 29; float: left; margin-top: 10px; margin-left: 10px; margin-right: 5px;}
+#content fieldset .field.birth .field_wall, #content fieldset .field.confirm .field_wall{width: 0;height: 29px;border-right: 1px solid #cdcdcd; float: left; margin-top: 10px; text-indent: -999px;}
+#content fieldset .field.birth input{float: left;}
+#content fieldset .field.confirm .btn-click{width: 99px; height: 31px; background-color: #fff; cursor: pointer;margin-top: 8px; margin-left: 13px; border: 1px solid #cdcdcd;}
+
 #content .btn-area .btn-submit
 	{width: 100%; height: 59px; border: 0 none; 
 	text-indent: -9999px; background: #1fbc02 url(../images/btn_join2.gif) no-repeat 50% -3px; cursor: pointer;}
+
+/*common*/
+.w458{width: 458px !important;}
+.w130{width: 130px !important;}
+.w145{width: 145px !important;}
+.w205{width: 205px !important;}
+.w332{width: 332px !important;}
