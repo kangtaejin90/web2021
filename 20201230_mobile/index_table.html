@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>table</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		table{border: 1px solid #000; width: 100%; margin-bottom: 20px;}
+		td{border: 1px solid #000; width: 25%; text-align: center; height: 40px;}
+		ul.box{margin-bottom: 20px;}
+		ul.box li{float: left; width: 25%; border: 1px solid #000; height: 40px; text-align: center; border-right: 0 none; line-height: 40px;}
+		ul.box li:last-child{border-right: 1px solid #000;}
+		
+		ul.box1{display: table; width: 100%;}
+		ul.box1 li{display: table-cell; width: 25%; border: 1px solid #000;border-right: 0 none; height: 40px; text-align: center; vertical-align: middle;}
+		ul.box1 li:last-child{border-right: 1px solid #000;}
+	</style>
+</head>
+<body>
+	<table class="">
+		<tr>
+			<td>Lorem.</td>
+			<td>Nulla!</td>
+			<td>Velit.</td>
+			<td>Aliquam?</td>
+		</tr>
+	</table>
+
+	<ul class="box clearfix">
+		<li>Lorem.</li>
+		<li>Sit!</li>
+		<li>Velit?</li>
+		<li>Error.</li>
+	</ul>
+
+	<ul class="box1">
+		<li>Lorem.</li>
+		<li>Blanditiis.</li>
+		<li>Fugit.</li>
+		<li>Repellat.</li>
+	</ul>
+</body>
+</html>

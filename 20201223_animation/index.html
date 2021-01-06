@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>table</title>
+	
+	<style>
+		table, td{border: 1px solid #000;border-collapse: collapse;}
+		table{width: 500px;}
+		th,td{height: 50px;}
+		td{padding: 10px;}
+		.tac{text-align: center;}
+	</style>
+</head>
+<body>
+	<table>
+		<colgroup>
+			<col width="15%">
+			<col width="30%">
+			<col width="*">
+			<col width="15%">
+		</colgroup>
+		<tr>
+			<th>Lorem.</th>
+			<th>Ea!</th>
+			<th>Iusto.</th>
+			<th>Animi?</th>
+		</tr>
+		<tr>
+			<td rowspan="2">Lorem.</td>
+			<td>Ea!</td>
+			<td>Iusto.</td>
+			<td>Animi?</td>
+		</tr>
+		<tr>
+			<td colspan="2">Ea!</td>
+			<td>Animi?</td>
+		</tr>
+		<tr>
+			<td>Lorem.</td>
+			<td>Ea!</td>
+			<td>Iusto.</td>
+			<td>Animi?</td>
+		</tr>
+	</table>
+</body>
+</html>

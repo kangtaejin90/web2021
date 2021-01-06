@@ -1,0 +1,23 @@
+@charset "utf=8";
+
+.topNav{background-color: #333;}
+.topNav a{display: block;color: #fff; float: left; padding: 14px 16px;}
+.topNav a.toggle{float: right; display: none;}
+
+@media screen and (max-width: 575px){
+	.menuWrap{position: fixed;width: 100%;}
+	.topNav a{float: none; display: none;}
+	.topNav.responsive a{float: none; display: block;}
+	.topNav a:first-child{display: block;}
+	.topNav a.toggle{display: block; position: absolute; right: 0;top: 0;}
+	.topNav.responsive a.toggle{}
+}
+
+@media screen and (min-width: 576px) and (max-width: 991px){
+	.menuWrap{width: 100%;}
+}
+
+@media screen and (min-width: 992px){
+	.menuWrap{width: 100%;; position: fixed;top: 10px; left: 50%; transform: translateX(-50%);}
+
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Selector</title>
+	<style>
+		div{background-color: lightseagreen; border: 1px solid #000; margin-bottom: 5px;}
+	
+		.box + .box{background-color: teal;}
+		/*+ box선택자 다음의 box선택자 하나만 선택 반복~*/
+		.box ~ .box1{background-color: #ccc;}
+		/*~ box선택자 다음에 나오는 box1선택자 전부*/
+	</style>
+</head>
+<body>
+	<div class="box">Lorem.</div>
+	<div class="box1">Aspernatur.</div>
+	<div class="box1">Reprehenderit?</div>
+	<div class="box">Dolorem?</div>
+	<div class="box">Tempora!</div>
+	<div class="box">Laborum.</div>
+	<div class="box">Itaque.</div>
+	<div class="box">Sed.</div>
+	<div class="box">Perspiciatis!</div>
+	<div class="box">Architecto!</div>
+</body>
+</html>

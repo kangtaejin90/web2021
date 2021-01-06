@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>anipos</title>
+	<style>
+		html,body{height: 100%;}
+		body{background-image: url(images/bg02.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; overflow: hidden;}
+		.wrap{position: absolute;left: 50%;top: 50%; transform: translateX(-50%) translateY(-50%); z-index: 2;}
+		.wrap form{position: relative;}
+		.wrap .img01{position: absolute;top: -200px;right: -100px; animation-name: bul01, bul02; animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: ease-in-out; animation-direction: alternate;}
+		@keyframes bul01{
+			0%{top: -200px;}
+			100%{top: -250px;}
+		}
+		@keyframes bul02 {
+			0%{right: -100px;}
+			25%{right: -105px;}
+			50%{right: -100px;}
+			100%{right: -95px;}
+		}
+		.searchTitle{display: block;position: absolute;width: 60px;height: 20px;background-image: url(images/searchtext.jpg); text-indent: -9999px;top: 18px;left: 20px; z-index: 2}
+		.searchInp{position: relative;width: 400px;height: 50px;text-indent: 90px;font-size: 18px; border: 2px solid #000; border-radius: 25px;}
+		.serchBtn{position: absolute;width: 40px;height: 40px;background-image: url(images/search.jpg);background-repeat: no-repeat;background-position: center; text-indent: -9999px; background-color: #fff;right: 10px;border: 2px solid #aaa;border-radius: 20px; top: 50%; transform: translateY(-50%);}
+		.img00{position: absolute;bottom: -228px; left: -478px; animation-name: air; animation-duration: 5s;animation-iteration-count:infinite;}
+		@keyframes air{
+			form{left: -478px;bottom: -228px;}
+			to{left: 1800px; bottom: 1400px;}
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<img src="images/content2.png" alt="" class="img01">
+		<form action="#" method="post">
+			<label for="search" class="searchTitle">search</label>
+			<input type="text" id="search" placeholder="검색어를 입력하세요." class="searchInp">
+			<input type="submit" value="button" class="serchBtn">
+		</form>
+	</div>
+	<img src="images/reallyAir.png" alt="" class="img00">
+</body>
+</html>

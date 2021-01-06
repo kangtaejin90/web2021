@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/*header*/
+#header{width: 960px;height: 130px; margin: 0 auto; position: relative;}
+#logo{position: absolute; left: 10px; top: 20px;}
+#logo a{display: block; width: 100px;}
+
+#header .util_menu{}
+#header .util_menu ul{float: right;height: 30px; border: 1px solid #000; border-radius: 10px;overflow: hidden;}
+#header .util_menu li{float: left;height: 100%; border-right: 1px solid #000;}
+#header .util_menu a{padding: 0 10px; line-height: 28px;}
+#header .util_menu li:hover{background-color: lightseagreen;}
+
+#header .gnb {position: absolute; width: 100%;bottom: 0;}
+#header .gnb ul{width: 100%;height: 40px; border: 1px solid #000; border-radius: 15px;overflow: hidden;}
+#header .gnb li{float: left;width: 20%; border-right: 1px solid #000;}
+#header .gnb a{display: block;text-align: center; line-height: 38px;}
+#header .gnb li:hover{background-color: lightseagreen;}
+
+/*content*/
+#content{width: 960px; margin: 0 auto;position: relative;}
+#main_section{width: 750px; float: left;}
+#main_section .main_article{border: 1px solid #000; padding: 20px;}
+#main_aside{width: 200px; float: right;}
+#main_aside .inp{display: none;}
+#main_aside .inp:nth-child(1):checked ~ .button label:first-child{background-color: teal !important; color: #fff;}
+#main_aside .inp:nth-child(2):checked ~ .button label:last-child{background-color: teal !important; color: #fff;}
+#main_aside .button label{display: block;width: 50%; line-height: 30px; border-radius: 10px 10px 0 0; background-color: lightseagreen; float: left; text-align: center; cursor: pointer;}
+#main_aside .tab_items1{}
+#main_aside .tab_items2{}
+#main_aside .inp:nth-child(1):checked ~ .tab_items1{display: block;}
+#main_aside .inp:nth-child(2):checked ~ .tab_items2{display: block;}
+#main_aside .inp:nth-child(1) ~ .tab_items1{display: none;}
+#main_aside .inp:nth-child(2) ~ .tab_items2{display: none;}
+#main_aside .item {padding: 10px; border: 1px solid #000; border-top: 0 none;}
+#main_aside .item div{float: left;}
+#main_aside .item .des{margin-left: 10px; width: 120px;}
+#main_aside .item .des .title{display: block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+/*footer*/
+#footer{width: 960px;margin: 0 auto;border: 1px solid #000;padding: 20px;}
+#footer address{font-style: normal;}
+
+/*common*/
+.br0{border-right: 0 none !important;}

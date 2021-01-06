@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>gallery</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<script src="../js/wow.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<style>
+	.content{position: relative;}	
+	.content h2:after{content: '';display: block; width: 150px; height: 1px; background-color: #000; margin: 0 auto;margin-top: 15px; margin-bottom: 15px;}
+	.content li{float: left; position: relative; width: 285px; height: 285px; margin-right: 20px;}
+	.content img{position: absolute; width: 100%; top: 0; left: 0;}
+	.content .hv{position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); opacity: 0;}
+	.content li:hover .hv{opacity: 1;}
+	.content .hv .hvtxt{position: absolute; width: 100px;height: 100px; background-color: #000; color: #fff;border-radius: 20px; top: 50%;left: 50%;transform: translate(-50%, -50%);}
+	</style>
+
+</head>
+<body>
+	<div style="height: 1000px;"></div>
+	<div class="container m0a ptb30 wow bounce">
+		<div class="content tac">
+			<h2 class="wow fadeInRight" data-wow-delay="0.5s">GLLERY</h2>
+			<p class="pb20 wow fadeInLeft" data-wow-delay="1.1s">Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Iusto, voluptatibus.</p>
+			<ul class="clearfix">
+				<li class="wow bounce" data-wow-delay="0.5s">
+					<img src="../images/testimg.jpg" alt="">
+					<div class="hv"><div class="hvtxt ptb30">Lorem ipsum dolor sit.</div></div>
+				</li>
+				<li class="wow bounce" data-wow-delay="0.7s">
+					<img src="../images/testimg.jpg" alt="">
+					<div class="hv"><div class="hvtxt ptb30">Lorem ipsum dolor sit.</div></div>
+				</li>
+				<li class="wow bounce" data-wow-delay="0.9s">
+					<img src="../images/testimg.jpg" alt="">
+					<div class="hv"><div class="hvtxt ptb30">Lorem ipsum dolor sit.</div></div>
+				</li>
+				<li class="wow bounce mr0" data-wow-delay="1.1s">
+					<img src="../images/testimg.jpg" alt="">
+					<div class="hv"><div class="hvtxt ptb30">Lorem ipsum dolor sit.</div></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="containerWrap bgc_gray">
+		<div class="container m0a ptb30">
+			<div class="content tac">
+				<h2>GLLERY</h2>
+				<p class="pb20">Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Iusto, voluptatibus.</p>
+				<ul class="clearfix">
+					<li>
+						<img src="../images/testimg.jpg" alt="">
+						<div class="hv"><div class="hvtxt ptb30">Lorem ipsum dolor sit.</div></div>
+					</li>
+					<li>
+						<img src="../images/testimg.jpg" alt="">
+						<div class="hv"><div class="hvtxt ptb30">Lorem ipsum dolor sit.</div></div>
+					</li>
+					<li>
+						<img src="../images/testimg.jpg" alt="">
+						<div class="hv"><div class="hvtxt ptb30">Lorem ipsum dolor sit.</div></div>
+					</li>
+					<li class="mr0">
+						<img src="../images/testimg.jpg" alt="">
+						<div class="hv"><div class="hvtxt ptb30">Lorem ipsum dolor sit.</div></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container m0a ptb30">
+		<div class="content tac">
+			<h2>GLLERY</h2>
+			<p class="pb20">Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Iusto, voluptatibus.</p>
+			<ul class="clearfix">
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="hv"><div class="hvtxt ptb30">Lorem ipsum dolor sit.</div></div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="hv"><div class="hvtxt ptb30">Lorem ipsum dolor sit.</div></div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="hv"><div class="hvtxt ptb30">Lorem ipsum dolor sit.</div></div>
+				</li>
+				<li class="mr0">
+					<img src="../images/testimg.jpg" alt="">
+					<div class="hv"><div class="hvtxt ptb30">Lorem ipsum dolor sit.</div></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
