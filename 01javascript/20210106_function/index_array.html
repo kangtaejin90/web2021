@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>array</title>
+</head>
+<body>
+	<div id="kang"></div>
+	<script>
+		function printArr(){
+		var txt = "";	
+		var city = ["seoul","daejun","daegoo","busan"];
+		for(var i = 0; i < city.length; i++){
+			txt += "배열 데이터 [" + i + "]은 " + city[i] + "<br>";
+	
+		};
+		document.getElementById("kang").innerHTML = txt;
+	}
+
+	</script>
+	<div onclick="printArr()">누르시오</div>
+</body>
+</html>

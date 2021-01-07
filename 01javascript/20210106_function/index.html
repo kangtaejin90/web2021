@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>function</title>
+</head>
+<body>
+	<a href="#han" id="top">눌러보니라</a>
+
+	<div style="height: 1000px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptatum soluta accusamus provident corrupti ab saepe blanditiis magni quia, placeat sunt iure voluptates impedit eveniet! Voluptate a harum dolorem quas vero ea nulla esse laboriosam non deserunt architecto, cupiditate nam repudiandae, voluptates consequatur consequuntur officiis soluta iusto ullam aut modi. Eligendi, inventore. Ex tempora explicabo cum nisi commodi et aliquam, repudiandae eaque accusantium totam accusamus, quod ea reprehenderit asperiores ipsam sint voluptatum expedita facere. Sequi, consequuntur mollitia velit numquam natus voluptatibus, consequatur quod nisi nemo provident facilis ullam repudiandae. Adipisci id ex aut minus, porro, numquam. Eius, omnis hic eligendi!</div>
+
+	<div id="han" style="height: 1000px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores sapiente fugit magni unde dicta provident atque sunt corrupti, optio ab ipsum? Itaque quos eos quis, ipsa fugiat, soluta nam quaerat.</div>
+
+	<a href="#top">올라가니라</a><br>
+
+	<script>
+		function printMsg(name, age){
+			document.write("학생이름 : " + name + "<br>");
+			document.write("학생나이 : " + age + "<br>");
+		}
+		printMsg();
+	</script>
+	<button type="button" onclick="printMsg('아무개',999)">누르니라</button>
+	<button type="button" onclick="printMsg('낙였다','끨끨')">누르라니까</button><br>
+	<div id="hap"></div>
+	<script>
+		var result;
+		function add(name, n){
+			document.write("<br>" + name+ "학생이 1부터 " + n + "까지 덧셈 수행<br>");
+			var sum = 0;
+			for(var i = 1 ; i <= n ; i++){
+				sum = sum + i;
+			};
+			// document.write(sum);
+			return sum;
+		};
+		resualt = add("홍길동",10);
+		// document.write("결과 : " + resualt + "<br>")
+		document.getElementById("hap").innerHTML = "결과 : " + resualt + "<br>"
+		resualt = add("이영희",100);
+		document.getElementById("hap").innerHTML = "이거슨 : " + resualt + "<br>"
+	</script>
+</body>
+</html>
