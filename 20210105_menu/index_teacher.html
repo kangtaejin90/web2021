@@ -41,7 +41,11 @@
 	</style>
 	<script>
 		$(document).ready(function(){
-			
+			$(window).resize(function(){
+				$("toggleMenu").removeClass("change")
+				$("#myTopMenu").removeAttr("style")
+			});
+
 			
 			$(".toggleMenu").click(function(){
 				var toggle = $(".toggleMenu").attr("class");
