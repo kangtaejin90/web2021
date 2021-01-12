@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>object</title>
+</head>
+<body>
+	<script>
+		var size = 10;
+		while(size > 0){
+			document.write("*");
+			size--; //size = size -1
+		}
+		document.write("<br>")
+		var size = 0;
+		while(size < 10){
+			document.write("*");
+			size++;
+		}
+		document.write("<br>")
+		for(var i = 10; i > 0 ; i-- ){
+			document.write("*");
+		}
+
+		var plots = [20,5,8,20,15];
+		var plotsLength = plots.length;
+		for(var i = 0; i < plotsLength; i++){
+			var size = plots[i];
+			while(size>0){
+				document.write("*");
+				size--;
+			}
+			document.write(" " + plots[i] + "<br>")
+		};
+		// for(var z = plots[plotsLength] ; ){}
+		var degress = new Array();
+		degress[0] = 15.1;
+		degress[1] = 15.4;
+		degress[2] = 16.1;
+		degress[3] = 17.1;
+		degress[4] = 18.1;
+		degress[5] = 12.1;
+
+		var sum = 0;
+		for(i = 0; i < degress.length; i++){
+			// document.write(degress[i]);
+			sum+= degress[i];
+		}
+		document.write("온도의 합계는 " + sum);
+		document.write("<br>");
+		document.write("온도의 평균은 " + sum/degress.length);
+		for(var i of degress){
+			console.log(i);
+		}
+	</script>
+</body>
+</html>

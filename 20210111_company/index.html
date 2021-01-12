@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>우미건설</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
+	<script src="js/wow.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({mode:"fade",controls:false,auto:true,pause:5000,speed:1200,
+				onSliderLoad: function(){
+				$(".txtWrap h2").addClass("animated fadeInDown op");
+		        $(".txtWrap p").addClass("animated fadeInUp op");
+		        $(".slider .title").addClass("up");
+				},
+				onSlideAfter: function(){
+		        $(".txtWrap h2").addClass("animated fadeInDown op");
+		        $(".txtWrap p").addClass("animated fadeInUp op");
+		        $(".slider .title").addClass("up");
+		        },
+		        onSlideBefore: function(){
+		        $(".txtWrap h2").removeClass("animated fadeInDown op");
+		        $(".txtWrap p").removeClass("animated fadeInUp op");
+		        $(".slider .title").removeClass("up");
+		        }
+				});
+			var headerOffset = $(".header_topWrap").offset();
+			$(window).scroll(function(){
+				if($(document).scrollTop() > headerOffset.top){
+					$(".header_topWrap").addClass("scroll animated fadeInDown");
+				}else{$(".header_topWrap").removeClass("scroll animated fadeInDown");};
+			});
+		});
+	</script>
+</head>
+<body>
+	<header id="main_header">
+		<div class="header_topWrap">
+			<div id="header_top" class="clearfix m0a">
+				<h1 class="logo blind"><a href="#">우미건설</a></h1>
+				<nav id="main_menu">
+					<ul class="fwb">
+						<li><a href="#">우미소개</a></li>
+						<li><a href="#">사업소개</a></li>
+						<li><a href="#">지속가능경영</a></li>
+						<li><a href="#">홍보센터</a></li>
+						<li><a href="#">채용정보</a></li>
+						<li><a href="#" class="pr0">고객센터</a></li>
+					</ul>
+				</nav>
+				<div class="toggleMenu">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+			</div>
+		</div>
+		<div class="sliderWrap">
+			<ul class="slider">
+				<li class="slider_1st">
+					<div class="txtWrap">
+						<h2 class="pb10">선도적인 일류 종합부동산회사</h2>
+						<p>PREMIER SPACE & VALUE CREATOR</p>
+					</div>
+					<div class="title tit01"><img src="images/tit_housing.png" alt=""></div>
+				</li>
+				<li class="slider_2st">
+					<div class="txtWrap">
+						<h2 class="pb10">선도적인 일류 종합부동산회사</h2>
+						<p>PREMIER SPACE & VALUE CREATOR</p>
+					</div>
+					<div class="title tit02"><img src="images/tit_building.png" alt=""></div>
+				</li>
+				<li class="slider_3st">
+					<div class="txtWrap">
+						<h2 class="pb10">선도적인 일류 종합부동산회사</h2>
+						<p>PREMIER SPACE & VALUE CREATOR</p>
+					</div>
+					<div class="title tit03"><img src="images/tit_civil.png" alt=""></div>
+				</li>
+			</ul>
+		</div>
+		<div class="content mb80">
+			<ul class="clearfix">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li class="w50p"></li>
+				<li class="h50p"></li>
+				<li class="w50p"></li>
+				<li></li>
+				<li></li>
+				<li class="w50p"></li>
+			</ul>
+		</div>
+	</header>
+	<div class="personnel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro reiciendis perspiciatis sapiente magnam quaerat! Quod autem fugiat delectus nihil officia ad, ipsam. Ipsum ad quos reiciendis eligendi laudantium eaque perferendis.</div>
+</body>
+</html>

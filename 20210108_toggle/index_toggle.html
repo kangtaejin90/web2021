@@ -42,14 +42,11 @@
 				if($(".toggle").attr("class") == "toggle"){
 					$(".toggle").addClass("click");
 					$(".toggle").animate({left:"30%"},300)
-					$(".headerWrap").animate({height:"100%"},0);
 					$("#nav").animate({left:0},300);
 					$(".mBack").animate({right:0},0);
 				}
 				else{$(".toggle").removeClass("click");
 				$(".toggle").animate({left:0},300)
-				$(".headerWrap").removeAttr("style");
-				$("#nav").css({height:"927px"},0)
 				$("#nav").animate({left:"-100%"},300);
 				$(".mBack").animate({right:"-100%"},0);
 			};	
@@ -100,12 +97,12 @@
 		.bx-wrapper .bx-pager.bx-default-pager a:hover{background-color: rgba(255,255,255,0.3);}
 
 		@media screen and (max-width: 556px) {
-			.headerWrap{position: fixed; height: ; background: none;}
-			#header{width: 100% ;height: 100%;}
+			.headerWrap{position: fixed; background: none;}
+			#header{width: 100%}
 			#header h1{display: block; background: #191970; width: 100%; text-align: center;}
 			#header h1 a{font-size: 45px}
-			.mBack{width: 100%;height: 100%; background: rgba(0,0,0,0.3); position: absolute; right: -100%;;}
-			#nav{width: 30%;height: 100%;background: #191970; position: absolute; padding-top: 50px; left: -100%;}
+			.mBack{width: 100%;height: 100%; background: rgba(0,0,0,0.3); position: fixed;top: 0; right: -100%;;}
+			#nav{width: 30%;height: 100%;background: #191970; position: fixed; padding-top: 50px;top: 0; left: -100%;}
 		}
 
 		@media screen and (min-width: 557px) and (max-width: 991px) {
