@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>bgi</title>
+</head>
+<body>
+	<style>
+		body{width: 100%; background-image: url(); background-repeat: no-repeat; background-position: top center; background-size: cover;}
+		.box{width: 200px;height: 40px; border: 1px solid #000; text-align: center;line-height: 40px; float: left;margin-right: 20px; box-sizing: border-box; background-color: #fff;}
+	</style>
+	<div class="box" onclick="bgi('url(../images/pc01.jpg)')">백그라운드 이미지</div>
+	<div class="box" onclick="bgi('url(../images/pc02.jpg)')">백그라운드 이미지</div>
+	<div class="box" onclick="bgi2()">백그라운드 이미지</div>
+	<script>
+		function bgi(url){
+			var bgi = document.getElementsByTagName("body")[0];
+			bgi.style.backgroundImage = url;
+		}
+		function bgi2(){
+			var bgi = document.getElementsByTagName("body")[0];
+			bgi.style.backgroundImage = "url('../images/pc03.jpg')";
+		}
+	</script>
+</body>
+</html>

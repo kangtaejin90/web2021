@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dom</title>
+</head>
+<body>
+	<button onclick="change()">클릭</button>
+	<button onclick="init()">복구</button>
+	<p>Lorem ipsum dolor sit <span>amet</span>, consectetur adipisicing elit. Nisi amet minima voluptatum dolorum deserunt suscipit <span>molestias</span> optio dolor labore <span>inventore</span> odio adipisci eos maiores, dignissimos ipsam <span>veritatis</span> eaque explicabo quae?</p>
+	<script>
+		function change(){
+			var sp = document.getElementsByTagName("span");
+			// sp[0].style.color = "red";
+			// sp[1].style.color = "green";
+			// sp[2].style.color = "blue";
+			// sp[3].style.color = "pink";
+			
+			for(var i = 0 ; i < sp.length ; i++){
+				sp[i].style.color = "pink";
+				sp[i].style.fontWeight = "bold";
+			}
+		}
+		function init(){
+			var sp = document.getElementsByTagName("span");
+			for(var i = 0; i < sp.length ; i++)
+				sp[i].style.color = "initial";
+				sp[i].style.fontWeight = "initial";
+		}
+	</script>
+	<style>
+		.boxWrap{color: red;}
+		.box{color: initial;}
+
+	</style>
+	
+
+	<div class="boxWrap">
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero sint, laboriosam accusamus neque et, similique eaque officia earum vel necessitatibus.</p>
+		<div class="box">Officia reiciendis quisquam nihil cumque quod maiores quam, voluptates tempora suscipit in cupiditate voluptatum, doloribus expedita? Dignissimos exercitationem, quibusdam porro.</box>
+	</div>
+</body>
+</html>
