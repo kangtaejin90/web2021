@@ -20,7 +20,7 @@
 	</div>
 	<button onclick="move(100)">+100</button>
 	<button onclick="move(0)">0</button>
-	<button onclick="bgColor('pink')">bgColor</button>
+	<button onclick="bc('pink')">bc</button>
 	<button onclick="bodyColor('pink')">bodyColor</button>
 	<script>
 		var p = document.getElementById("firstP");
@@ -35,22 +35,22 @@
 		}
 
 		function change1(){
-			var tagP = document.getElementById("fisrtP");
+			var tagP = document.getElementById("firstP");
 			tagP.style.color = "pink";
 			tagP.style.fontSize = "30px";
 		}	
 
 		function move100(){
 			var box = document.getElementsByClassName("box")[0];
-			box.style.left = "100px"
+			box.style.left = "100px";
 
 		}
 		function move(left){
 			var box = document.getElementsByClassName("box")[0];
-			box.style.left = left + "px"
+			box.style.left = left + "px";
 		}
-		
-		function bgColor(color){
+
+		function bc(color){
 			var bg = document.getElementsByTagName("body")[0];
 			bg.style.backgroundColor = color;
 		}
