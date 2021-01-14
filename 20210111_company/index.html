@@ -15,24 +15,29 @@
 	<script src="js/jquery.colorbox-min.js"></script>
 	<script src="js/wow.js"></script>
 	<script>
+		new WOW().init();
 		$(document).ready(function(){
 			$(".slider").bxSlider({mode:"fade",controls:false,auto:true,pause:5000,speed:1200,
 				onSliderLoad: function(){
-				$(".txtWrap h2").addClass("animated fadeInDown op");
-		        $(".txtWrap p").addClass("animated fadeInUp op");
+				$(".slider .txtWrap h2").addClass("animated fadeInDown op");
+		        $(".slider .txtWrap p").addClass("animated fadeInUp op");
 		        $(".slider .title").addClass("up");
 				},
 				onSlideAfter: function(){
-		        $(".txtWrap h2").addClass("animated fadeInDown op");
-		        $(".txtWrap p").addClass("animated fadeInUp op");
+		        $(".slider .txtWrap h2").addClass("animated fadeInDown op");
+		        $(".slider .txtWrap p").addClass("animated fadeInUp op");
 		        $(".slider .title").addClass("up");
 		        },
 		        onSlideBefore: function(){
-		        $(".txtWrap h2").removeClass("animated fadeInDown op");
-		        $(".txtWrap p").removeClass("animated fadeInUp op");
+		        $(".slider .txtWrap h2").removeClass("animated fadeInDown op");
+		        $(".slider .txtWrap p").removeClass("animated fadeInUp op");
 		        $(".slider .title").removeClass("up");
 		        }
-				});
+			});
+			var ctSlider = $(".ct_slider").bxSlider({controls:false,pagerCustom:".newsWrap"});
+			$(".ct3 .nextBtn").click(function(){ctSlider.goToNextSlide()});
+			$(".ct3 .prevBtn").click(function(){ctSlider.goToPrevSlide()});
+
 			var headerOffset = $(".header_topWrap").offset();
 			$(window).scroll(function(){
 				if($(document).scrollTop() > headerOffset.top){
@@ -91,18 +96,108 @@
 		</div>
 		<div class="content mb80">
 			<ul class="clearfix">
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li class="w50p"></li>
-				<li class="h50p"></li>
-				<li class="w50p"></li>
-				<li></li>
-				<li></li>
-				<li class="w50p"></li>
+				<li class="ct1 bgc_00529B hv_ul3 wow fadeInDown" _data-wow-delay="0.1s">
+					<div class="iconWrap poCen tac">
+						<img src="images/logo_symbol.png" alt="" class="pb20 aniB">
+						<p class="fwb">우미 VISION</p>
+					</div>
+				</li>
+				<li class="ct2 hv_sc2 hv_sc3 wow fadeInDown" data-wow-delay="0.3s">
+					<img src="images/main_company_img.jpg" alt="" class="poXCen2">
+					<div class="txtWrap">
+						<img src="images/play_btn2.png" alt="" class="poCen">
+						<img src="images/play_btn1.png" alt="" class="poCen roll">
+					</div>
+				</li>
+				<li class="ct3 cp_p01 wow fadeInDown" data-wow-delay="0.5s">
+					<h3>뉴스룸</h3>
+					<div class="newsWrap">
+						<a href="#" data-slide-index="0">우미건설, 상업시설·지식센터까지…부동산 사업모델 다각화</a>
+						<a href="#" data-slide-index="1">[Jump-up!] 우미건설, 시공능력평가 첫 20위권 진입</a>
+						<a href="#" data-slide-index="2">이석준 우미건설 부회장, ‘플라워 버킷 챌린지’ 동참</a>
+						<a href="#" data-slide-index="3">LH, 민간임대주택 공모…제일·우미·서한건설 선정</a>
+					</div>
+					<div class="btn clearfix">
+						<div class="prevBtn"></div>
+						<div class="nextBtn"></div>
+					</div>
+				</li>
+				<li class="ct4 wow fadeInDown" data-wow-delay="0.5s">
+					<div class="ct_slider">
+						<div><a href="#"><img src="images/news01.png" alt="" class="poXCen2"></a></div>
+						<div><a href="#"><img src="images/news02.png" alt="" class="poXCen2"></a></div>
+						<div><a href="#"><img src="images/news03.png" alt="" class="poXCen2"></a></div>
+						<div><a href="#"><img src="images/news04.png" alt="" class="poXCen2"></a></div>
+					</div>
+				</li>
+				<li class="ct5 bgc_292F37 hv_ul3 wow fadeInRight" data-wow-delay="0.1s">
+					<div class="iconWrap poCen tac">
+						<img src="images/mct_housing_icon.png" alt="" class="pb20 aniB">
+						<p class="fwb">주택사업</p>
+					</div>
+				</li>
+				<li class="ct6 bgc_00529B hv_ul3 wow fadeInRight" data-wow-delay="0.3s">
+					<div class="iconWrap poCen tac">
+						<img src="images/mct_building_icon.png" alt="" class="pb20 aniB">
+						<p class="fwb">건축사업</p>
+					</div>
+				</li>
+				<li class="ct7 w50p hv_sc2 wow fadeInRight" data-wow-delay="0.5s">
+					<img src="images/img_works02.jpg" alt="" class="poXCen2">
+					<div class="txtWrap cp_p01 hv_bgc1">
+						<h3>BUILDING WORKS</h3>
+						<p>도시의 표정을 만드는 <br>랜드마크가 늘어갑니다</p>
+						<a href="#" class="more hv_ul">
+							<img src="images/icon_more.png" alt="" class="poXCen">
+							<p class="col_fff pt60 tac">건축사업 주요실적 바로가기</p>
+						</a>
+					</div>
+				</li>
+				<li class="ct8 h50p hv_sc2 wow fadeInLeft" data-wow-delay="0.1s">
+					<img src="images/img_works01.jpg" alt="" class="poXCen2">
+					<div class="txtWrap cp_p01 hv_bgc2">
+						<h3>HOUSING WORKS</h3>
+						<p>사람과 공간을<br>연결해 새로운<br>주거문화를<br>만듭니다</p>
+						<a href="#" class="more hv_ul">
+							<img src="images/icon_more2.png" alt="" class="poXCen">
+							<p class="col_fff pt60 tac">주택사업 주요실적 바로가기</p>
+						</a>
+					</div>
+				</li>
+				<li class="ct9 w50p hv_sc2 wow fadeInLeft" data-wow-delay="0.3s">
+					<img src="images/img_works03.jpg" alt="" class="poXCen2">
+					<div class="txtWrap cp_p01 hv_bgc2">
+						<h3>CIVIL WORKS</h3>
+						<p>인프라 건설을 통해<br>국토에 생명력을 부여합니다</p>
+						<a href="#" class="more hv_ul">
+							<img src="images/icon_more2.png" alt="" class="poXCen">
+							<p class="col_fff pt60 tac">토목사업 주요실적 바로가기</p>
+						</a>
+					</div>
+				</li>
+				<li class="ct10 bgc_292F37 hv_ul3 wow fadeInLeft" data-wow-delay="0.5s">
+					<div class="iconWrap poCen tac">
+						<img src="images/mct_civil_icon.png" alt="" class="pb20 aniB">
+						<p class="fwb">토목사업</p>
+					</div>
+				</li>
+				<li class="ct11 bgc_00529B hv_ul3 wow fadeInUp" data-wow-delay="0.1s">
+					<div class="iconWrap poCen tac">
+						<img src="images/mct_plant_icon.png" alt="" class="pb20 aniB">
+						<p class="fwb">플랜트사업</p>
+					</div>
+				</li>
+				<li class="ct12 w50p hv_sc2 wow fadeInUp" data-wow-delay="0.3s">
+					<img src="images/img_works04.jpg" alt="" class="poXCen2">
+					<div class="txtWrap cp_p01 hv_bgc1">
+						<h3>PLANT WORKS</h3>
+						<p>고도의 기술 역량으로<br>산업발전을 이끌어 갑니다</p>
+						<a href="#" class="more hv_ul">
+							<img src="images/icon_more.png" alt="" class="poXCen">
+							<p class="col_fff pt60 tac">플랜트사업 주요실적 바로가기</p>
+						</a>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</header>

@@ -17,6 +17,7 @@
 	.pt30{padding-top: 30px !important;}
 	.pt40{padding-top: 40px !important;}
 	.pt55{padding-top: 55px !important;}
+	.pt60{padding-top: 60px !important;}
 	
 	/* padding-bottom */
 	.pb10{padding-bottom: 10px !important;}
@@ -47,21 +48,35 @@
 	.ts10{transition: 1s !important;}
 
 	/*transform*/
-	.poCen{position: absolute; top: 50%; left: 50%; transform: translate(-50% -50%);}
+	.poCen{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 	.poXCen{position: absolute; left: 50%; transform: translateX(-50%);}
+	.poXCen2{position: absolute; left: 50%; transform: translateX(-50%); transform-origin: 300% 50%}
 
 	/*hover*/
 	.hv_ul:hover{text-decoration: underline !important; text-underline-position: under; }
 	.hv_ul2:hover .tul{text-decoration: underline !important; text-underline-position: under; }
+	.hv_ul3:hover .iconWrap p{text-decoration: underline !important; text-underline-position: under; }
 
-	/*line_ah*/
-	.line_ah:after{content: ''; width: 150px; height: 1px; background-color: #000; margin: 15px auto; display: block; }
 
-	.bgc_gray{background-color: #ccc;}
+	/*background-color*/
+	.bgc_ccc{background-color: #ccc;}
+	.bgc_00529B{background-color: #00529B;}
+	.bgc_292F37{background-color: #292F37;}
+
+	/*color*/
+	.col_fff{color: #fff;}
 
 	/*company*/
 	.w50p{width: 50% !important;}
 	.h50p{height: 600px !important;}
+	.hv_sc:hover img{transform:scale(1.2); transition: 0.3s;}
+	.hv_sc2:hover>img{transform:scale(1.2); transition: 0.3s;}
+	.hv_sc3:hover img.hv_sc3{transform: translate(-50%, -50%) scale(1.2); transition: 0.3s;}
+	.cp_p01{padding: 35px 40px !important;}
+	.hv_bgc1{background-color: rgba(0,82,155,0.1); transition: 0.3s}
+	.hv_bgc2{background-color: rgba(0,0,0,0.1); transition: 0.3s}
+	.hv_bgc1:hover{background-color: rgba(0,82,155,0.5);}
+	.hv_bgc2:hover{background-color: rgba(0,0,0,0.6);}
 
 	/*travel*/
 	.tr_mb16{margin-bottom: 16px !important;}
@@ -70,8 +85,3 @@
 	.tr_p02{padding: 12px 20px 15px 20px !important;}
 	.tr_p03{padding: 25px 20px !important;}
 	.tr_p04{padding: 25px 21px !important;}
-
-	.tr_boxset{width: 233px; height: 240px; margin-right: 16px; margin-bottom: 16px; float: left;}
-	.hv_sc:hover img{transform:scale(1.2); transition: 0.3s;}
-	.hv_sc2:hover>img{transform:scale(1.2); transition: 0.3s;}
-	.ani_bu01{position: absolute;right: 0;}
