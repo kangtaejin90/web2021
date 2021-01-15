@@ -19,18 +19,18 @@
 		$(document).ready(function(){
 			$(".slider").bxSlider({mode:"fade",controls:false,auto:true,pause:5000,speed:1200,
 				onSliderLoad: function(){
-				$(".slider .txtWrap h2").addClass("animated fadeInDown op");
-		        $(".slider .txtWrap p").addClass("animated fadeInUp op");
+				$(".slider .txtWrap h2").addClass("animated fadeInLeft op");
+		        $(".slider .txtWrap p").addClass("animated fadeInRight op");
 		        $(".slider .title").addClass("up");
 				},
 				onSlideAfter: function(){
-		        $(".slider .txtWrap h2").addClass("animated fadeInDown op");
-		        $(".slider .txtWrap p").addClass("animated fadeInUp op");
+		        $(".slider .txtWrap h2").addClass("animated fadeInLeft op");
+		        $(".slider .txtWrap p").addClass("animated fadeInRight op");
 		        $(".slider .title").addClass("up");
 		        },
 		        onSlideBefore: function(){
-		        $(".slider .txtWrap h2").removeClass("animated fadeInDown op");
-		        $(".slider .txtWrap p").removeClass("animated fadeInUp op");
+		        $(".slider .txtWrap h2").removeClass("animated fadeInLeft op");
+		        $(".slider .txtWrap p").removeClass("animated fadeInRight op");
 		        $(".slider .title").removeClass("up");
 		        }
 			});
@@ -38,9 +38,14 @@
 			$(".ct3 .nextBtn").click(function(){ctSlider.goToNextSlide()});
 			$(".ct3 .prevBtn").click(function(){ctSlider.goToPrevSlide()});
 
+			var width = $(".pr_sliderWrap").width()/3;
+			var prSlider = $(".pr_slider").bxSlider({moveSlides:1,maxSlides:3,controls:false,slideWidth:width,pagerCustom:".prPager"});
+			$(".pr .nextBtn").click(function(){prSlider.goToNextSlide()});
+			$(".pr .prevBtn").click(function(){prSlider.goToPrevSlide()});
+
 			var headerOffset = $(".header_topWrap").offset();
 			$(window).scroll(function(){
-				if($(document).scrollTop() > headerOffset.top){
+				if($(document).scrollTop() > 100){
 					$(".header_topWrap").addClass("scroll animated fadeInDown");
 				}else{$(".header_topWrap").removeClass("scroll animated fadeInDown");};
 			});
@@ -145,8 +150,8 @@
 				<li class="ct7 w50p hv_sc2 wow fadeInRight" data-wow-delay="0.5s">
 					<img src="images/img_works02.jpg" alt="" class="poXCen2">
 					<div class="txtWrap cp_p01 hv_bgc1">
-						<h3>BUILDING WORKS</h3>
-						<p>도시의 표정을 만드는 <br>랜드마크가 늘어갑니다</p>
+						<h3 class="txtShodow">BUILDING WORKS</h3>
+						<p class="txtShodow">도시의 표정을 만드는 <br>랜드마크가 늘어갑니다</p>
 						<a href="#" class="more hv_ul">
 							<img src="images/icon_more.png" alt="" class="poXCen">
 							<p class="col_fff pt60 tac">건축사업 주요실적 바로가기</p>
@@ -156,8 +161,8 @@
 				<li class="ct8 h50p hv_sc2 wow fadeInLeft" data-wow-delay="0.1s">
 					<img src="images/img_works01.jpg" alt="" class="poXCen2">
 					<div class="txtWrap cp_p01 hv_bgc2">
-						<h3>HOUSING WORKS</h3>
-						<p>사람과 공간을<br>연결해 새로운<br>주거문화를<br>만듭니다</p>
+						<h3 class="txtShodow">HOUSING WORKS</h3>
+						<p class="txtShodow">사람과 공간을<br>연결해 새로운<br>주거문화를<br>만듭니다</p>
 						<a href="#" class="more hv_ul">
 							<img src="images/icon_more2.png" alt="" class="poXCen">
 							<p class="col_fff pt60 tac">주택사업 주요실적 바로가기</p>
@@ -167,8 +172,8 @@
 				<li class="ct9 w50p hv_sc2 wow fadeInLeft" data-wow-delay="0.3s">
 					<img src="images/img_works03.jpg" alt="" class="poXCen2">
 					<div class="txtWrap cp_p01 hv_bgc2">
-						<h3>CIVIL WORKS</h3>
-						<p>인프라 건설을 통해<br>국토에 생명력을 부여합니다</p>
+						<h3 class="txtShodow">CIVIL WORKS</h3>
+						<p class="txtShodow">인프라 건설을 통해<br>국토에 생명력을 부여합니다</p>
 						<a href="#" class="more hv_ul">
 							<img src="images/icon_more2.png" alt="" class="poXCen">
 							<p class="col_fff pt60 tac">토목사업 주요실적 바로가기</p>
@@ -190,8 +195,8 @@
 				<li class="ct12 w50p hv_sc2 wow fadeInUp" data-wow-delay="0.3s">
 					<img src="images/img_works04.jpg" alt="" class="poXCen2">
 					<div class="txtWrap cp_p01 hv_bgc1">
-						<h3>PLANT WORKS</h3>
-						<p>고도의 기술 역량으로<br>산업발전을 이끌어 갑니다</p>
+						<h3 class="txtShodow">PLANT WORKS</h3>
+						<p class="txtShodow">고도의 기술 역량으로<br>산업발전을 이끌어 갑니다</p>
 						<a href="#" class="more hv_ul">
 							<img src="images/icon_more.png" alt="" class="poXCen">
 							<p class="col_fff pt60 tac">플랜트사업 주요실적 바로가기</p>
@@ -201,6 +206,144 @@
 			</ul>
 		</div>
 	</header>
-	<div class="personnel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro reiciendis perspiciatis sapiente magnam quaerat! Quod autem fugiat delectus nihil officia ad, ipsam. Ipsum ad quos reiciendis eligendi laudantium eaque perferendis.</div>
+	<div class="personnel mb80">
+		<div class="section tac pt60 col_fff">
+			<p class="txtShodow2">기업가치관</p>
+			<h2 class="txtShodow2 pb50">WOOMI VALUE</h2>
+			<ul class="clearfix">
+				<li class="wow fadeInDown" data-wow-delay="0.1s">
+					<div class="iconWrap poCen">
+						<img src="images/person_icon1.png" alt="" class="pb10">
+						<h3 class="txtShodow2 pb10">MISSION</h3>
+						<p class="txtShodow2">우미의 미션</p>
+					</div>
+					<div class="txtWrap cp_p01 col_333">
+						<h3>MISSION</h3>
+						<p class="pb30">우미의 <span class="col_00529B fwb">미션</span></p>
+						<a href="#"><img src="images/person_icon5.png" alt="" class=""></a>
+					</div>
+				</li>
+				<li class="wow fadeInDown" data-wow-delay="0.3s">
+					<div class="iconWrap poCen">
+						<img src="images/person_icon2.png" alt="" class="pb10">
+						<h3 class="txtShodow2 pb10">TRUST</h3>
+						<p class="txtShodow2">마음을 얻는 신뢰</p>
+					</div>
+					<div class="txtWrap cp_p01 col_333">
+						<h3>TRUST</h3>
+						<p class="pb30">마음을 얻는 <span class="col_00529B fwb">신뢰</span></p>
+						<a href="#"><img src="images/person_icon6.png" alt="" class=""></a>
+					</div>
+				</li>
+				<li class="wow fadeInDown" data-wow-delay="0.5s">
+					<div class="iconWrap poCen">
+						<img src="images/person_icon3.png" alt="" class="pb10">
+						<h3 class="txtShodow2 pb10">LEARNING</h3>
+						<p class="txtShodow2">미래를 여는 학습</p>
+					</div>
+					<div class="txtWrap cp_p01 col_333">
+						<h3>LEARNING</h3>
+						<p class="pb30">미래를 여는 <span class="col_00529B fwb">학습</span></p>
+						<a href="#"><img src="images/person_icon7.png" alt="" class=""></a>
+					</div>
+				</li>
+				<li class="mr0 wow fadeInDown" data-wow-delay="0.7s">
+					<div class="iconWrap poCen">
+						<img src="images/person_icon4.png" alt="" class="pb10">
+						<h3 class="txtShodow2 pb10">CHALLENGE</h3>
+						<p class="txtShodow2">최고를 향한 도전</p>
+					</div>
+					<div class="txtWrap cp_p01 col_333">
+						<h3>CHALLENGE</h3>
+						<p class="pb30">최고를 향한 <span class="col_00529B fwb">도전</span></p>
+						<a href="#"><img src="images/person_icon8.png" alt="" class=""></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="pr mb80 clearfix">
+		<div class="title cp_p01 bgc_00529B">
+			<div class="prPager">
+				<a href="#" class="poXCen" data-slide-index="0"><img src="images/pr_icon1.png" alt=""></a>
+				<a href="#" class="poXCen" data-slide-index="1"><img src="images/pr_icon1.png" alt=""></a>
+				<a href="#" class="poXCen" data-slide-index="2"><img src="images/pr_icon1.png" alt=""></a>
+				<a href="#" class="poXCen" data-slide-index="3"><img src="images/pr_icon1.png" alt=""></a>
+				<a href="#" class="poXCen" data-slide-index="4"><img src="images/pr_icon1.png" alt=""></a>
+				<a href="#" class="poXCen" data-slide-index="5"><img src="images/pr_icon1.png" alt=""></a>
+			</div>
+			<h3 class="col_fff tac">홍보센터</h3>
+			<p class="col_fff pb30">우리는 사람·자연·역사에 대한<br>통찰을 바탕으로<br>고객의 꿈과 행복을 위해<br>더 나은 공간의 가치를 창조한다</p>
+			<p class="mission col_fff">기업가치관</p>
+			<div class="btn clearfix">
+				<div class="prevBtn"></div>
+				<div class="nextBtn"></div>
+			</div>
+		</div>
+		<div class="pr_sliderWrap">
+			<ul class="pr_slider clearfix">
+				<li>
+					<div class="imgWrap hv_sc2">
+						<img href="#" src="images/pr_img03.jpg" alt="" class="poXCen2">
+					</div>
+					<div class="txtWrap cp_p01 col_333 down">
+						<h3>사회공헌</h3>
+						<p>우미건설은 다년간<br>소외된 이웃의 주거환경을<br>개선해 오고 있습니다</p>
+					</div>
+				</li>
+				<li>
+					<div class="txtWrap cp_p01 col_333 up">
+						<h3>사회공헌</h3>
+						<p>우미건설은 다년간<br>소외된 이웃의 주거환경을<br>개선해 오고 있습니다</p>
+					</div>
+					<div class="imgWrap hv_sc2">
+						<img href="#" src="images/pr_img03.jpg" alt="" class="poXCen2">
+					</div>	
+				</li>
+				<li>
+					<div class="imgWrap hv_sc2">
+						<img href="#" src="images/pr_img03.jpg" alt="" class="poXCen2">
+					</div>
+					<div class="txtWrap cp_p01 col_333 down">
+						<h3>사회공헌</h3>
+						<p>우미건설은 다년간<br>소외된 이웃의 주거환경을<br>개선해 오고 있습니다</p>
+					</div>
+				</li>
+				<li>
+					<div class="txtWrap cp_p01 col_333 up">
+						<h3>사회공헌</h3>
+						<p>우미건설은 다년간<br>소외된 이웃의 주거환경을<br>개선해 오고 있습니다</p>
+					</div>
+					<div class="imgWrap hv_sc2">
+						<img href="#" src="images/pr_img03.jpg" alt="" class="poXCen2">
+					</div>	
+				</li>
+				<li>
+					<div class="imgWrap hv_sc2">
+						<img href="#" src="images/pr_img03.jpg" alt="" class="poXCen2">
+					</div>
+					<div class="txtWrap cp_p01 col_333 down">
+						<h3>사회공헌</h3>
+						<p>우미건설은 다년간<br>소외된 이웃의 주거환경을<br>개선해 오고 있습니다</p>
+					</div>
+				</li>
+				<li>
+					<div class="txtWrap cp_p01 col_333 up">
+						<h3>사회공헌</h3>
+						<p>우미건설은 다년간<br>소외된 이웃의 주거환경을<br>개선해 오고 있습니다</p>
+					</div>
+					<div class="imgWrap hv_sc2">
+						<img href="#" src="images/pr_img03.jpg" alt="" class="poXCen2">
+					</div>	
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="banner">
+		
+	</div>
+	<footer id="footer">
+		
+	</footer>
 </body>
 </html>

@@ -1,7 +1,7 @@
 @charset "utf-8";
 /*common*/
 
-	.container{width: 980px; margin: 0 auto;}
+	.container{width: 1200px; margin: 0 auto;}
 	.blind{display: block; text-indent: -9999px;}
 	.tac{text-align: center;}
 	.fwb{font-weight: bold;}
@@ -18,17 +18,23 @@
 	.pt40{padding-top: 40px !important;}
 	.pt55{padding-top: 55px !important;}
 	.pt60{padding-top: 60px !important;}
+	.pt80{padding-top: 80px !important;}
 	
 	/* padding-bottom */
 	.pb10{padding-bottom: 10px !important;}
 	.pb20{padding-bottom: 20px !important;}
 	.pb30{padding-bottom: 30px !important;}
-	.pb40{padding-bottom: 30px !important;}
+	.pb40{padding-bottom: 40px !important;}
+	.pb50{padding-bottom: 50px !important;}
+	.pb60{padding-bottom: 60px !important;}
+	.pb80{padding-bottom: 80px !important;}
 	
 	/* padding-top,bottom */
 	.ptb10{padding: 10px 0 !important;}
 	.ptb20{padding: 20px 0 !important;}
 	.ptb30{padding: 30px 0 !important;}
+	.ptb40{padding: 40px 0 !important;}
+	.ptb80{padding: 80px 0 !important;}
 
 
 	/*margin-bottom*/
@@ -64,7 +70,13 @@
 	.bgc_292F37{background-color: #292F37;}
 
 	/*color*/
-	.col_fff{color: #fff;}
+	.col_fff{color: #fff !important;}
+	.col_333{color: #333 !important;}
+	.col_00529B{color: #00529B !important;}
+
+	/*font*/
+	.txtShodow{text-shadow: 1px 1px 2px rgba(0,0,0,0.3)}
+	.txtShodow2{text-shadow: 1px 1px 2px rgba(0,0,0,0.2)}
 
 	/*company*/
 	.w50p{width: 50% !important;}
