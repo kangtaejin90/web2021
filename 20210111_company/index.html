@@ -38,16 +38,28 @@
 			$(".ct3 .nextBtn").click(function(){ctSlider.goToNextSlide()});
 			$(".ct3 .prevBtn").click(function(){ctSlider.goToPrevSlide()});
 
-			var width = $(".pr_sliderWrap").width()/3;
-			var prSlider = $(".pr_slider").bxSlider({moveSlides:1,maxSlides:3,controls:false,slideWidth:width,pagerCustom:".prPager"});
+			var prWidth = $(".pr_sliderWrap").width()/3;
+			var prSlider = $(".pr_slider").bxSlider({moveSlides:1,maxSlides:3,slideWidth:prWidth,controls:false,pagerCustom:".prPager"});
 			$(".pr .nextBtn").click(function(){prSlider.goToNextSlide()});
 			$(".pr .prevBtn").click(function(){prSlider.goToPrevSlide()});
+			$(window).resize(function(){
+				var prWidth = $(".pr_sliderWrap").width()/3;
+				$(".pr_slider li").width(prWidth);
+			});
 
 			var headerOffset = $(".header_topWrap").offset();
 			$(window).scroll(function(){
 				if($(document).scrollTop() > 100){
 					$(".header_topWrap").addClass("scroll animated fadeInDown");
 				}else{$(".header_topWrap").removeClass("scroll animated fadeInDown");};
+			});
+
+			$(".personnel li").mouseenter(function(){
+				var i = $(this).index();
+				$(".personnel").css("background","url(images/mid_bg_img" + i +".jpg) no-repeat center fixed").css("background-size","cover");
+			});
+			$(".personnel li").mouseleave(function(){
+				$(".personnel").removeAttr("style");
 			});
 		});
 	</script>
@@ -207,57 +219,52 @@
 		</div>
 	</header>
 	<div class="personnel mb80">
-		<div class="section tac pt60 col_fff">
-			<p class="txtShodow2">기업가치관</p>
-			<h2 class="txtShodow2 pb50">WOOMI VALUE</h2>
+		<div class="section pt60 col_fff">
+			<p class="txtShodow2 tac">기업가치관</p>
+			<h2 class="txtShodow2 pb60 tac">WOOMI VALUE</h2>
 			<ul class="clearfix">
-				<li class="wow fadeInDown" data-wow-delay="0.1s">
-					<div class="iconWrap poCen">
-						<img src="images/person_icon1.png" alt="" class="pb10">
-						<h3 class="txtShodow2 pb10">MISSION</h3>
-						<p class="txtShodow2">우미의 미션</p>
-					</div>
-					<div class="txtWrap cp_p01 col_333">
-						<h3>MISSION</h3>
-						<p class="pb30">우미의 <span class="col_00529B fwb">미션</span></p>
-						<a href="#"><img src="images/person_icon5.png" alt="" class=""></a>
-					</div>
+				<li class="cp_p01 hv_ul2 wow fadeInDown" data-wow-delay="0.1s">
+						<img src="images/person_icon1.png" alt="" class="poXCen">
+						<h3 class="txtShodow2 tul tac pb20">MISSION</h3>
+						<p class="">우리는 사람·자연·역사에 대한<br>통찰을 바탕으로<br>고객의 꿈과 행복을 위해<br>더 나은 공간의 가치를 창조한다</p>
+						<a href="#" class="moreBtn col_fff">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						</a>
 				</li>
-				<li class="wow fadeInDown" data-wow-delay="0.3s">
-					<div class="iconWrap poCen">
-						<img src="images/person_icon2.png" alt="" class="pb10">
-						<h3 class="txtShodow2 pb10">TRUST</h3>
-						<p class="txtShodow2">마음을 얻는 신뢰</p>
-					</div>
-					<div class="txtWrap cp_p01 col_333">
-						<h3>TRUST</h3>
-						<p class="pb30">마음을 얻는 <span class="col_00529B fwb">신뢰</span></p>
-						<a href="#"><img src="images/person_icon6.png" alt="" class=""></a>
-					</div>
+				<li class="cp_p01 hv_ul2 wow fadeInDown" data-wow-delay="0.3s">
+						<img src="images/person_icon2.png" alt="" class="poXCen">
+						<h3 class="txtShodow2 tul tac pb20">TRUST</h3>
+						<p class="pb10">신뢰는 약속을 철저히 지키는<br>것부터 시작한다</p>
+						<p class="">항상 상대방의 입장에서 생각하고<br>배려하는 자세를 갖는다</p>
+						<a href="#" class="moreBtn col_fff">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						</a>
 				</li>
-				<li class="wow fadeInDown" data-wow-delay="0.5s">
-					<div class="iconWrap poCen">
-						<img src="images/person_icon3.png" alt="" class="pb10">
-						<h3 class="txtShodow2 pb10">LEARNING</h3>
-						<p class="txtShodow2">미래를 여는 학습</p>
-					</div>
-					<div class="txtWrap cp_p01 col_333">
-						<h3>LEARNING</h3>
-						<p class="pb30">미래를 여는 <span class="col_00529B fwb">학습</span></p>
-						<a href="#"><img src="images/person_icon7.png" alt="" class=""></a>
-					</div>
+				<li class="cp_p01 hv_ul2 wow fadeInDown" data-wow-delay="0.5s">
+						<img src="images/person_icon3.png" alt="" class="poXCen">
+						<h3 class="txtShodow2 tul tac pb20">LEARNING</h3>
+						<p class="pb10">성장은 함께 하는 것입니다</p>
+						<p class="">끊임없이 배우고 공유하고 소통해야 합니다</p>
+						<a href="#" class="moreBtn col_fff">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						</a>
 				</li>
-				<li class="mr0 wow fadeInDown" data-wow-delay="0.7s">
-					<div class="iconWrap poCen">
-						<img src="images/person_icon4.png" alt="" class="pb10">
-						<h3 class="txtShodow2 pb10">CHALLENGE</h3>
-						<p class="txtShodow2">최고를 향한 도전</p>
-					</div>
-					<div class="txtWrap cp_p01 col_333">
-						<h3>CHALLENGE</h3>
-						<p class="pb30">최고를 향한 <span class="col_00529B fwb">도전</span></p>
-						<a href="#"><img src="images/person_icon8.png" alt="" class=""></a>
-					</div>
+				<li class="cp_p01 hv_ul2 wow fadeInDown" data-wow-delay="0.7s">
+						<img src="images/person_icon4.png" alt="" class="poXCen">
+						<h3 class="txtShodow2 tul tac pb20">CHALLENGE</h3>
+						<p class="pb10">유연한 사고와 민첩한 행동이 발전을 가져온다</p>
+						<p class="">목표를 세우고 최고의 성과를 도출한다</p>
+						<a href="#" class="moreBtn col_fff">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						</a>
 				</li>
 			</ul>
 		</div>

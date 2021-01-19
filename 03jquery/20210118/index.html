@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jquery</title>
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		// window.onload = function(){
+		// 	document.getElementsByClassName("box")[0].style.display="none";
+		// };
+		$(document).ready(function(){
+			// $(".box").hide();
+			$(".btnShow").hide();
+			$(".btn").click(function(){
+				$(".btn").hide();
+				$(".box").hide();
+				$(".btnShow").show();
+			});
+			$(".btnShow").click(function(){
+				$(".btn").show();
+				$(".box").show();
+				$(".btnShow").hide();
+			});
+		});
+	</script>
+</head>
+<body>
+	<button class="btn">누르세요</button>
+	<button class="btnShow">나타나기</button>
+	<div class="box">안녕하세요</div>
+	<script>
+		// $(".box").hide();
+	</script>
+</body>
+</html>
