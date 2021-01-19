@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jquery</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			// $("p").hide();
+			$("p").css("background-color","red");
+			var pColor = $("p").css("background-color",);
+			console.log(pColor);
+			$(".box2,.box3").hide();
+			
+			// $("ul>li").eq(0).click(function(){
+			// 	$(".box1").fadeIn();
+			// 	$(".box2").hide();
+			// 	$(".box3").hide();
+			// });
+			// $("ul>li").eq(1).click(function(){
+			// 	$(".box2").fadeIn();
+			// 	$(".box1").hide();
+			// 	$(".box3").hide();
+			// });
+			// $("ul>li").eq(2).click(function(){
+			// 	$(".box3").fadeIn();
+			// 	$(".box1").hide();
+			// 	$(".box2").hide();
+			// });
+			$("li").click(function(){
+			var num = $(this).index();
+			console.log(num);
+			$("div").hide();
+			$("div").eq(num).show();
+			});
+			
+		});
+
+	</script>
+	<style>
+		.tab{width: 1000px; margin: 0 auto;background-color: lightseagreen; }
+		.tab li{float: left; width: 33.3333%;border: 1px solid #000; text-align: center;}
+		div{width: 1000px; margin: 0 auto;}
+	</style>
+</head>
+<body>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor quaerat vero, asperiores culpa harum animi rem impedit tempora inventore aliquam veritatis omnis cum itaque? Asperiores nobis a, iure blanditiis neque.</p>
+	<p>Quos veritatis similique aliquid aspernatur, debitis sequi ad odit repellat odio impedit quisquam tempora soluta, sint, recusandae ipsum ab neque velit suscipit voluptate nostrum. Ut, odit, debitis! Nulla praesentium, animi.</p>
+	<p>Assumenda est consequuntur quaerat nam blanditiis impedit id iste esse excepturi quo ut aut odit molestiae, quasi incidunt officiis facilis ab facere porro exercitationem rem nulla neque doloremque. Ipsa, rem.</p>
+	<p>Culpa corrupti officia repellat, perferendis assumenda aspernatur nesciunt ad, qui molestiae nulla debitis tenetur, magnam minus suscipit adipisci error voluptatum. Eligendi in blanditiis magnam a odit sit deleniti ipsam! Numquam.</p>
+
+	<ul class="tab clearfix">
+		<li>menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+	</ul>
+	<div class="box1">01 Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Unde at, rem ratione! Rem, enim. Deleniti architecto dicta blanditiis esse incidunt alias est cupiditate, sed inventore provident, minima odit quidem, quasi!</div>
+	<div class="box2">02 Ullam, corrupti aut cumque omnis et vero minima doloremque, magni fugiat veritatis, obcaecati itaque voluptatem ducimus, doloribus nisi. Ipsam vel laboriosam obcaecati suscipit sit ipsum excepturi fugiat molestias voluptatum sunt.</div>
+	<div class="box3">03 Eveniet, temporibus quaerat architecto, soluta voluptatibus quia obcaecati? Aperiam temporibus velit amet ut, molestias. Quis aliquid vitae perferendis sunt, aliquam eligendi voluptatum veritatis ab tempora, et voluptatem assumenda rerum modi.</div>
+</body>
+</html>

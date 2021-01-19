@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>tabmenu</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<style>
+		.tabWrap{width: 1000px;margin: 0 auto;}
+		.tab li{float: left; width: 200px; line-height: 40px; text-align: center;}
+		.tab li.active{background: teal;color: #fff;}
+		.tabWrap div{border: 1px solid #000; padding: 20px; display: none;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".tabWrap div").eq(0).show();
+
+			$("li").click(function(){
+				var num = $(this).index();
+				console.log(num);
+				$("li").removeClass("active");
+				$(this).addClass("active");
+				$(".tabWrap div").hide();
+				$(".tabWrap div").eq(num).fadeIn();	
+			});
+		});
+		
+	</script>
+</head>
+<body>
+	<div class="tabWrap">
+		<ul class="tab clearfix">
+			<li class="active">menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+		</ul>
+		<div>
+			01 Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Quaerat impedit, maiores, deleniti veniam, itaque officia molestias in aliquid culpa quibusdam dolores eaque voluptas. Voluptates inventore, dignissimos exercitationem, non harum quae.
+		</div>
+		<div>
+			02 Atque dolorem accusamus quod animi eius error illo quasi aspernatur quo voluptates reiciendis deserunt iure minus quas dolorum, fugit officiis at odio aut. Fugiat fugit consequatur fuga eligendi beatae culpa?
+		</div>
+		<div>
+			03 Architecto ipsum amet, sapiente dicta ratione. Laudantium optio, exercitationem et. Odit nobis et, quis qui, rem ullam magnam sed totam odio commodi, enim omnis eligendi, vero autem iste adipisci veritatis.
+		</div>
+		<div>
+			04 Repellat quasi nam in veniam, modi, necessitatibus? Libero rem a quisquam repudiandae. Eius repellendus minus deserunt ut vel obcaecati, inventore quo aspernatur debitis maxime dolorum nesciunt facilis autem officiis voluptatum.
+		</div>
+		<div>
+			05 Ratione dolore, fugit asperiores et. Similique officiis ipsa aliquam maiores cum optio ex corporis, dolorum, sit consequatur eligendi officia eveniet laudantium quaerat excepturi dolores impedit vel. Magnam maxime facere, sequi.
+		</div>
+	</div>
+</body>
+</html>
