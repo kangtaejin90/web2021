@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>gallery</title>
+   <link rel="stylesheet" href="../css/jquery.bxslider.css">
+   <link rel="stylesheet" href="../css/reset.css">
+
+   <script src="../js/jquery-3.1.1.min.js"></script>
+   <script src="../js/jquery.bxslider.js"></script>
+   <style>
+      .sliderWrap{width: 1000px;margin: 0 auto;background-color:#444;}
+   </style>
+   <script>
+      $(document).ready(function(){
+         var $slider;
+
+             function aconfig() {
+          
+             var windowWidth = $(window).width();
+             var numSlide;
+
+             if (windowWidth < 420) {
+                 numSlide = 1;
+             } else if (windowWidth < 768) {
+                 numSlide = 2;
+             } else if (windowWidth < 1200) {
+                 numSlide = 3;
+             } else {
+                 numSlide = 4;
+             }
+
+             return {
+                 pager: false,
+                 controls: false,
+                 auto: true,
+                 slideWidth: 5000,
+                 startSlide: 0,
+                 nextText: ' ',
+                 prevText: ' ',
+                 adaptiveHeight: true,
+                 moveSlides: 1,
+                 slideMargin: 20,
+                 minSlides: numSlide,
+                 maxSlides: numSlide
+             };
+         }
+
+
+
+
+         function configureSlider() {
+             var config = aconfig();
+
+             if ($slider && $slider.reloadSlider) {
+                 $slider.reloadSlider(config);
+                 console.log(config)
+             } else {
+                 $slider = $('.slider').bxSlider(config);
+             }
+         }
+
+         $(window).resize(configureSlider);
+         configureSlider();
+
+
+         
+         
+      });
+   </script>
+</head>
+<body>
+   <div class="sliderWrap">
+      <ul class="slider">
+         <li><img src="../images/img1.jpg" alt=""></li>
+         <li><img src="../images/img2.jpg" alt=""></li>
+         <li><img src="../images/img3.jpg" alt=""></li>
+         <li><img src="../images/img4.jpg" alt=""></li>
+         <li><img src="../images/img5.jpg" alt=""></li>
+         <li><img src="../images/img6.jpg" alt=""></li>
+         <li><img src="../images/img7.jpg" alt=""></li>
+         <li><img src="../images/img7.jpg" alt=""></li>
+      </ul>
+   </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>modal</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <link rel="stylesheet" href="../css/colorbox.css">
+  <script src="../js/jquery.colorbox-min.js"></script>
+  <script>
+    <!-- @(document).ready(function(){}); = $(function(){}); -->
+    $(function(){
+      $("body").append("<div id='glayLayer'></div>")
+      .append("<div id='overLayer'><div class='imgWrap'></div><div class='btn clearfix'><div class='prevBtn'></div><div class='nextBtn'></div></div><div class='cBtn'></div></div>");
+      $("#overLayer .imgWrap").html("<img src='../images/tourgallery_j1.jpg'>");
+      $("a.modal").click(function(){
+        var ahref = $(this).attr("href");
+        var i = $(this).parent().index() + 1 ;
+        $("#glayLayer").show();
+        $("#overLayer").show();
+        $("#overLayer .imgWrap").html("<img src='" + ahref + "'>");
+        var imgX = $("#overLayer .imgWrap img").width();
+        var imgY = $("#overLayer .imgWrap img").height();
+        $("#overLayer .imgWrap").width(imgX + 40).height(imgY + 60);
+        console.log(ahref);
+        console.log(i);
+        console.log(imgX);
+        console.log(imgY);
+        $(".btn .nextBtn").click(function() {
+          console.log(i);
+          i++;
+          if(i<7){$(".imgWrap img").attr("src","../images/tourgallery_j" + i + "a.jpg")}
+          else{return false;};
+        });
+        $(".btn .prevBtn").click(function() {
+          console.log(i);
+          i--;
+          if(i>0){$(".imgWrap img").attr("src","../images/tourgallery_j" + i + "a.jpg")}
+          else{return false;};
+        });
+        return false;
+      });
+
+      $("#overLayer .cBtn").click(function(){
+        $("#glayLayer,#overLayer").hide();
+      });
+      $(".color").colorbox({rel : "color"})
+    });
+  </script>
+  <style>
+    .box{width: 100px;height: 100px;background: red;}
+    #glayLayer{width: 100%;height: 100%; position: fixed; top: 0; left: 0; background: #000; opacity: 0.6; display: none;}
+    #overLayer{background: #fff; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);display: none;border-radius : 10px; overflow: hidden;}
+    #overLayer .imgWrap img{padding: 20px;}
+    #overLayer .btn{width: 80px;height: 40px;position: absolute;bottom: 0;left: 0;padding: 7.5px;}
+    #overLayer .btn div{float: left;width: 25px;height: 25px;background: url(../images/controls1.png) no-repeat -75px 0;cursor: pointer;}
+    #overLayer .btn div.nextBtn{background: url(../images/controls1.png) no-repeat -50px 0;}
+    #overLayer .cBtn{width: 25px;height: 25px;position: absolute;bottom: 7.5px;right: 7.5px;background: url(../images/controls1.png) no-repeat -25px 0;cursor: pointer;}
+    .layer{width: 470px; margin: 0 auto;}
+    .layer li{float: left;width: 150px;margin-right: 10px;margin-bottom: 10px;}
+    .layer li:nth-child(3n){margin-right: 0;}
+    .layer li img{display: block;}
+
+  </style>
+</head>
+<body>
+  <!-- <div class="box"></div> -->
+  <ul class="layer clearfix">
+    <li>
+      <a href="../images/tourgallery_j1a.jpg" class="modal">
+        <img src="../images/tourgallery_j1.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="../images/tourgallery_j2a.jpg" class="modal">
+        <img src="../images/tourgallery_j2.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="../images/tourgallery_j3a.jpg" class="modal">
+        <img src="../images/tourgallery_j3.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="../images/tourgallery_j4a.jpg" class="modal">
+        <img src="../images/tourgallery_j4.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="../images/tourgallery_j5a.jpg" class="modal">
+        <img src="../images/tourgallery_j5.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="../images/tourgallery_j6a.jpg" class="modal">
+        <img src="../images/tourgallery_j6.jpg" alt="">
+      </a>
+    </li>
+  </ul>
+  <ul class="layer clearfix">
+    <li>
+      <a href="../images/tourgallery_j1a.jpg" class="color">
+        <img src="../images/tourgallery_j1.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="../images/tourgallery_j2a.jpg" class="color">
+        <img src="../images/tourgallery_j2.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="../images/tourgallery_j3a.jpg" class="color">
+        <img src="../images/tourgallery_j3.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="../images/tourgallery_j4a.jpg" class="color">
+        <img src="../images/tourgallery_j4.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="../images/tourgallery_j5a.jpg" class="color">
+        <img src="../images/tourgallery_j5.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="../images/tourgallery_j6a.jpg" class="color">
+        <img src="../images/tourgallery_j6.jpg" alt="">
+      </a>
+    </li>
+  </ul>
+
+</body>
+</html>
