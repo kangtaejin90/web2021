@@ -38,16 +38,6 @@
 			$(".ct3 .nextBtn").click(function(){ctSlider.goToNextSlide()});
 			$(".ct3 .prevBtn").click(function(){ctSlider.goToPrevSlide()});
 
-			var prWidth = $(".pr_sliderWrap").width()/3;
-			var prSlider = $(".pr_slider").bxSlider({moveSlides:1,maxSlides:3,slideWidth:prWidth,controls:false,pagerCustom:".prPager"});
-			$(".pr .nextBtn").click(function(){prSlider.goToNextSlide()});
-			$(".pr .prevBtn").click(function(){prSlider.goToPrevSlide()});
-			$(window).resize(function(){
-				var prWidth = $(".pr_sliderWrap").width()/3;
-				var prSlider = $(".pr_slider").bxSlider({moveSlides:1,maxSlides:3,slideWidth:prWidth,controls:false,pagerCustom:".prPager"});
-				prSlider.reloadSlider({moveSlides:1,maxSlides:3,slideWidth:prWidth,controls:false,pagerCustom:".prPager"})
-			});
-
 			var headerOffset = $(".header_topWrap").offset();
 			$(window).scroll(function(){
 				if($(document).scrollTop() > 100){
@@ -60,6 +50,24 @@
 				$(".personnel").css("background","url(images/mid_bg_img" + i +".jpg) no-repeat center fixed").css("background-size","cover");
 			},function(){$(".personnel").removeAttr("style");}
 			);
+
+			$(".fSiteWrap").hover(function(){
+				$(".familySite").slideDown("slow");
+				$(".familySite a").removeClass("animated fadeOut");
+				$(".familySite a").addClass("animated fadeInRight");
+				$(".familySite a").eq(1).css("animation-delay","0.05s");
+				$(".familySite a").eq(2).css("animation-delay","0.1s");
+				$(".familySite a").eq(3).css("animation-delay","0.15s");
+				$(".familySite a").eq(4).css("animation-delay","0.2s");
+				$(".familySite a").eq(5).css("animation-delay","0.25s");
+				$(".familySite a").eq(6).css("animation-delay","0.3s");
+			},
+				function(){$(".familySite").slideUp("slow");
+				$(".familySite a").removeClass("animated fadeInRight");
+				$(".familySite a").addClass("animated fadeOut");
+				$(".familySite a").css("animation-delay",0);
+			});
+
 		});
 	</script>
 </head>
@@ -112,7 +120,7 @@
 		</div>
 		<div class="content mb80">
 			<ul class="clearfix">
-				<li class="ct1 bgc_00529B hv_ul3 wow fadeInDown" _data-wow-delay="0.1s">
+				<li class="ct1 bgc_00529B hv_ul3 wow fadeInDown" data-wow-delay="0.1s">
 					<div class="iconWrap poCen tac">
 						<img src="images/logo_symbol.png" alt="" class="pb20 aniB">
 						<p class="fwb">우미 VISION</p>
@@ -268,7 +276,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="pr mb80 clearfix">
+	<!-- <div class="pr mb80 clearfix">
 		<div class="title cp_p01 bgc_00529B">
 			<div class="prPager">
 				<a href="#" class="poXCen" data-slide-index="0"><img src="images/pr_icon1.png" alt=""></a>
@@ -344,12 +352,68 @@
 				</li>
 			</ul>
 		</div>
+	</div> -->
+	<div class="subContent mb80 clearfix">
+		<div class="subSliderWrap">
+			<ul class="subSlider">
+				<li class="cp_p01">
+					<div class="txtWrap col_fff">
+						<h3 class="txtShodow">SUSTAINABLE MANAGEMENT</h3>
+						<p class="txtShodow"></p>
+					</div>
+				</li>
+			</ul>
+			<div class="subSliderControl">
+				<div class="btn"></div>
+				<div class="pager"></div>
+			</div>
+		</div>
+		<div class="sliderContent clearfix">
+			<div class="iconBox1"></div>
+			<div class="imgBox1">
+				<img src="images/subContent_img01_01.jpg" alt="" class="poCen">
+			</div>
+			<div class="imgBox2">
+				<img src="images/subContent_img01_01.jpg" alt="" class="poCen">
+			</div>
+			<div class="iconBox2"></div>
+		</div>		
 	</div>
-	<div class="banner">
-		
+	<div class="banner clearfix mb80">
+		<div class="bannerTxt cp_p01 col_fff">
+			<p>WE BUILD TOMORROW,<br>TOGETHER FOR A BETTER<br>FUTURE !</p>
+			<a href="#" class="col_fff tac">
+				<p class="">회사소개서 보기</p>
+				<div class="hv">
+					<p class="col_00529B">회사소개서 보기</p>
+				</div>
+			</a>
+		</div>
+		<div class="bannerImg">
+			<img src="images/banner_img1.jpg" alt="" class="poCen">
+		</div>
 	</div>
 	<footer id="footer">
-		
+		<div class="ft_content pt50 clearfix">
+			<img src="images/logo_f.png" alt="" class="poXCen">
+			<img src="images/icon_logo_f1.png" alt="" class="fLogo1">
+			<img src="images/icon_logo_f2.png" alt="" class="fLogo2">
+			<div class="fSiteWrap">
+				<p>패밀리 사이트</p>
+				<img src="images/ftTopBtn.png" alt="">
+				<ul class="familySite">
+					<li><a href="http://www.lynn.co.kr/" target="_balnk" class="hv_ul">우미린</a></li>
+					<li><a href="https://www.lakecomo.co.kr/" target="_balnk" class="hv_ul">레이크꼬모</a></li>
+					<li><a href="http://recruit.woomi.co.kr" target="_balnk" class="hv_ul">우미채용</a></li>
+					<li><a href="http://lynnstay-cb.co.kr/" target="_balnk" class="hv_ul">충북혁신도시 린스테이</a></li>
+					<li><a href="http://www.ilovewm.co.kr/" target="_balnk" class="hv_ul">이노샘</a></li>
+					<li><a href="http://www.cleanwoomi.co.kr/" target="_balnk" class="hv_ul">사이버신문고</a></li>
+					<li><a href="http://b2b.woomi.co.kr/" target="_balnk" class="hv_ul">협력업체</a></li>			
+				</ul>	
+			</div>
+			<p class="addr tac">06292 서울시 강남구 언주로 30길 39 린스퀘어(도곡동 467-14) 대표전화 1588-9707</p>
+			<p class="copy tac">Copyright (c) 2016 WOOMI CONSTRUCTION CORP. All rights reserved.</p>
+		</div>
 	</footer>
 </body>
 </html>
