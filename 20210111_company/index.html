@@ -34,9 +34,46 @@
 		        $(".slider .title").removeClass("up");
 		        }
 			});
+
 			var ctSlider = $(".ct_slider").bxSlider({controls:false,pagerCustom:".newsWrap"});
 			$(".ct3 .nextBtn").click(function(){ctSlider.goToNextSlide()});
 			$(".ct3 .prevBtn").click(function(){ctSlider.goToPrevSlide()});
+
+			$("#main_menu").hover(function(){
+				$(".header_topWrap").css("background-color","rgba(41,47,55,1)");
+				$(".header_topWrap h1 a").css("background-image","url(images/logo_w2.png)");
+				$(".sub_menu").slideDown();
+				$(".sub_menu li").removeClass("animated fadeOut");
+				$(".sub_menu li").addClass("animated fadeInUp");
+				$(".sub_menu li:nth-child(1)").css("animation-delay","0.1s");
+				$(".sub_menu li:nth-child(2)").css("animation-delay","0.2s");
+				$(".sub_menu li:nth-child(3)").css("animation-delay","0.3s");
+				$(".sub_menu li:nth-child(4)").css("animation-delay","0.4s");
+				$(".sub_menu li:nth-child(5)").css("animation-delay","0.5s");
+				$(".sub_menu li:nth-child(6)").css("animation-delay","0.6s");
+				$(".sub_menu li").css("animation-duration","0.4s");
+			},function(){
+				$(".header_topWrap").removeAttr("style");
+				$(".header_topWrap h1 a").removeAttr("style");
+				$(".sub_menu").slideUp();
+				$(".sub_menu li").addClass("animated fadeOut");
+				$(".sub_menu li").removeAttr("style");
+				$(".sub_menu li").css("animation-duration","0.1s");
+			});
+
+			$("#main_menu>ul>li").hover(function(){
+				$("#main_menu>ul>li>a>span:after").removeAttr("style");
+			},function(){
+				$("#main_menu>ul>li>a>span:after").css("transform","translateX(101%)");
+			});
+
+			$(".scroll #main_menu").hover(function(){
+				var i = 1;
+				console.log(i);
+				$(".scroll #header_top h1").height(100);
+			},function(){
+				$(".scroll #header_top h1").removeAttr("style");
+			});
 
 			var headerOffset = $(".header_topWrap").offset();
 			$(window).scroll(function(){
@@ -52,18 +89,18 @@
 			);
 
 			$(".fSiteWrap").hover(function(){
-				$(".familySite").slideDown("slow");
+				$(".familySite").slideDown();
 				$(".familySite a").removeClass("animated fadeOut");
-				$(".familySite a").addClass("animated fadeInRight");
-				$(".familySite a").eq(1).css("animation-delay","0.05s");
-				$(".familySite a").eq(2).css("animation-delay","0.1s");
+				$(".familySite a").addClass("animated fadeInUp");
+				$(".familySite a").eq(0).css("animation-delay","0.3s");
+				$(".familySite a").eq(1).css("animation-delay","0.25s");
+				$(".familySite a").eq(2).css("animation-delay","0.2s");
 				$(".familySite a").eq(3).css("animation-delay","0.15s");
-				$(".familySite a").eq(4).css("animation-delay","0.2s");
-				$(".familySite a").eq(5).css("animation-delay","0.25s");
-				$(".familySite a").eq(6).css("animation-delay","0.3s");
+				$(".familySite a").eq(4).css("animation-delay","0.1s");
+				$(".familySite a").eq(5).css("animation-delay","0.05s");
 			},
-				function(){$(".familySite").slideUp("slow");
-				$(".familySite a").removeClass("animated fadeInRight");
+				function(){$(".familySite").slideUp();
+				$(".familySite a").removeClass("animated fadeInUp");
 				$(".familySite a").addClass("animated fadeOut");
 				$(".familySite a").css("animation-delay",0);
 			});
@@ -78,12 +115,59 @@
 				<h1 class="logo blind"><a href="#">우미건설</a></h1>
 				<nav id="main_menu">
 					<ul class="fwb">
-						<li><a href="#">우미소개</a></li>
-						<li><a href="#">사업소개</a></li>
-						<li><a href="#">지속가능경영</a></li>
-						<li><a href="#">홍보센터</a></li>
-						<li><a href="#">채용정보</a></li>
-						<li><a href="#" class="pr0">고객센터</a></li>
+						<li>
+							<a href="#"><span>우미소개</span></a>
+							<ul class="sub_menu">
+								<li><a href="#"><span>기업가치관</span></a></li>
+								<li><a href="#"><span>인사말</span></a></li>
+								<li><a href="#"><span>연혁</span></a></li>
+								<li><a href="#"><span>조직도</span></a></li>
+								<li><a href="#"><span>찾아오시는 길</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><span>사업소개</span></a>
+							<ul class="sub_menu">
+								<li><a href="#"><span>사업분야 안내</span></a></li>
+								<li><a href="#"><span>주택사업</span></a></li>
+								<li><a href="#"><span>건축사업</span></a></li>
+								<li><a href="#"><span>토목사업</span></a></li>
+								<li><a href="#"><span>기타사업</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><span>지속가능경영</span></a>
+							<ul class="sub_menu">
+								<li><a href="#"><span>기업윤리</span></a></li>
+								<li><a href="#"><span>품질경영</span></a></li>
+								<li><a href="#"><span>지식경영</span></a></li>
+								<li><a href="#"><span>사회공헌</span></a></li>
+								<li><a href="#"><span>사이버신문고</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><span>홍보센터</span></a>
+							<ul class="sub_menu">
+								<li><a href="#"><span>뉴스룸</span></a></li>
+								<li><a href="#"><span>자료실</span></a></li>
+								<li><a href="#"><span>CI/BI</span></a></li>
+								<li><a href="#"><span>린 유튜브</span></a></li>
+								<li><a href="#"><span>린 인스타그램</span></a></li>
+								<li><a href="#"><span>린 블로그</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><span>채용정보</span></a>
+							<ul class="sub_menu">
+								<li><a href="#"><span>채용안내</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="pr0"><span>고객센터</span></a>
+							<ul class="sub_menu">
+								<li><a href="#"><span>고객지원안내</span></a></li>
+							</ul>
+						</li>
 					</ul>
 				</nav>
 				<div class="toggleMenu">
@@ -276,83 +360,7 @@
 			</ul>
 		</div>
 	</div>
-	<!-- <div class="pr mb80 clearfix">
-		<div class="title cp_p01 bgc_00529B">
-			<div class="prPager">
-				<a href="#" class="poXCen" data-slide-index="0"><img src="images/pr_icon1.png" alt=""></a>
-				<a href="#" class="poXCen" data-slide-index="1"><img src="images/pr_icon1.png" alt=""></a>
-				<a href="#" class="poXCen" data-slide-index="2"><img src="images/pr_icon1.png" alt=""></a>
-				<a href="#" class="poXCen" data-slide-index="3"><img src="images/pr_icon1.png" alt=""></a>
-				<a href="#" class="poXCen" data-slide-index="4"><img src="images/pr_icon1.png" alt=""></a>
-				<a href="#" class="poXCen" data-slide-index="5"><img src="images/pr_icon1.png" alt=""></a>
-			</div>
-			<h3 class="col_fff tac">홍보센터</h3>
-			<p class="col_fff pb30">우리는 사람·자연·역사에 대한<br>통찰을 바탕으로<br>고객의 꿈과 행복을 위해<br>더 나은 공간의 가치를 창조한다</p>
-			<p class="mission col_fff">기업가치관</p>
-			<div class="btn clearfix">
-				<div class="prevBtn"></div>
-				<div class="nextBtn"></div>
-			</div>
-		</div>
-		<div class="pr_sliderWrap">
-			<ul class="pr_slider clearfix">
-				<li>
-					<div class="imgWrap hv_sc2">
-						<img href="#" src="images/pr_img03.jpg" alt="" class="poXCen2">
-					</div>
-					<div class="txtWrap cp_p01 col_333 down">
-						<h3>사회공헌</h3>
-						<p>우미건설은 다년간<br>소외된 이웃의 주거환경을<br>개선해 오고 있습니다</p>
-					</div>
-				</li>
-				<li>
-					<div class="txtWrap cp_p01 col_333 up">
-						<h3>사회공헌</h3>
-						<p>우미건설은 다년간<br>소외된 이웃의 주거환경을<br>개선해 오고 있습니다</p>
-					</div>
-					<div class="imgWrap hv_sc2">
-						<img href="#" src="images/pr_img03.jpg" alt="" class="poXCen2">
-					</div>	
-				</li>
-				<li>
-					<div class="imgWrap hv_sc2">
-						<img href="#" src="images/pr_img03.jpg" alt="" class="poXCen2">
-					</div>
-					<div class="txtWrap cp_p01 col_333 down">
-						<h3>사회공헌</h3>
-						<p>우미건설은 다년간<br>소외된 이웃의 주거환경을<br>개선해 오고 있습니다</p>
-					</div>
-				</li>
-				<li>
-					<div class="txtWrap cp_p01 col_333 up">
-						<h3>사회공헌</h3>
-						<p>우미건설은 다년간<br>소외된 이웃의 주거환경을<br>개선해 오고 있습니다</p>
-					</div>
-					<div class="imgWrap hv_sc2">
-						<img href="#" src="images/pr_img03.jpg" alt="" class="poXCen2">
-					</div>	
-				</li>
-				<li>
-					<div class="imgWrap hv_sc2">
-						<img href="#" src="images/pr_img03.jpg" alt="" class="poXCen2">
-					</div>
-					<div class="txtWrap cp_p01 col_333 down">
-						<h3>사회공헌</h3>
-						<p>우미건설은 다년간<br>소외된 이웃의 주거환경을<br>개선해 오고 있습니다</p>
-					</div>
-				</li>
-				<li>
-					<div class="txtWrap cp_p01 col_333 up">
-						<h3>사회공헌</h3>
-						<p>우미건설은 다년간<br>소외된 이웃의 주거환경을<br>개선해 오고 있습니다</p>
-					</div>
-					<div class="imgWrap hv_sc2">
-						<img href="#" src="images/pr_img03.jpg" alt="" class="poXCen2">
-					</div>	
-				</li>
-			</ul>
-		</div>
-	</div> -->
+	
 	<div class="subContent mb80 clearfix">
 		<div class="subSliderWrap">
 			<ul class="subSlider">
@@ -380,7 +388,7 @@
 		</div>		
 	</div>
 	<div class="banner clearfix mb80">
-		<div class="bannerTxt cp_p01 col_fff">
+		<div class="bannerTxt cp_p01 col_fff wow fadeInLeft">
 			<p>WE BUILD TOMORROW,<br>TOGETHER FOR A BETTER<br>FUTURE !</p>
 			<a href="#" class="col_fff tac">
 				<p class="">회사소개서 보기</p>
@@ -389,7 +397,7 @@
 				</div>
 			</a>
 		</div>
-		<div class="bannerImg">
+		<div class="bannerImg wow fadeInRight">
 			<img src="images/banner_img1.jpg" alt="" class="poCen">
 		</div>
 	</div>
