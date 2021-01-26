@@ -5,3 +5,4 @@
 	li{list-style: none;}
 	.clearfix:after{display: block; content: ''; clear: both; }
 	table{border-collapse: collapse;}
+	img, a{display: block;}

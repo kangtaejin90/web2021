@@ -42,9 +42,10 @@
 			$("#main_menu").hover(function(){
 				$(".header_topWrap").css("background-color","rgba(41,47,55,1)");
 				$(".header_topWrap h1 a").css("background-image","url(images/logo_w2.png)");
-				$(".sub_menu").slideDown();
+				$(".sub_menu").stop().slideDown();
 				$(".sub_menu li").removeClass("animated fadeOut");
 				$(".sub_menu li").addClass("animated fadeInUp");
+				$("#header_top h1").height(100);
 				$(".sub_menu li:nth-child(1)").css("animation-delay","0.1s");
 				$(".sub_menu li:nth-child(2)").css("animation-delay","0.2s");
 				$(".sub_menu li:nth-child(3)").css("animation-delay","0.3s");
@@ -55,24 +56,11 @@
 			},function(){
 				$(".header_topWrap").removeAttr("style");
 				$(".header_topWrap h1 a").removeAttr("style");
-				$(".sub_menu").slideUp();
+				$(".sub_menu").stop().slideUp();
 				$(".sub_menu li").addClass("animated fadeOut");
 				$(".sub_menu li").removeAttr("style");
+				$("#header_top h1").removeAttr("style");
 				$(".sub_menu li").css("animation-duration","0.1s");
-			});
-
-			$("#main_menu>ul>li").hover(function(){
-				$("#main_menu>ul>li>a>span:after").removeAttr("style");
-			},function(){
-				$("#main_menu>ul>li>a>span:after").css("transform","translateX(101%)");
-			});
-
-			$(".scroll #main_menu").hover(function(){
-				var i = 1;
-				console.log(i);
-				$(".scroll #header_top h1").height(100);
-			},function(){
-				$(".scroll #header_top h1").removeAttr("style");
 			});
 
 			var headerOffset = $(".header_topWrap").offset();
@@ -89,7 +77,7 @@
 			);
 
 			$(".fSiteWrap").hover(function(){
-				$(".familySite").slideDown();
+				$(".familySite").stop().slideDown();
 				$(".familySite a").removeClass("animated fadeOut");
 				$(".familySite a").addClass("animated fadeInUp");
 				$(".familySite a").eq(0).css("animation-delay","0.3s");
@@ -99,7 +87,7 @@
 				$(".familySite a").eq(4).css("animation-delay","0.1s");
 				$(".familySite a").eq(5).css("animation-delay","0.05s");
 			},
-				function(){$(".familySite").slideUp();
+				function(){$(".familySite").stop().slideUp();
 				$(".familySite a").removeClass("animated fadeInUp");
 				$(".familySite a").addClass("animated fadeOut");
 				$(".familySite a").css("animation-delay",0);

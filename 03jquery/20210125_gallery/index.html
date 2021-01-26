@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>gallery</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <style>
+    #gallery{width: 824px;margin: 0 auto;background: #ccc;padding: 32px 0;}
+    #image{width: 760px; margin: 0 auto;margin-bottom: 16px;}
+    #image p{display: none;}
+    #image p img{display: block;}
+    #thumbnail{width: 824px;height: 95px;}
+    #thumbnail div{float: left;}
+    #thumbnail div.left, #thumbnail div.right{width: 32px; padding: 35px 8.5px;cursor: pointer;}
+    #thumbnail div.container{width: 760px;height: 95px;overflow: hidden;}
+    #thumbnail div.container ul{width: 2280px;position: relative;left: 0;transition:0.4s;}
+    #thumbnail div.container li{float: left; width: 120px; height: 95px; margin-left: 8px;text-align: center; background: #555; color: #fff;}
+    .ml0{margin-left: 0 !important;}
+  </style>
+  <script>
+    $(document).ready(function(){
+      $("#thumbnail li").click(function(){
+        var num = $(this).index();
+        //$("#image>p").css("display","none");
+        //$("#image>p").eq(num).css("display","block");
+        $("#image>p").hide().eq(num).show();
+      });
+      var current = 0;
+
+      $(".right").click(function(){
+        current++;
+        if(current == 3){current = 0;};
+        imgMove();
+      });
+      $(".left").click(function(){
+        current--;
+        if(current == -1){current = 2;};
+        imgMove();
+      });
+      function imgMove(){
+        var cNum = current*-760;
+        console.log(cNum);
+        $(".container ul").css("left",cNum);
+      };
+    });
+  </script>
+
+</head>
+<body>
+  <div id="gallery">
+    <div id="image">
+      <p style="display: block;"><img src="../images/0.jpg" alt="0"></p>
+      <p><img src="../images/1.jpg" alt=""></p>
+      <p><img src="../images/2.jpg" alt=""></p>
+      <p><img src="../images/3.jpg" alt=""></p>
+      <p><img src="../images/4.jpg" alt=""></p>
+      <p><img src="../images/5.jpg" alt=""></p>
+      <p><img src="../images/6.jpg" alt=""></p>
+      <p><img src="../images/7.jpg" alt=""></p>
+      <p><img src="../images/8.jpg" alt=""></p>
+      <p><img src="../images/9.jpg" alt=""></p>
+      <p><img src="../images/10.jpg" alt=""></p>
+      <p><img src="../images/11.jpg" alt=""></p>
+      <p><img src="../images/12.jpg" alt=""></p>
+      <p><img src="../images/13.jpg" alt=""></p>
+      <p><img src="../images/14.jpg" alt=""></p>
+      <p><img src="../images/15.jpg" alt=""></p>
+      <p><img src="../images/16.jpg" alt=""></p>
+      <p><img src="../images/17.jpg" alt=""></p>
+    </div>
+    <div id="thumbnail" class="clearfix">
+      <div class="left"><img src="../images/btn_left.gif" alt="prev"></div>
+      <div class="container">
+        <ul class="clearfix">
+          <li class="ml0"><img src="../images/thumb0.jpg" alt="thumb0">1</li>
+          <li><img src="../images/thumb1.jpg" alt="thumb1">2</li>
+          <li><img src="../images/thumb2.jpg" alt="thumb2">3</li>
+          <li><img src="../images/thumb3.jpg" alt="thumb3">4</li>
+          <li><img src="../images/thumb4.jpg" alt="thumb4">5</li>
+          <li><img src="../images/thumb5.jpg" alt="thumb5">6</li>
+          <li class="ml0"><img src="../images/thumb6.jpg" alt="thumb6">6</li>
+          <li><img src="../images/thumb7.jpg" alt="thumb7">7</li>
+          <li><img src="../images/thumb8.jpg" alt="thumb8">8</li>
+          <li><img src="../images/thumb9.jpg" alt="thumb9">9</li>
+          <li><img src="../images/thumb10.jpg" alt="thumb10">10</li>
+          <li><img src="../images/thumb11.jpg" alt="thumb11">11</li>
+          <li class="ml0"><img src="../images/thumb12.jpg" alt="thumb0">12</li>
+          <li><img src="../images/thumb13.jpg" alt="thumb12">13</li>
+          <li><img src="../images/thumb14.jpg" alt="thumb13">14</li>
+          <li><img src="../images/thumb15.jpg" alt="thumb14">15</li>
+          <li><img src="../images/thumb16.jpg" alt="thumb15">16</li>
+          <li><img src="../images/thumb17.jpg" alt="thumb16">17</li>
+        </ul>
+      </div>
+      <div class="right"><img src="../images/btn_right.gif" alt="next"></div>
+
+
+    </div>
+  </div>
+</body>
+</html>

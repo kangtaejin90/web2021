@@ -8,7 +8,7 @@ header#main_header{}
 /*headerTop*/
 .header_topWrap{width: 100%;background-color: rgba(41,47,55,0); position: fixed; top: 0;z-index: 99999; transition: 0.5s;}
 #header_top{width: 100%; max-width: 1200px;}
-#header_top h1{float: left;height: 100px;}
+#header_top h1{float: left;height: 100px;transition: 0.3s;}
 #header_top h1 a{width: 105px; height: 100%;background-image: url(../images/logo_w.png); background-position: center; background-repeat: no-repeat;}
 #main_menu{float: right;}
 #main_menu span{position: relative;overflow: hidden;}
