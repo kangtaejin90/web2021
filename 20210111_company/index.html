@@ -45,6 +45,7 @@
 				$(".sub_menu").stop().slideDown();
 				$(".sub_menu li").removeClass("animated fadeOut");
 				$(".sub_menu li").addClass("animated fadeInUp");
+				$("#header_top .lynn").addClass("hover");
 				$("#header_top h1").height(100);
 				$(".sub_menu li:nth-child(1)").css("animation-delay","0.1s");
 				$(".sub_menu li:nth-child(2)").css("animation-delay","0.2s");
@@ -58,6 +59,7 @@
 				$(".header_topWrap h1 a").removeAttr("style");
 				$(".sub_menu").stop().slideUp();
 				$(".sub_menu li").addClass("animated fadeOut");
+				$("#header_top .lynn").removeClass("hover");
 				$(".sub_menu li").removeAttr("style");
 				$("#header_top h1").removeAttr("style");
 				$(".sub_menu li").css("animation-duration","0.1s");
@@ -151,12 +153,19 @@
 							</ul>
 						</li>
 						<li>
-							<a href="#" class="pr0"><span>고객센터</span></a>
+							<a href="#"><span>고객센터</span></a>
 							<ul class="sub_menu">
 								<li><a href="#"><span>고객지원안내</span></a></li>
 							</ul>
 						</li>
 					</ul>
+					<div class="lynn">
+					<a href="http://lynn.co.kr" target="_blank">
+						<div class="lynn_hover"></div>
+						<img src="images/woomi_lynn02.png" alt="" class="poCen back">
+						<img src="images/woomi_lynn01.png" alt="" class="poCen front">
+					</a>
+				</div>
 				</nav>
 				<div class="toggleMenu">
 					<div class="bar1"></div>
@@ -350,29 +359,46 @@
 	</div>
 	
 	<div class="subContent mb80 clearfix">
-		<div class="subSliderWrap">
-			<ul class="subSlider">
-				<li class="cp_p01">
-					<div class="txtWrap col_fff">
-						<h3 class="txtShodow">SUSTAINABLE MANAGEMENT</h3>
-						<p class="txtShodow"></p>
-					</div>
-				</li>
-			</ul>
-			<div class="subSliderControl">
-				<div class="btn"></div>
-				<div class="pager"></div>
+		<div class="management hv_bgc3 hv_sc3">
+			<img src="images/management.jpg" alt="" class="poCen hv_sc3">
+			<div class="txtWrap cp_p01 col_fff">
+				<h3 class="txtShodow">BUSINESS ETHICS</h3>
+				<p class="txtShodow">우미건설은 창의와 노력을 바탕으로<br>고객에 대한 최고의 제품과 서비스를 제공하는<br>선도적인 일류 종합부동산회사를 지향한다</p>
+				<a href="#" class="more hv_ul">
+					<img src="images/icon_more2.png" alt="" class="poXCen">
+					<p class="col_fff pt60 tac">기업윤리 바로가기</p>
+				</a>
 			</div>
 		</div>
-		<div class="sliderContent clearfix">
-			<div class="iconBox1"></div>
-			<div class="imgBox1">
-				<img src="images/subContent_img01_01.jpg" alt="" class="poCen">
+		<div class="pr clearfix">
+			<div class="iconBox1 hv_ul2 bgc_292F37">
+				<div class="txtWrap cp_p01 col_fff">
+					<h3 class="">채용안내</h3>
+					<p class="tul">우미건설의 미래가 될<br />창의적인 인재를 찾습니다</p>
+				</div>
+				<a href="#" class="moreBtn">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</a>
 			</div>
-			<div class="imgBox2">
-				<img src="images/subContent_img01_01.jpg" alt="" class="poCen">
+			<div class="imgBox1 hv_sc3">
+				<img src="images/pr_img01.jpg" alt="" class="poCen hv_sc3">
 			</div>
-			<div class="iconBox2"></div>
+			<div class="imgBox2 hv_sc3">
+				<img src="images/pr_img02.jpg" alt="" class="poCen hv_sc3">
+			</div>
+			<div class="iconBox2 hv_ul2">
+				<div class="txtWrap cp_p01">
+					<h3 class="">린 인스타그램</h3>
+					<p class="tul">마음을 짓는 집,<br>멀리 보는 집 우미 Lynn</p>
+				</div>
+				<a href="#" class="moreBtn">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</a>
+			</div>
 		</div>		
 	</div>
 	<div class="banner clearfix mb80">

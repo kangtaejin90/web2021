@@ -11,9 +11,10 @@ header#main_header{}
 #header_top h1{float: left;height: 100px;transition: 0.3s;}
 #header_top h1 a{width: 105px; height: 100%;background-image: url(../images/logo_w.png); background-position: center; background-repeat: no-repeat;}
 #main_menu{float: right;}
+#main_menu ul{float: left;}
 #main_menu span{position: relative;overflow: hidden;}
 #main_menu>ul>li{float: left;}
-#main_menu>ul>li>a{display: block;line-height: 100px; padding: 0 30px;color: #333; font-size: 17px;transition: 0.3s;}
+#main_menu>ul>li>a{display: block;line-height: 100px; padding: 0 25px;color: #333; font-size: 17px;transition: 0.3s;}
 #main_menu>ul>li>a>span:after {content: '';display: block;width: 100%;height: 3px;background-color: #00529B;transform:scaleX(0);transform-origin: left;transition: 0.4s;position: absolute;bottom: -10px;
 }
 .sub_menu{padding-bottom: 40px;display: none;}
@@ -22,6 +23,10 @@ header#main_header{}
 .sub_menu li a{font-size: 15px;line-height: 18px;height: 18px;color: #c9c9c9;margin-bottom: 10px;font-weight: normal;}
 .sub_menu li a span:after {content: '';display: block;width: 100%;height: 1px;background-color: #fff;transform: scaleX(0);transform-origin: left; transition: 0.4s;position: absolute;bottom: -2px;}
 .sub_menu li a:hover{color: #fff;}
+#header_top .lynn{float: left; padding-left: 50px;}
+#header_top .lynn a{width: 100px;height: 35px;margin: 32.5px 0; border: 1px solid #333; border-radius: 17.5px; position: relative; overflow: hidden; transition: 0.4s}
+#header_top .lynn div{width: 100px;height: 35px; border-radius: 17.5px; background: #f08a1d; transform: translateX(-101%); transition: 0.3s;}
+#header_top .lynn img{height: 24px;}
 .toggleMenu{display: none; }
 
 /*headerhover*/
@@ -29,13 +34,19 @@ header#main_header{}
 #main_menu>ul>li:hover>a>span:after {transform: scaleX(1);}
 .sub_menu li a:hover span:after {transform: scaleX(1);}
 .header_topWrap.scroll #main_menu:hover>ul>li>a{line-height: 100px;}
-
+#header_top .lynn a:hover div{transform: translateX(0);}
+#header_top .lynn a:hover img.front{display: none;}
+#header_top .lynn.hover a{border: 1px solid #fff;}
+#header_top .lynn.hover a img.front{display: none;}
+.header_topWrap.scroll #main_menu:hover .lynn a{margin: 32.5px 0;}
 
 /*headerScroll*/
 .header_topWrap.scroll{background-color: rgba(41,47,55,0.8);transition: 0.3s;}
 .header_topWrap.scroll #header_top h1{height: 50px;}
 .header_topWrap.scroll h1 a{background-image: url(../images/logo_w2.png) !important;}
 .header_topWrap.scroll #main_menu>ul>li>a{line-height: 50px;color: #fff;}
+.header_topWrap.scroll #header_top .lynn a{margin: 7.5px 0; border: 1px solid #fff;}
+.header_topWrap.scroll .lynn a img.front{display: none;}
 
 
 /*slider*/
@@ -143,25 +154,54 @@ header#main_header{}
 
 /*subcontent*/
 .subContent{width: 100%; max-width: 1200px; height: 600px; margin: 0 auto; background: rgba(0,0,0,0.5);}
+.subContent h3{font-size: 16px;}
 
-/*subslider*/
-.subSliderWrap{float: left; width: 50%;height: 100%;position: relative;}
-.subSlider{width: 100%;height: 100%;}
-.subSlider li{height: 100%; background-image: url(../images/subSlider_main01.jpg); background-repeat: no-repeat; background-position: top center; background-size: cover;}
-.subSlider li .txtWrap h3:after{content: '';display: block; width: 60px; height: 3px; background-color: #fff; margin: 10px 0;}
+/*management*/
+.management{float: left; width: 50%;height: 100%;position: relative;overflow: hidden;}
+.management>img{height: 100%;z-index: -1; transition: 0.3s;}
+.management .txtWrap{width: 100%;height: 100%;}
+.management .txtWrap h3:after{content: '';display: block; width: 60px; height: 3px; background-color: #fff; margin: 10px 0;}
+.management .txtWrap p{font-size: 24px;}
+.management .txtWrap .more{width: 220px; position: absolute; top: 60%;left: 50%; margin-left: -110px; transform: translate3d(0, 100%, 0); opacity: 0; color: #eee;}
+.management:hover .txtWrap .more{opacity: 0;-webkit-animation-name: fadeInUp; animation-name: fadeInUp; animation-duration: 0.5s; animation-fill-mode: forwards;}
+.management .txtWrap .more p{font-size: 1em; font-weight: 400;}
 
-/*slidercontrol*/
-.subSliderWrap .subSliderControl{width: 50%;height: 50%;position: absolute;bottom: 0;left: 0;border: 1px solid #fff;}
-
-/*slidercontent*/
-.sliderContent{float: left; width: 50%; height: 100%;}
-.sliderContent>div{float: left;position: relative;width: 50%;height: 50%;}
+/*pr*/
+.pr{float: left; width: 50%; height: 100%;}
+.pr>div{float: left;position: relative;width: 50%;height: 50%;}
 
 /*iconbox*/
-.sliderContent .iconBox1,.sliderContent .iconBox2{z-index: 2;}
-.sliderContent .iconBox1:after{content: ''; display: block;position: absolute;top: 50%;right: -60px; margin-top: -30px;  border-width: 30px;border-style: solid; border-color: transparent transparent transparent #fff;}
-.sliderContent .iconBox2:after{content: ''; display: block;position: absolute;top: 50%;left: -60px; margin-top: -30px;  border-width: 30px;border-style: solid; border-color: transparent #fff transparent transparent;}
-.sliderContent .imgBox1,.sliderContent .imgBox2{overflow: hidden;}
+.pr .iconBox1,.pr .iconBox2{z-index: 2; transition: 0.3s;}
+.pr .txtWrap{width: 100%;height: 100%;}
+.pr .txtWrap h3{font-size: 20px;}
+.pr .txtWrap p{font-size: 15px;line-height: 24px; color: rgba(255,255,255,0.3); transition: 0.3s}
+.pr .txtWrap h3:after{content: '';display: block; width: 60px; height: 3px; background-color: #fff; margin: 10px 0;}
+.pr .iconBox1{background-image: url(../images/pr_icon1.png); background-repeat: no-repeat; background-position: 40px 180px;}
+.pr .iconBox2{background-color: #f08a1d ;background-image: url(../images/pr_lynn1.png); background-repeat: no-repeat; background-position: 40px 180px;}
+.pr .iconBox2 h3{color: #292F37;}
+.pr .iconBox2 p{color: rgba(41,47,55,0.5);}
+.pr .iconBox2 h3:after{background-color: #292F37;}
+.pr .iconBox1:after{content: ''; display: block;position: absolute;top: 50%;right: -60px; margin-top: -30px;  border-width: 30px;border-style: solid; border-color: transparent transparent transparent #292F37;}
+.pr .iconBox2:after{content: ''; display: block;position: absolute;top: 50%;left: -60px; margin-top: -30px;  border-width: 30px;border-style: solid; border-color: transparent #f08a1d transparent transparent;}
+.pr .moreBtn{width: 50px;height: 50px; position: absolute; bottom: 40px; right: 40px; background: #fff; border-radius: 25px;}
+.pr .iconBox2 .moreBtn{width: 50px;height: 50px; position: absolute; bottom: 40px; right: 40px; background: #292F37; border-radius: 25px;}
+.pr .iconBox2 .moreBtn div{background-color: #f08a1d !important;}
+.pr .moreBtn .bar1{width: 2px;height: 10px;background-color: #292F37;position: absolute;top: 20px; left: 50%; transform: translate(-0.5px, -5px);transition: 0.3s}
+.pr .moreBtn .bar2{width: 20px;height: 2px;background-color: #292F37; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transition: 0.3s}
+.pr .moreBtn .bar3{width: 2px;height: 10px;background-color: #292F37;position: absolute;bottom: 20px; left: 50%; transform: translate(-0.5px, 5px);transition: 0.3s}
+
+/*iconbox hover*/
+.pr .iconBox1:hover{background-image: url(../images/pr_icon2.png);}
+.pr .iconBox2:hover{background-image: url(../images/pr_lynn2.png);}
+.pr .iconBox1:hover p{color: rgba(255,255,255,1);}
+.pr .iconBox2:hover p{color: rgba(41,47,55,1);}
+.pr .moreBtn:hover .bar1{width: 1.5px;height: 13px;transform: translate(10px, -5px) rotate(-45deg);}
+.pr .moreBtn:hover .bar2{width: 30px;}
+.pr .moreBtn:hover .bar3{width: 1.5px;height: 13px;transform: translate(10px, 5px) rotate(45deg);}
+
+/*imgbox*/
+.pr img{height: 300px;transition: 0.3s;}
+.pr .imgBox1,.pr .imgBox2{overflow: hidden;}
 
 /*banner*/
 .banner{width: 100%;max-width: 1200px; height: 300px;margin: 0 auto;}

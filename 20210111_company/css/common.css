@@ -88,8 +88,10 @@
 	.cp_p01{padding: 35px 40px !important;}
 	.hv_bgc1{background-color: rgba(0,82,155,0.1); transition: 0.3s}
 	.hv_bgc2{background-color: rgba(0,0,0,0.1); transition: 0.3s}
+	.hv_bgc3{background-color: rgba(0,0,0,0); transition: 0.3s}
 	.hv_bgc1:hover{background-color: rgba(0,82,155,0.5);}
 	.hv_bgc2:hover{background-color: rgba(0,0,0,0.6);}
+	.hv_bgc3:hover{background-color: rgba(0,0,0,0.4);}
 
 	/*travel*/
 	.tr_mb16{margin-bottom: 16px !important;}
