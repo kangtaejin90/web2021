@@ -75,6 +75,7 @@ header#main_header{}
 .content{width: 100%; max-width: 1200px; height: 1200px; margin: 0 auto; margin-top: -300px; position: relative; z-index: 1;}
 .content li{float: left;width: 25%; height: 300px; position: relative; overflow: hidden;}
 .content li>img{height: 100%; transition: 0.3s;}
+.content .ct8Tablet{display: none;}
 
 /*arrow*/
 .content li.ct1,.content li.ct3,.content li.ct5,.content li.ct6,.content li.ct10,.content li.ct11{overflow: visible; z-index: 2;}
@@ -153,7 +154,7 @@ header#main_header{}
 
 
 /*subcontent*/
-.subContent{width: 100%; max-width: 1200px; height: 600px; margin: 0 auto; background: rgba(0,0,0,0.5);}
+.subContent{width: 100%; max-width: 1200px; height: 600px; margin: 0 auto;}
 .subContent h3{font-size: 16px;}
 
 /*management*/
