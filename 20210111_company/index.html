@@ -39,6 +39,12 @@
 			$(".ct3 .nextBtn").click(function(){ctSlider.goToNextSlide()});
 			$(".ct3 .prevBtn").click(function(){ctSlider.goToPrevSlide()});
 
+			$(window).resize(function(){
+				$("toggleMenu").removeClass("click");
+				$("#header_top").removeAttr("style");
+				$("#main_menu>ul").removeAttr("style");
+			});
+				
 			$("#main_menu").hover(function(){
 				$(".header_topWrap").css("background-color","rgba(41,47,55,1)");
 				$(".header_topWrap h1 a").css("background-image","url(images/logo_m.png)");
@@ -82,7 +88,6 @@
 				for(var i = 0; i < 6; i++){
 					$(".familySite a").eq(i).css("animation-delay",0.3 - 0.05*i + "s");	
 				};
-				
 			},
 				function(){$(".familySite").stop().slideUp();
 				$(".familySite a").removeClass("animated fadeInUp");
@@ -90,6 +95,44 @@
 				$(".familySite a").css("animation-delay",0);
 			});
 
+			
+
+			$("#main_menu>ul>li>a").click(function(){
+				$("#main_menu>ul>li>a").removeClass("on");
+				$(this).addClass("on");
+				if($("#main_menu>ul>li").children().hasClass("on") == true){
+					var thisH = $(this).height();
+					var pI = $(this).parent().index();
+					var sMH = $("#main_menu>ul>li").eq(pI).children("ul").height();
+					console.log(thisH);
+					console.log(pI);
+					console.log(sMH);
+					$("#main_menu>ul>li").removeAttr("style"); 
+					$("#main_menu>ul>li").eq(pI).css("height",sMH + thisH); 
+				// $("#main_menu>ul>li>a").preventDefault();
+				};
+			});
+			
+			// $("#main_menu>ul>li>a.on").click(function(){
+			// 	console.log($(this).index);
+			// 	$("#main_menu>ul>li>a").removeClass("on");
+			// 	$("#main_menu>ul>li").removeAttr("style"); 
+			// });	
+
+			$(".toggleMenu").click(function(){
+				if($(".toggleMenu").attr("class") == "toggleMenu"){
+					$(".toggleMenu").addClass("click");
+					$("#main_menu>ul").animate({left:0},300);
+					var wH = $(window).height();
+					$("#header_top").css("height",wH);
+				}
+				else{$(".toggleMenu").removeClass("click");
+				$("#main_menu>ul").animate({left:"-100%"},300);
+				$("#header_top").removeAttr("style");
+				$("#main_menu>ul>li").removeAttr("style");
+				$("#main_menu>ul>li>a").removeClass("on");
+			};	
+			});
 
 		});
 	</script>
@@ -100,19 +143,19 @@
 			<div id="header_top" class="clearfix m0a">
 				<h1 class="logo blind"><a href="#">우미건설</a></h1>
 				<nav id="main_menu">
-					<ul class="fwb">
+					<ul class="fwb mobile">
 						<li>
-							<a href="#" class="pl0"><span>우미소개</span></a>
+							<a href="#"><span>우미소개</span><div class="mSlide"><img src="images/ftTopBtn.png" alt=""></div></a>
 							<ul class="sub_menu">
-								<li class="pl0"><a href="#"><span>기업가치관</span></a></li>
-								<li class="pl0"><a href="#"><span>인사말</span></a></li>
-								<li class="pl0"><a href="#"><span>연혁</span></a></li>
-								<li class="pl0"><a href="#"><span>조직도</span></a></li>
-								<li class="pl0"><a href="#"><span>찾아오시는 길</span></a></li>
+								<li><a href="#"><span>기업가치관</span></a></li>
+								<li><a href="#"><span>인사말</span></a></li>
+								<li><a href="#"><span>연혁</span></a></li>
+								<li><a href="#"><span>조직도</span></a></li>
+								<li><a href="#"><span>찾아오시는 길</span></a></li>
 							</ul>
 						</li>
 						<li>
-							<a href="#"><span>사업소개</span></a>
+							<a href="#"><span>사업소개</span><div class="mSlide"><img src="images/ftTopBtn.png" alt=""></div></a>
 							<ul class="sub_menu">
 								<li><a href="#"><span>사업분야 안내</span></a></li>
 								<li><a href="#"><span>주택사업</span></a></li>
@@ -122,8 +165,8 @@
 							</ul>
 						</li>
 						<li>
-							<a href="#"><span>지속가능경영</span></a>
-							<ul class="sub_menu">
+							<a href="#"><span>지속가능경영</span><div class="mSlide"><img src="images/ftTopBtn.png" alt=""></div></a>
+							<ul class="sub_menu">	
 								<li><a href="#"><span>기업윤리</span></a></li>
 								<li><a href="#"><span>품질경영</span></a></li>
 								<li><a href="#"><span>지식경영</span></a></li>
@@ -132,7 +175,7 @@
 							</ul>
 						</li>
 						<li>
-							<a href="#"><span>홍보센터</span></a>
+							<a href="#"><span>홍보센터</span><div class="mSlide"><img src="images/ftTopBtn.png" alt=""></div></a>
 							<ul class="sub_menu">
 								<li><a href="#"><span>뉴스룸</span></a></li>
 								<li><a href="#"><span>자료실</span></a></li>
@@ -143,13 +186,13 @@
 							</ul>
 						</li>
 						<li>
-							<a href="#"><span>채용정보</span></a>
+							<a href="#"><span>채용정보</span><div class="mSlide"><img src="images/ftTopBtn.png" alt=""></div></a>
 							<ul class="sub_menu">
 								<li><a href="#"><span>채용안내</span></a></li>
 							</ul>
 						</li>
 						<li>
-							<a href="#"><span>고객센터</span></a>
+							<a href="#"><span>고객센터</span><div class="mSlide"><img src="images/ftTopBtn.png" alt=""></div></a>
 							<ul class="sub_menu">
 								<li><a href="#"><span>고객지원안내</span></a></li>
 							</ul>
