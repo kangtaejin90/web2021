@@ -41,21 +41,15 @@
 
 			$("#main_menu").hover(function(){
 				$(".header_topWrap").css("background-color","rgba(41,47,55,1)");
-				$(".header_topWrap h1 a").css("background-image","url(images/logo_w2.png)");
+				$(".header_topWrap h1 a").css("background-image","url(images/logo_m.png)");
 				$(".sub_menu").stop().slideDown();
 				$(".sub_menu li").removeClass("animated fadeOut");
 				$(".sub_menu li").addClass("animated fadeInUp");
 				$("#header_top .lynn").addClass("hover");
 				$("#header_top h1").height(100);
-				// for(var i = 1; i <7; i++){
-				// 	$(".sub_menu li:nth-child(i)").css("animation-delay","0." + i + "s");	
-				// };
-				$(".sub_menu li:nth-child(1)").css("animation-delay","0.1s");
-				$(".sub_menu li:nth-child(2)").css("animation-delay","0.2s");
-				$(".sub_menu li:nth-child(3)").css("animation-delay","0.3s");
-				$(".sub_menu li:nth-child(4)").css("animation-delay","0.4s");
-				$(".sub_menu li:nth-child(5)").css("animation-delay","0.5s");
-				$(".sub_menu li:nth-child(6)").css("animation-delay","0.6s");
+				for(var i = 1; i <7; i++){
+					$(".sub_menu li:nth-child("+i+")").css("animation-delay","0." + i + "s");	
+				};
 				$(".sub_menu li").css("animation-duration","0.4s");
 			},function(){
 				$(".header_topWrap").removeAttr("style");
@@ -108,13 +102,13 @@
 				<nav id="main_menu">
 					<ul class="fwb">
 						<li>
-							<a href="#"><span>우미소개</span></a>
+							<a href="#" class="pl0"><span>우미소개</span></a>
 							<ul class="sub_menu">
-								<li><a href="#"><span>기업가치관</span></a></li>
-								<li><a href="#"><span>인사말</span></a></li>
-								<li><a href="#"><span>연혁</span></a></li>
-								<li><a href="#"><span>조직도</span></a></li>
-								<li><a href="#"><span>찾아오시는 길</span></a></li>
+								<li class="pl0"><a href="#"><span>기업가치관</span></a></li>
+								<li class="pl0"><a href="#"><span>인사말</span></a></li>
+								<li class="pl0"><a href="#"><span>연혁</span></a></li>
+								<li class="pl0"><a href="#"><span>조직도</span></a></li>
+								<li class="pl0"><a href="#"><span>찾아오시는 길</span></a></li>
 							</ul>
 						</li>
 						<li>
@@ -237,11 +231,11 @@
 						<div><a href="#"><img src="images/news04.png" alt="" class="poXCen2"></a></div>
 					</div>
 				</li>
-				<li class="ct8Tablet hv_sc2" data-wow-delay="0.1s">
+				<li class="ct8Tablet hv_sc2 wow fadeInLeft" data-wow-delay="0.1s">
 					<img src="images/img_works01_tablet.jpg" alt="" class="poXCen2">
 					<div class="txtWrap cp_p01 hv_bgc2">
 						<h3 class="txtShodow">HOUSING WORKS</h3>
-						<p class="txtShodow">사람과 공간을<br>연결해 새로운<br>주거문화를<br>만듭니다</p>
+						<p class="txtShodow">사람과 공간을 연결해<br>새로운 주거문화를 만듭니다</p>
 						<a href="#" class="more hv_ul">
 							<img src="images/icon_more2.png" alt="" class="poXCen">
 							<p class="col_fff pt60 tac">주택사업 주요실적 바로가기</p>
@@ -376,7 +370,7 @@
 			<img src="images/management.jpg" alt="" class="poCen hv_sc3">
 			<div class="txtWrap cp_p01 col_fff">
 				<h3 class="txtShodow">BUSINESS ETHICS</h3>
-				<p class="txtShodow">우미건설은 창의와 노력을 바탕으로<br>고객에 대한 최고의 제품과 서비스를 제공하는<br>선도적인 일류 종합부동산회사를 지향한다</p>
+				<p class="txtShodow">선도적인 일류 종합부동산회사를 지향한다</p>
 				<a href="#" class="more hv_ul">
 					<img src="images/icon_more2.png" alt="" class="poXCen">
 					<p class="col_fff pt60 tac">기업윤리 바로가기</p>
@@ -388,6 +382,10 @@
 				<div class="txtWrap cp_p01 col_fff">
 					<h3 class="">채용안내</h3>
 					<p class="tul">우미건설의 미래가 될<br />창의적인 인재를 찾습니다</p>
+				</div>
+				<div class="icon">
+					<img src="images/pr_icon1.png" alt="" class="front">
+					<img src="images/pr_icon2.png" alt="" class="back">
 				</div>
 				<a href="#" class="moreBtn">
 					<div class="bar1"></div>
@@ -405,6 +403,10 @@
 				<div class="txtWrap cp_p01">
 					<h3 class="">린 인스타그램</h3>
 					<p class="tul">마음을 짓는 집,<br>멀리 보는 집 우미 Lynn</p>
+				</div>
+				<div class="icon">
+					<img src="images/pr_lynn1.png" alt="" class="front">
+					<img src="images/pr_lynn2.png" alt="" class="back">
 				</div>
 				<a href="#" class="moreBtn">
 					<div class="bar1"></div>

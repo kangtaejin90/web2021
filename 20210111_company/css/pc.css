@@ -8,7 +8,7 @@ header#main_header{}
 /*headerTop*/
 .header_topWrap{width: 100%;background-color: rgba(41,47,55,0); position: fixed; top: 0;z-index: 99999; transition: 0.5s;}
 #header_top{width: 100%; max-width: 1200px;}
-#header_top h1{float: left;height: 100px;transition: 0.3s;}
+#header_top h1{float: left;height: 100px;padding-left: 20px;transition: 0.3s;}
 #header_top h1 a{width: 105px; height: 100%;background-image: url(../images/logo_w.png); background-position: center; background-repeat: no-repeat;}
 #main_menu{float: right;}
 #main_menu ul{float: left;}
@@ -23,7 +23,7 @@ header#main_header{}
 .sub_menu li a{font-size: 15px;line-height: 18px;height: 18px;color: #c9c9c9;margin-bottom: 10px;font-weight: normal;}
 .sub_menu li a span:after {content: '';display: block;width: 100%;height: 1px;background-color: #fff;transform: scaleX(0);transform-origin: left; transition: 0.4s;position: absolute;bottom: -2px;}
 .sub_menu li a:hover{color: #fff;}
-#header_top .lynn{float: left; padding-left: 50px;}
+#header_top .lynn{float: left; padding-left: 30px;padding-right: 20px;}
 #header_top .lynn a{width: 100px;height: 35px;margin: 32.5px 0; border: 1px solid #333; border-radius: 17.5px; position: relative; overflow: hidden; transition: 0.4s}
 #header_top .lynn div{width: 100px;height: 35px; border-radius: 17.5px; background: #f08a1d; transform: translateX(-101%); transition: 0.3s;}
 #header_top .lynn img{height: 24px;}
@@ -41,11 +41,11 @@ header#main_header{}
 .header_topWrap.scroll #main_menu:hover .lynn a{margin: 32.5px 0;}
 
 /*headerScroll*/
-.header_topWrap.scroll{background-color: rgba(41,47,55,0.8);transition: 0.3s;}
-.header_topWrap.scroll #header_top h1{height: 50px;}
-.header_topWrap.scroll h1 a{background-image: url(../images/logo_w2.png) !important;}
-.header_topWrap.scroll #main_menu>ul>li>a{line-height: 50px;color: #fff;}
-.header_topWrap.scroll #header_top .lynn a{margin: 7.5px 0; border: 1px solid #fff;}
+.header_topWrap.scroll{background-color: rgba(41,47,55,1);transition: 0.3s;}
+.header_topWrap.scroll #header_top h1{height: 60px;}
+.header_topWrap.scroll h1 a{background-image: url(../images/logo_m.png) !important;}
+.header_topWrap.scroll #main_menu>ul>li>a{line-height: 60px;color: #fff;}
+.header_topWrap.scroll #header_top .lynn a{margin: 12.5px 0; border: 1px solid #fff;}
 .header_topWrap.scroll .lynn a img.front{display: none;}
 
 
@@ -177,8 +177,12 @@ header#main_header{}
 .pr .txtWrap h3{font-size: 20px;}
 .pr .txtWrap p{font-size: 15px;line-height: 24px; color: rgba(255,255,255,0.3); transition: 0.3s}
 .pr .txtWrap h3:after{content: '';display: block; width: 60px; height: 3px; background-color: #fff; margin: 10px 0;}
-.pr .iconBox1{background-image: url(../images/pr_icon1.png); background-repeat: no-repeat; background-position: 40px 180px;}
-.pr .iconBox2{background-color: #f08a1d ;background-image: url(../images/pr_lynn1.png); background-repeat: no-repeat; background-position: 40px 180px;}
+.pr .icon{position: absolute;bottom: 40px;left: 40px;width: 80px; height: 80px;}
+.pr .iconBox2 .icon{width: 42%; max-width: 134px;}
+.pr .icon img{position: absolute;bottom: 0; transition: 0.3s;width: 100%;}
+.pr .icon img.front{opacity: 1;}
+.pr .icon img.back{opacity: 0;}
+.pr .iconBox2{background-color: #f08a1d ;}
 .pr .iconBox2 h3{color: #292F37;}
 .pr .iconBox2 p{color: rgba(41,47,55,0.5);}
 .pr .iconBox2 h3:after{background-color: #292F37;}
@@ -192,8 +196,8 @@ header#main_header{}
 .pr .moreBtn .bar3{width: 2px;height: 10px;background-color: #292F37;position: absolute;bottom: 20px; left: 50%; transform: translate(-0.5px, 5px);transition: 0.3s}
 
 /*iconbox hover*/
-.pr .iconBox1:hover{background-image: url(../images/pr_icon2.png);}
-.pr .iconBox2:hover{background-image: url(../images/pr_lynn2.png);}
+.pr .iconBox1:hover .icon .front,.pr .iconBox2:hover .icon .front{opacity: 0;}
+.pr .iconBox2:hover .icon .back,.pr .iconBox1:hover .icon .back{opacity: 1;}
 .pr .iconBox1:hover p{color: rgba(255,255,255,1);}
 .pr .iconBox2:hover p{color: rgba(41,47,55,1);}
 .pr .moreBtn:hover .bar1{width: 1.5px;height: 13px;transform: translate(10px, -5px) rotate(-45deg);}
@@ -201,7 +205,7 @@ header#main_header{}
 .pr .moreBtn:hover .bar3{width: 1.5px;height: 13px;transform: translate(10px, 5px) rotate(45deg);}
 
 /*imgbox*/
-.pr img{height: 300px;transition: 0.3s;}
+.pr .imgBox1 img,.pr .imgBox2 img{height: 300px;transition: 0.3s;}
 .pr .imgBox1,.pr .imgBox2{overflow: hidden;}
 
 /*banner*/
@@ -235,7 +239,7 @@ header#main_header{}
 .ft_content .addr{padding-top: 65px;padding-bottom: 10px;}
 .ft_content img{position: absolute;}
 .ft_content .fLogo1{top: 0px;left: 0;}
-.ft_content .fLogo2{bottom: 0;;right: 30px;}
+.ft_content .fLogo2{bottom: 0;right: 30px;}
 
 /*ani*/
 @keyframes roll{
