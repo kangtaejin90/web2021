@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>scroll_menu</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script src="../js/jquery.mousewheel.min.js"></script>
+	<style>
+		nav.menu{width: 100%;background: #ccc;}
+		nav.menu ul{width: 1000px; margin: 0 auto;}
+		nav.menu li{float: left; width: 20%;}
+		nav.menu li a{line-height: 40px; text-align: center;}
+		nav.menu.fixed{position: fixed;}
+		.content{height: 2000px;}
+	</style>
+	<script>
+		$(function(){
+			$(document).mousewheel(function(evnet,delta){
+				console.log(delta);
+				$(window).scroll(function(){
+					var scrollY = $(window).scrollTop();
+					if(scrollY > 100){
+						if(delta > 0){$(".menu").addClass("fixed")}
+						else{$(".menu").removeClass("fixed")};
+					}else{$(".menu").removeClass("fixed");};
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<nav class="menu">
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</nav>
+		<div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aliquam similique molestias aspernatur iusto ratione totam delectus assumenda aliquid? Atque nesciunt culpa, quam autem delectus quibusdam sint voluptatum quod cupiditate?</div>
+	</div>
+</body>
+</html>

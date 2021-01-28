@@ -47,6 +47,9 @@
 				$(".sub_menu li").addClass("animated fadeInUp");
 				$("#header_top .lynn").addClass("hover");
 				$("#header_top h1").height(100);
+				// for(var i = 1; i <7; i++){
+				// 	$(".sub_menu li:nth-child(i)").css("animation-delay","0." + i + "s");	
+				// };
 				$(".sub_menu li:nth-child(1)").css("animation-delay","0.1s");
 				$(".sub_menu li:nth-child(2)").css("animation-delay","0.2s");
 				$(".sub_menu li:nth-child(3)").css("animation-delay","0.3s");
@@ -82,12 +85,10 @@
 				$(".familySite").stop().slideDown();
 				$(".familySite a").removeClass("animated fadeOut");
 				$(".familySite a").addClass("animated fadeInUp");
-				$(".familySite a").eq(0).css("animation-delay","0.3s");
-				$(".familySite a").eq(1).css("animation-delay","0.25s");
-				$(".familySite a").eq(2).css("animation-delay","0.2s");
-				$(".familySite a").eq(3).css("animation-delay","0.15s");
-				$(".familySite a").eq(4).css("animation-delay","0.1s");
-				$(".familySite a").eq(5).css("animation-delay","0.05s");
+				for(var i = 0; i < 6; i++){
+					$(".familySite a").eq(i).css("animation-delay",0.3 - 0.05*i + "s");	
+				};
+				
 			},
 				function(){$(".familySite").stop().slideUp();
 				$(".familySite a").removeClass("animated fadeInUp");
@@ -95,9 +96,6 @@
 				$(".familySite a").css("animation-delay",0);
 			});
 
-			// if(window.width() < 1024){
-			// 	$(".content li").removeClass("w50p").removeClass("h50p");
-			// };
 
 		});
 	</script>
