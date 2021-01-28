@@ -176,7 +176,7 @@ header#main_header{}
 .ft_content{position: relative;width: 100%; height: 170px;margin: 0 auto; padding-top: 40px !important;}
 
 /*familysite*/
-.ft_content .fSiteWrap{position: absolute;bottom: 100px;right: 20px;width: 68%;min-width: 300px; height: 30px;background: #292f37;border: 1px solid #999;transition: 0.7s;}
+.ft_content .fSiteWrap{position: absolute;bottom: 100px;right: 20px;width: 55%;min-width: 300px; height: 30px;background: #292f37;border: 1px solid #999;transition: 0.7s;}
 .ft_content .fSiteWrap p{position: absolute;bottom: 0; font-size: 13px; text-indent: 10px;height: 28px;line-height: 30px;}
 .ft_content .fSiteWrap img{position: absolute; top: 10px;right: 10px; transform: scaleY(1); transition: 1.3s; z-index: 2;}
 .ft_content .fSiteWrap .familySite{display: none;position:absolute;bottom: 35px;width: 173px; padding-top: 10px;overflow: hidden;}
