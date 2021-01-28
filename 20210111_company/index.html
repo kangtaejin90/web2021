@@ -125,12 +125,14 @@
 					$("#main_menu>ul").animate({left:0},300);
 					var wH = $(window).height();
 					$("#header_top").css("height",wH);
+					$(".overlayer").show();
 				}
 				else{$(".toggleMenu").removeClass("click");
 				$("#main_menu>ul").animate({left:"-100%"},300);
 				$("#header_top").removeAttr("style");
 				$("#main_menu>ul>li").removeAttr("style");
 				$("#main_menu>ul>li>a").removeClass("on");
+				$(".overlayer").hide();
 			};	
 			});
 
@@ -141,6 +143,7 @@
 	<header id="main_header">
 		<div class="header_topWrap">
 			<div id="header_top" class="clearfix m0a">
+				<div class="overlayer"></div>
 				<h1 class="logo blind"><a href="#">우미건설</a></h1>
 				<nav id="main_menu">
 					<ul class="fwb mobile">
