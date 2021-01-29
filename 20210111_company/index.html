@@ -71,7 +71,10 @@
 			var headerOffset = $(".header_topWrap").offset();
 			$(window).scroll(function(){
 				if($(document).scrollTop() > 100){
-					$(".header_topWrap").addClass("scroll animated fadeInDown");
+					if($(".toggleMenu").hasClass("click") == true){
+						$(".header_topWrap").removeClass("scroll animated fadeInDown");
+						console.log("click")}
+						else{$(".header_topWrap").addClass("scroll animated fadeInDown");}
 				}else{$(".header_topWrap").removeClass("scroll animated fadeInDown");};
 			});
 
