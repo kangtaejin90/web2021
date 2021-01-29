@@ -43,9 +43,16 @@
 				$("toggleMenu").removeClass("click");
 				$("#header_top").removeAttr("style");
 				$("#main_menu>ul").removeAttr("style");
+				$(".sub_menu").removeAttr("style");
+				$(".overlayer").hide();
 			});
 				
 			$("#main_menu").hover(function(){
+				if($(".toggleMenu").hasClass("click") == true){
+					$(".sub_menu li").removeClass();
+					$(".sub_menu").css("display","block");
+				}
+					else{
 				$(".header_topWrap").css("background-color","rgba(41,47,55,1)");
 				$(".header_topWrap h1 a").css("background-image","url(images/logo_m.png)");
 				$(".sub_menu").stop().slideDown();
@@ -56,8 +63,12 @@
 				for(var i = 1; i <7; i++){
 					$(".sub_menu li:nth-child("+i+")").css("animation-delay","0." + i + "s");	
 				};
-				$(".sub_menu li").css("animation-duration","0.4s");
+				$(".sub_menu li").css("animation-duration","0.4s");}
 			},function(){
+				if($(".toggleMenu").hasClass("click") == true){
+					$(".sub_menu li").removeClass();
+					$(".sub_menu").css("display","block");
+				}else{
 				$(".header_topWrap").removeAttr("style");
 				$(".header_topWrap h1 a").removeAttr("style");
 				$(".sub_menu").stop().slideUp();
@@ -65,7 +76,7 @@
 				$("#header_top .lynn").removeClass("hover");
 				$(".sub_menu li").removeAttr("style");
 				$("#header_top h1").removeAttr("style");
-				$(".sub_menu li").css("animation-duration","0.1s");
+				$(".sub_menu li").css("animation-duration","0.1s");}
 			});
 
 			var headerOffset = $(".header_topWrap").offset();
@@ -99,28 +110,30 @@
 			});
 
 			
-
-			$("#main_menu>ul>li>a").click(function(){
-				$("#main_menu>ul>li>a").removeClass("on");
-				$(this).addClass("on");
-				if($("#main_menu>ul>li").children().hasClass("on") == true){
+			
+			// 토글메뉴 클릭
+			$("#main_menu>ul>li>a").click(function(event){
+				if($("#main_menu>ul>li").children().hasClass("on") == false){
+					// $("#main_menu>ul>li>a").removeClass("on");
+					$(this).addClass("on");
 					var thisH = $(this).height();
 					var pI = $(this).parent().index();
 					var sMH = $("#main_menu>ul>li").eq(pI).children("ul").height();
 					console.log(thisH);
 					console.log(pI);
 					console.log(sMH);
-					$("#main_menu>ul>li").removeAttr("style"); 
+					// $("#main_menu>ul>li").removeAttr("style");
 					$("#main_menu>ul>li").eq(pI).css("height",sMH + thisH); 
-				// $("#main_menu>ul>li>a").preventDefault();
+				event.preventDefault();
+				}else
+				{$("#main_menu>ul>li>a").removeClass("on");$("#main_menu>ul>li").removeAttr("style");
+				// var thisH = $(this).height();
+				// var pI = $(this).parent().index();
+				// var sMH = $("#main_menu>ul>li").eq(pI).children("ul").height();
+				// $(this).addClass("on");$("#main_menu>ul>li").eq(pI).css("height",sMH + thisH); 
+				console.log($(this).index());event.preventDefault();
 				};
 			});
-			
-			// $("#main_menu>ul>li>a.on").click(function(){
-			// 	console.log($(this).index);
-			// 	$("#main_menu>ul>li>a").removeClass("on");
-			// 	$("#main_menu>ul>li").removeAttr("style"); 
-			// });	
 
 			$(".toggleMenu").click(function(){
 				if($(".toggleMenu").attr("class") == "toggleMenu"){
