@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>array</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script>
+    var view = [
+      ["잉꼬","img1.jpg"],["장미꽃","img2.jpg"],
+      ["거위","img3.jpg"],["바이킹","img4.jpg"],
+      ["놀이동산","img5.jpg"],["양","img6.jpg"],
+      ["잉꼬","img7.jpg"],["잉꼬","img7.jpg"]
+    ];
+    var txt = "";
+    $(function(){
+      for(var i=0;i < view.length; i++){
+        txt += "<li>"
+        txt += "<img src='../images/" + view[i][1] + "'>"
+        txt += "<div class='bg'></div>"
+        txt += "<span class='txt'>" + view[i][0] + "</span>"
+        txt += "</li>"
+      };
+    console.log(txt);
+    $(".kang").append(txt);
+    });
+  </script>
+  <style>
+    .wrap{width: 1000px;margin: 0 auto;}
+    .kang li{float: left;width: 242.5px;margin-right: 10px; position: relative;cursor: pointer;overflow: hidden;}
+    .kang li:nth-child(4n){margin-right: 0;}
+    .kang img{width: 100%;display: block; transition: 0.3s;}
+    .kang .bg{background: royalblue; position: absolute; width: 100%; height: 100%;top: 0;opacity: 0; transition: 0.3s;}
+    .kang li:hover .bg{opacity: 0.5;}
+    .kang .txt{position: absolute;width: 100%;height: 100%;color: white;display: flex; justify-content: center; align-items: center; top: 0; font-size: 2em;}
+    .kang li:hover img{transform: scale(1.2);}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="kang">
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    html,body{height: 100%;}
+    .wrap{background: pink;padding: 30px 0;}
+    .container{max-width: 1000px; margin: 0 auto; background: skyblue;}
+    .container h3{text-align: center;padding: 20px 0;}
+    .proList{display: flex;justify-content: space-between;}
+    .list{padding: 20px;border: 1px solid #000;flex-basis: 23%;margin-bottom: 20px;}
+    .list h4{font-size: 1.3em;margin-bottom: 20px;}
+    .list p{}
+    @media screen and (max-width : 746px){
+      .proList{flex-direction: column;}
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="container">
+    <h3>Lorem ipsum dolor sit amet.</h3>
+    <div class="proList">
+      <div class="list">
+        <h4>Lorem ipsum dolor.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, dolor.</p>
+      </div>
+      <div class="list">
+        <h4>Lorem ipsum dolor.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, dolor.</p>
+      </div>
+      <div class="list">
+        <h4>Lorem ipsum dolor.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, dolor.</p>
+      </div>
+      <div class="list">
+        <h4>Lorem ipsum dolor.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, dolor.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
