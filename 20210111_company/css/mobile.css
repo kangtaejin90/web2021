@@ -75,9 +75,9 @@ header#main_header{}
 
 
 /*img_content*/
-.content .txtWrap{position: relative; height: 100%; color: #fff;}
+.content .txtWrap{position: relative; height: 100%;padding-top: 78px !important; color: #fff;text-align: center;}
 .content .txtWrap h3{letter-spacing: 0.05em;font-size: 14px}
-.content .txtWrap h3:after{content: '';display: block; width: 50px; height: 3px; background-color: #fff; margin: 10px 0;}
+.content .txtWrap h3:after{content: '';display: block; width: 50px; height: 3px;position: relative;left: 50%;transform: translateX(-50%); background-color: #fff; margin: 10px 0;}
 .content .txtWrap p{font-size: 20px;}
 .content .txtWrap .more{width: 220px; position: absolute; top: 55%;left: 50%; margin-left: -110px; transform: translate3d(0, 100%, 0); opacity: 0; color: #eee;}
 .content li:hover .txtWrap .more{opacity: 0;-webkit-animation-name: fadeInUp; animation-name: fadeInUp; animation-duration: 0.5s; animation-fill-mode: forwards;}
@@ -94,8 +94,11 @@ header#main_header{}
 .personnel .section ul{width: 100%; max-width: 600px; margin: 0 auto;}
 .personnel .section li{float: left;position: relative; width: 50%; height: 240px;background: rgba(0,0,0,0); border: 1px solid rgba(255,255,255,0.3); transition: 0.6s; padding: 20px !important;}
 .personnel .section li img{width: 100px;}
-.personnel .section li h3{padding-top: 110px;font-size: 20px; text-align-last: center;}
+.personnel .section li h3{padding-top: 110px;font-size: 20px; text-align-last: center;text-decoration: underline !important; text-underline-position: under;}
 .personnel .section li p{display: none;}
+
+/*hover*/
+.personnel .section li:hover{background: rgba(0,82,155,0.9);border: 0 none;}
 
 /*more*/
 .personnel .moreBtn{width: 40px;height: 21px; position: absolute; bottom: 20px; left: 50%; margin-left: -20px; transition: 0.3s;}

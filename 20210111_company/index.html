@@ -116,7 +116,8 @@
 			// 토글메뉴 클릭
 			$("#main_menu>ul>li>a").click(function(event){
 				if($("#main_menu>ul>li").children().hasClass("on") == false){
-					// $("#main_menu>ul>li>a").removeClass("on");
+					$("#main_menu>ul>li>a").removeClass("on");
+					$("#main_menu>ul>li").removeAttr("style");
 					$(this).addClass("on");
 					var thisH = $(this).height();
 					var pI = $(this).parent().index();
@@ -124,16 +125,15 @@
 					console.log(thisH);
 					console.log(pI);
 					console.log(sMH);
-					// $("#main_menu>ul>li").removeAttr("style");
 					$("#main_menu>ul>li").eq(pI).css("height",sMH + thisH); 
+					event.preventDefault();
+				}
+				else
+				{$(this).removeClass("on");
+				var pI = $(this).parent().index();
+				$("#main_menu>ul>li").eq(pI).removeAttr("style"); 
+				console.log($(this).index());
 				event.preventDefault();
-				}else
-				{$("#main_menu>ul>li>a").removeClass("on");$("#main_menu>ul>li").removeAttr("style");
-				// var thisH = $(this).height();
-				// var pI = $(this).parent().index();
-				// var sMH = $("#main_menu>ul>li").eq(pI).children("ul").height();
-				// $(this).addClass("on");$("#main_menu>ul>li").eq(pI).css("height",sMH + thisH); 
-				console.log($(this).index());event.preventDefault();
 				};
 			});
 
