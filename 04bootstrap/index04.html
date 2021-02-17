@@ -18,15 +18,60 @@
           --gradient-color:linear-gradient(90deg,#4458dc 0%,#854fee 100%);
           --shadow-color:0px 10px 30px rgba(118,85,225,0.3);
           --box-shadow:0px 10px 20px rgba(57,56,61,0.3);}
-    .container{background-image: var(--gradient-color);color: var(--text-color);transition: 0.3s;}
-    .container:hover{box-shadow: var(--box-shadow);}
+    .headerWrap .nav-item{font-size: 1.2em; border-bottom: 4px solid transparent; transition: 0.3s;}
+    .headerWrap .nav-item:hover{border-bottom: 4px solid var(--primary-color2);}
+    .visualWrap{background: url(assets/slider-bg.svg) no-repeat center; background-size: cover;}
+    .primary-button{box-shadow: var(--box-shadow); background: var(--gradient-color); color: white;}
+    .second-button{box-shadow: var(--box-shadow);}
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      1
+  <!-- headerWrap start -->
+  <div class="headerWrap bg-light">
+    <div class="container px-0">
+      <nav class="navbar navbar-expand-lg navbar-light px-0">
+        <a href="#!" class="navbar-brand">
+          <img src="assets/logo.svg" alt="" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#!" class="nav-link active">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a href="#!" class="nav-link">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a href="#!" class="nav-link">SERVICE</a>
+            </li>
+            <li class="nav-item">
+              <a href="#!" class="nav-link">COMMUNITY</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
   </div>
+  <!-- headerWrap end -->
+  <!-- visualWrap start -->
+  <div class="visualWrap">
+    <div class="container">
+      <div class="row py-4">
+        <div class="col-md-6 col-lg-4 align-self-center">
+          <h2 class="text-center text-md-left">Lorem ipsum dolor sit.</h2>
+          <p class="pb-2 text-center text-md-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <a href="#!" class="btn primary-button px-4 d-block d-md-inline-block mb-3 mb-md-0">MORE</a>
+          <a href="#!" class="btn second-button btn-outline-primary px-4 d-block d-md-inline-block mb-3 mb-md-0">MORE</a>
+        </div>
+        <div class="col-md-6 col-lg-8 text-center">
+          <img src="assets/slider.svg" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- visualWrap end -->
 </body>
 </html>

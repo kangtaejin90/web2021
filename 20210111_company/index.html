@@ -16,6 +16,7 @@
 	<script src="js/wow.js"></script>
 	<script>
 		new WOW().init();
+		var vWidth;
 		$(document).ready(function(){
 			$(".slider").bxSlider({mode:"fade",controls:false,auto:true,pause:5000,speed:1200,touchEnabled:false,
 				onSliderLoad: function(){
@@ -48,7 +49,7 @@
 				$(".sub_menu").removeAttr("style");
 				$(".overlayer").hide();
 
-				var vWidth = $(document).width();
+				vWidth = $(document).width();
 
             	if(vWidth < 1024){
                	mViewer();
@@ -59,7 +60,7 @@
             	};
 			});
 
-			 var vWidth = $(document).width();
+			vWidth = $(document).width();
 
          	if(vWidth < 1024){
 			mViewer();
@@ -125,68 +126,30 @@
 			});
 
 			
-			
 			// 토글메뉴 클릭
 			function mViewer(){
-	         var click = 0;
-	            $("#main_menu>ul>li").click(function(event){
-	               event.preventDefault();
-	               $(this).find(".sub_menu").removeAttr("style");
-	               $("#main_menu>ul>li>a").removeClass("on").removeAttr("style");
-	               $(this).find("a").addClass("on");
-
-	               
-	               if(click == 0){
-	                  if($("#main_menu>ul>li").children().hasClass("on") == true){
-	                        var thisH = $(this).height();
-	                        var pI = $(this).index();
-	                        var sMH = $("#main_menu>ul>li").eq(pI).children("ul").height();
-
-	                        $("#main_menu>ul>li").removeAttr("style"); 
-	                        $("#main_menu>ul>li").eq(pI).css("height",sMH + thisH); 
-	                         
-	                  };
-	               click = 1;
-	            }else{
+	            $("#main_menu>ul>li>a").click(function(event){
+	               $("#main_menu>ul>li").removeAttr("style");
 	               $("#main_menu>ul>li>a").removeClass("on");
-	               $("#main_menu>ul>li").removeAttr("style"); 
-	               click=0;
-	            };})};
-
-			// $("#main_menu>ul>li>a").click(function(event){
-			// 	if($("#main_menu>ul>li").children().hasClass("on") == false){
-			// 		$("#main_menu>ul>li>a").removeClass("on");
-			// 		$("#main_menu>ul>li").removeAttr("style");
-			// 		$(this).addClass("on");
-			// 		var thisH = $(this).height();
-			// 		var pI = $(this).parent().index();
-			// 		var sMH = $("#main_menu>ul>li").eq(pI).children("ul").height();
-			// 		console.log(thisH);
-			// 		console.log(pI);
-			// 		console.log(sMH);
-			// 		$("#main_menu>ul>li").eq(pI).css("height",sMH + thisH); 
-			// 		event.preventDefault();
-			// 	}
-			// 	else
-			// 	{$(this).removeClass("on");
-			// 	var pI = $(this).parent().index();
-			// 	$("#main_menu>ul>li").eq(pI).removeAttr("style"); 
-			// 	console.log($(this).index());
-			// 	event.preventDefault();
-			// 	};
-			// });
+	               $(this).addClass("on");
+	               if($("#main_menu>ul>li>a").hasClass("on") == true){
+                    var thisH = $(this).height();
+                    var pI = $(this).parent().index();
+                    var sMH = $("#main_menu>ul>li").eq(pI).children("ul").height();
+                    $("#main_menu>ul>li").eq(pI).css("height",sMH + thisH); 
+                    event.preventDefault();
+                    console.log(pI);
+	                };
+	           })};
 
 			$(".toggleMenu").click(function(){
 				if($(".toggleMenu").attr("class") == "toggleMenu"){
 					$(".toggleMenu").addClass("click");
 					$("#main_menu>ul").animate({left:0},300);
-					// var wH = $(window).height();
-					// $("#header_top").css("height",wH);
 					$(".overlayer").show();
 				}
 				else{$(".toggleMenu").removeClass("click");
 				$("#main_menu>ul").animate({left:"-100%"},300);
-				// $("#header_top").removeAttr("style");
 				$("#main_menu>ul>li").removeAttr("style");
 				$("#main_menu>ul>li>a").removeClass("on");
 				$(".overlayer").hide();
@@ -201,7 +164,7 @@
 		<div class="header_topWrap">
 			<div id="header_top" class="clearfix m0a">
 				<div class="overlayer"></div>
-				<h1 class="logo blind"><a href="#">우미건설</a></h1>
+				<h1 class="logo blind"><a href="index.html#main_header">우미건설</a></h1>
 				<nav id="main_menu">
 					<ul class="fwb mobile">
 						<li>
