@@ -172,7 +172,7 @@ header#main_header{}
 
 /*ect*/
 .ft_content>p{font-size: 13px; color: #d7d7d7;position: relative;left: 50%;transform: translateX(-50%);}
-.ft_content .addr{width: 400px;padding-top: 100px;padding-bottom: 5px;}
+.ft_content .addr{width: 360px;padding-top: 100px;padding-bottom: 5px;}
 .ft_content .copy{width: 300px;}
 .ft_content>img{position: absolute;left: 50%;height: 30px;transform: translateX(-50%);}
 .ft_content .fLogo{display: none;}

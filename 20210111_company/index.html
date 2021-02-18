@@ -132,13 +132,16 @@
 	               $("#main_menu>ul>li").removeAttr("style");
 	               $("#main_menu>ul>li>a").removeClass("on");
 	               $(this).addClass("on");
-	               if($("#main_menu>ul>li>a").hasClass("on") == true){
-                    var thisH = $(this).height();
-                    var pI = $(this).parent().index();
-                    var sMH = $("#main_menu>ul>li").eq(pI).children("ul").height();
-                    $("#main_menu>ul>li").eq(pI).css("height",sMH + thisH); 
-                    event.preventDefault();
-                    console.log(pI);
+	               var thisH = $(this).height();
+	                var pI = $(this).parent().index();
+	                var sMH = $("#main_menu>ul>li").eq(pI).children("ul").height();
+	                $("#main_menu>ul>li").eq(pI).css("height",sMH + thisH); 
+	                event.preventDefault();
+	                console.log(pI);
+	                console.log($("#main_menu>ul>li").eq(pI).height());
+	                if($("#main_menu>ul>li").eq(pI).height() > 50){
+	                	$("#main_menu>ul>li").removeAttr("style");
+	               		$("#main_menu>ul>li>a").removeClass("on");
 	                };
 	           })};
 
