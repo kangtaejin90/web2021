@@ -9,11 +9,12 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/fullpage.css">
   <link rel="stylesheet" href="css/jquery.bxslider.css">
-  <link rel="stylesheet" href="css/jquery.mb.YTPlayer.min.css">
+  <script src="https://www.youtube.com/player_api"></script>
   <script src="js/jquery-3.1.1.min.js"></script>
   <script src="js/jquery.bxslider.js"></script>
   <script src="js/jquery.fullPage.js"></script>
-  <script src="js/jquery.mb.YTPlayer.min.js"></script>
+  <script src="js/jquery.youtube-background.js"></script>
+  
 
   <script>
     $(function(){
@@ -25,8 +26,15 @@
       
         }
       });
+      $('[data-youtube]').youtube_background({
+        'mobile': true,
+        });
     });
   </script>
+  <style>
+    #navTop{position: fixed;z-index: 9999;}
+    
+  </style>
 </head>
 <body>
   <nav id="navTop">
@@ -39,9 +47,7 @@
   </nav>
   <div id="fullpage">
     <div class="section page1" data-anchor="m1st">
-      <video id="myVideo" muted autoplay loop>
-        <source src="../images/sample.mp4" type="video/mp4">
-      </video>
+      <div id="ytbg" data-youtube="https://www.youtube.com/watch?v=p9K6mNMCLh8&list=PLEAFX11b3tC4bReXkuWbXyoWnvioO_h8E&index=2"></div>
     </div>
     <div class="section page2" data-anchor="m2st">
     
