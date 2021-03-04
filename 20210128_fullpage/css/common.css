@@ -1,0 +1,91 @@
+@charset "utf-8";
+/*common*/
+
+	.container{width: 1200px; margin: 0 auto;}
+	.blind{display: block; text-indent: -9999px;}
+	.tac{text-align: center;}
+	.fwb{font-weight: bold;}
+	.m0a{margin: 0 auto;}
+	.mb0{margin-bottom: 0 !important;}
+	.mr0{margin-right: 0 !important;}
+	.pl0{padding-left: 0 !important;}
+	.pr0{padding-right: 0 !important;}
+
+	/* padding-top */
+	.pt10{padding-top: 10px !important;}
+	.pt20{padding-top: 20px !important;}
+	.pt30{padding-top: 30px !important;}
+	.pt40{padding-top: 40px !important;}
+	.pt50{padding-top: 50px !important;}
+	.pt55{padding-top: 55px !important;}
+	.pt60{padding-top: 60px !important;}
+	.pt80{padding-top: 80px !important;}
+
+	/* padding-bottom */
+	.pb10{padding-bottom: 10px !important;}
+	.pb20{padding-bottom: 20px !important;}
+	.pb30{padding-bottom: 30px !important;}
+	.pb40{padding-bottom: 40px !important;}
+	.pb50{padding-bottom: 50px !important;}
+	.pb60{padding-bottom: 60px !important;}
+	.pb80{padding-bottom: 80px !important;}
+
+	/* padding-top,bottom */
+	.ptb10{padding: 10px 0 !important;}
+	.ptb20{padding: 20px 0 !important;}
+	.ptb30{padding: 30px 0 !important;}
+	.ptb40{padding: 40px 0 !important;}
+	.ptb80{padding: 80px 0 !important;}
+
+
+	/*margin-bottom*/
+	.mb10{margin-bottom: 10px !important;}
+	.mb20{margin-bottom: 20px !important;}
+	.mb30{margin-bottom: 30px !important;}
+	.mb80{margin-bottom: 80px !important;}
+
+	/*margin-top*/
+	.mt10{margin-top: 10px !important;}
+	.mt20{margin-top: 20px !important;}
+	.mt30{margin-top: 30px !important;}
+
+	/*transition*/
+	.ts03{transition: 0.3s !important;}
+	.ts05{transition: 0.5s !important;}
+	.ts10{transition: 1s !important;}
+
+	/*transform*/
+	.poCen{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+	.poXCen{position: absolute; left: 50%; transform: translateX(-50%);}
+
+	/*hover*/
+	.hv_ul:hover{text-decoration: underline !important; text-underline-position: under; }
+	.hv_ul2:hover .tul{text-decoration: underline !important; text-underline-position: under; }
+	.hv_ul3:hover .iconWrap p{text-decoration: underline !important; text-underline-position: under; }
+
+
+	/*background-color*/
+	.bgc_ccc{background-color: #ccc;}
+
+
+	/*color*/
+	.col_fff{color: #fff !important;}
+	.col_333{color: #333 !important;}
+
+
+	/*font*/
+	.txtShodow{text-shadow: 1px 1px 2px rgba(0,0,0,0.3)}
+	.txtShodow2{text-shadow: 1px 1px 2px rgba(0,0,0,0.2)}
+
+	/*company*/
+	.w50p{width: 50% !important;}
+	.hv_sc:hover img{transform:scale(1.2); transition: 0.3s;}
+	.hv_sc2:hover>img{transform:scale(1.2); transition: 0.3s;}
+	.hv_sc3:hover img.hv_sc3{transform: translate(-50%, -50%) scale(1.2); transition: 0.3s;}
+	.cp_p01{padding: 35px 40px !important;}
+	.hv_bgc1{background-color: rgba(0,82,155,0.1); transition: 0.3s}
+	.hv_bgc2{background-color: rgba(0,0,0,0.1); transition: 0.3s}
+	.hv_bgc3{background-color: rgba(0,0,0,0); transition: 0.3s}
+	.hv_bgc1:hover{background-color: rgba(0,82,155,0.5);}
+	.hv_bgc2:hover{background-color: rgba(0,0,0,0.6);}
+	.hv_bgc3:hover{background-color: rgba(0,0,0,0.4);}
