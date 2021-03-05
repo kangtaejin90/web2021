@@ -1,7 +1,7 @@
 @charset "utf-8";
 /*common*/
 
-	.container{width: 1200px; margin: 0 auto;}
+	.container{width: 100%; max-width: 1200px; margin: 0 auto;}
 	.blind{display: block; text-indent: -9999px;}
 	.tac{text-align: center;}
 	.fwb{font-weight: bold;}
