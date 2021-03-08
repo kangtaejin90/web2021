@@ -1,7 +1,7 @@
 @charset "utf-8";
 /*common*/
 
-	.container{width: 100%; max-width: 1200px; margin: 0 auto;}
+	.container{width: 100%; max-width: 1200px; margin: 0 auto; position: relative;}
 	.blind{display: block; text-indent: -9999px;}
 	.tac{text-align: center;}
 	.fwb{font-weight: bold;}
@@ -10,6 +10,7 @@
 	.mr0{margin-right: 0 !important;}
 	.pl0{padding-left: 0 !important;}
 	.pr0{padding-right: 0 !important;}
+	.cuP{cursor: pointer !important;}
 
 	/* padding-top */
 	.pt10{padding-top: 10px !important;}
@@ -57,6 +58,7 @@
 	/*transform*/
 	.poCen{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 	.poXCen{position: absolute; left: 50%; transform: translateX(-50%);}
+	.poYCen{position: absolute; top: 50%; transform: translateY(-50%);}
 
 	/*hover*/
 	.hv_ul:hover{text-decoration: underline !important; text-underline-position: under; }
