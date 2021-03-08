@@ -31,6 +31,19 @@
         }
       });
 
+      $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:0,
+      nav:true,
+      navText:[$(".prev"),$(".next")],
+      dots:false,
+      URLhashListener:true,
+      autoplay:true,
+      autoplayTimeout:5000,
+      autoplayHoverPause:false,
+      responsive:{0:{items:1}}
+    });
+
     });
   </script>
   <style>
@@ -60,29 +73,20 @@
     .titleWrap {top: 117px; color: #C59771;}
     .titleWrap .enTitle{font-size: 30px;}
     .titleWrap .koTitle{font-size: 60px;}
-    .page2 .menuWrap .menu:first-child{margin-top: calc((100vh - 412px) / 2 - (197px / 2));}
+    .content{position: absolute;bottom: 0; width: 100%; height: calc(100vh - 224px);}
     .page2 .menuWrap .menu+.menu{margin-top: 20px;}
     .page2 .menu{width: 136px; position: relative;}
     .menu svg{display: block;}
-    .menu .menuName{top: 0;line-height: 66.4px; font-size: 21px; font-weight: 600; color: #C18243; }
-    .page2 .sliderWarp{top: calc(100vh / 2 + (197px / 2)); right: 100px; width: calc(100% - 336px);}
-    .sliderCover{position: absolute;top: 0;width: 100%;z-index: 2;}
+    .menu .menuName{position: absolute; top: 0; left: 0; width: 136px; line-height: 66.4px; font-size: 21px; font-weight: 600; text-align: center; color: #C18243; }
+    .page2 .sliderWarp{right: 100px; width: calc(100% - 336px);}
+    .page2 .owl-theme .owl-nav{margin-top: 0; position: absolute; width: 100%; height: 90px; top: 50%; transform: translateY(-50%);}
+    .page2 .owl-nav .owl-prev{margin: 0; width: 60px; height: 90px; position: absolute; left: -80px;}
+    .page2 .owl-nav .owl-next{margin: 0; width: 60px; height: 90px; position: absolute; right: -80px;}
+    .page2 .prev{position: absolute; left: -15px; top: 15px; width: 90px; height: 60px; transform: rotate(-90deg);}
+    .page2 .next{position: absolute; left: -15px; top: 15px; width: 90px; height: 60px; transform: rotate(90deg);}
+    .sliderCover{position: absolute;top: 0;width: calc(100% + 1px);z-index: 2;}
+    .owl-theme .owl-nav [class*=owl-]:hover {background: transparent;}
   </style>
-  <script>
-    $(function(){
-      $('.owl-carousel').owlCarousel({
-      loop:true,
-      margin:0,
-      nav:false,
-      dots:false,
-      autoplay:false,
-      autoplayTimeout:5000,
-      autoplayHoverPause:false,
-      responsive:{0:{items:1}}
-    })
-    });
-
-  </script>
 </head>
 <body>
   <nav id="navTop">
@@ -125,123 +129,128 @@
         <div class="border">
           <img src="" alt="">
         </div>
-        <div class="menuWrap poYCen">
-          <div class="menu 1st cuP">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              	 viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
-                <style type="text/css">
-                	.st0{fill:#775533;}
-                </style>
-                <g>
-                	<g>
-                		<path class="st0" d="M130.8,61.9H5.3c-0.4,0-0.8-0.3-0.8-0.8V5.3c0-0.4,0.3-0.8,0.8-0.8h125.5c0.4,0,0.8,0.3,0.8,0.8v55.8
-                			C131.6,61.6,131.3,61.9,130.8,61.9z M6.1,60.4h124V6.1H6.1V60.4z"/>
-                	</g>
-                	<g>
-                		<path class="st0" d="M121.4,66.5H14.8c-0.4,0-0.8-0.3-0.8-0.8c0-7.3-6-13.3-13.3-13.3c-0.4,0-0.8-0.3-0.8-0.8V14.8
-                			C0,14.4,0.3,14,0.8,14C8.1,14,14,8.1,14,0.8C14,0.3,14.4,0,14.8,0h106.6c0.4,0,0.8,0.3,0.8,0.8c0,7.3,6,13.3,13.3,13.3
-                			c0.4,0,0.8,0.3,0.8,0.8v36.9c0,0.4-0.3,0.8-0.8,0.8c-7.3,0-13.3,6-13.3,13.3C122.1,66.1,121.8,66.5,121.4,66.5z M15.5,65h105.1
-                			c0.4-7.6,6.5-13.6,14-14V15.5c-7.6-0.4-13.6-6.5-14-14H15.5c-0.4,7.6-6.5,13.6-14,14v35.4C9.1,51.3,15.1,57.4,15.5,65z"/>
-                	</g>
-                </g>
-              </svg>
-            <p class="menuName poXCen">전투</p>
+        <div class="content">
+          <div class="menuWrap poYCen">
+            <div class="menu 1st cuP url">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
+                  <style type="text/css">
+                    .st0{fill:#775533;}
+                  </style>
+                  <g>
+                    <g>
+                      <path class="st0" d="M130.8,61.9H5.3c-0.4,0-0.8-0.3-0.8-0.8V5.3c0-0.4,0.3-0.8,0.8-0.8h125.5c0.4,0,0.8,0.3,0.8,0.8v55.8
+                        C131.6,61.6,131.3,61.9,130.8,61.9z M6.1,60.4h124V6.1H6.1V60.4z"/>
+                    </g>
+                    <g>
+                      <path class="st0" d="M121.4,66.5H14.8c-0.4,0-0.8-0.3-0.8-0.8c0-7.3-6-13.3-13.3-13.3c-0.4,0-0.8-0.3-0.8-0.8V14.8
+                        C0,14.4,0.3,14,0.8,14C8.1,14,14,8.1,14,0.8C14,0.3,14.4,0,14.8,0h106.6c0.4,0,0.8,0.3,0.8,0.8c0,7.3,6,13.3,13.3,13.3
+                        c0.4,0,0.8,0.3,0.8,0.8v36.9c0,0.4-0.3,0.8-0.8,0.8c-7.3,0-13.3,6-13.3,13.3C122.1,66.1,121.8,66.5,121.4,66.5z M15.5,65h105.1
+                        c0.4-7.6,6.5-13.6,14-14V15.5c-7.6-0.4-13.6-6.5-14-14H15.5c-0.4,7.6-6.5,13.6-14,14v35.4C9.1,51.3,15.1,57.4,15.5,65z"/>
+                    </g>
+                  </g>
+                </svg>
+              <a class="menuName" href="#battle">전투</a>
+            </div>
+            <div class="menu 2st cuP">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
+                  <style type="text/css">
+                    .st0{fill:#775533;}
+                  </style>
+                  <g>
+                    <g>
+                      <path class="st0" d="M130.8,61.9H5.3c-0.4,0-0.8-0.3-0.8-0.8V5.3c0-0.4,0.3-0.8,0.8-0.8h125.5c0.4,0,0.8,0.3,0.8,0.8v55.8
+                        C131.6,61.6,131.3,61.9,130.8,61.9z M6.1,60.4h124V6.1H6.1V60.4z"/>
+                    </g>
+                    <g>
+                      <path class="st0" d="M121.4,66.5H14.8c-0.4,0-0.8-0.3-0.8-0.8c0-7.3-6-13.3-13.3-13.3c-0.4,0-0.8-0.3-0.8-0.8V14.8
+                        C0,14.4,0.3,14,0.8,14C8.1,14,14,8.1,14,0.8C14,0.3,14.4,0,14.8,0h106.6c0.4,0,0.8,0.3,0.8,0.8c0,7.3,6,13.3,13.3,13.3
+                        c0.4,0,0.8,0.3,0.8,0.8v36.9c0,0.4-0.3,0.8-0.8,0.8c-7.3,0-13.3,6-13.3,13.3C122.1,66.1,121.8,66.5,121.4,66.5z M15.5,65h105.1
+                        c0.4-7.6,6.5-13.6,14-14V15.5c-7.6-0.4-13.6-6.5-14-14H15.5c-0.4,7.6-6.5,13.6-14,14v35.4C9.1,51.3,15.1,57.4,15.5,65z"/>
+                    </g>
+                  </g>
+                </svg>
+              <a class="menuName" href="#adventure">모험</a>
+            </div>
+            <div class="menu 3st cuP">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
+                  <style type="text/css">
+                    .st0{fill:#775533;}
+                  </style>
+                  <g>
+                    <g>
+                      <path class="st0" d="M130.8,61.9H5.3c-0.4,0-0.8-0.3-0.8-0.8V5.3c0-0.4,0.3-0.8,0.8-0.8h125.5c0.4,0,0.8,0.3,0.8,0.8v55.8
+                        C131.6,61.6,131.3,61.9,130.8,61.9z M6.1,60.4h124V6.1H6.1V60.4z"/>
+                    </g>
+                    <g>
+                      <path class="st0" d="M121.4,66.5H14.8c-0.4,0-0.8-0.3-0.8-0.8c0-7.3-6-13.3-13.3-13.3c-0.4,0-0.8-0.3-0.8-0.8V14.8
+                        C0,14.4,0.3,14,0.8,14C8.1,14,14,8.1,14,0.8C14,0.3,14.4,0,14.8,0h106.6c0.4,0,0.8,0.3,0.8,0.8c0,7.3,6,13.3,13.3,13.3
+                        c0.4,0,0.8,0.3,0.8,0.8v36.9c0,0.4-0.3,0.8-0.8,0.8c-7.3,0-13.3,6-13.3,13.3C122.1,66.1,121.8,66.5,121.4,66.5z M15.5,65h105.1
+                        c0.4-7.6,6.5-13.6,14-14V15.5c-7.6-0.4-13.6-6.5-14-14H15.5c-0.4,7.6-6.5,13.6-14,14v35.4C9.1,51.3,15.1,57.4,15.5,65z"/>
+                    </g>
+                  </g>
+                </svg>
+              <a class="menuName" href="#kingdom">왕국</a>
+            </div>
+            <div class="menu 4st cuP">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
+                  <style type="text/css">
+                    .st0{fill:#775533;}
+                  </style>
+                  <g>
+                    <g>
+                      <path class="st0" d="M130.8,61.9H5.3c-0.4,0-0.8-0.3-0.8-0.8V5.3c0-0.4,0.3-0.8,0.8-0.8h125.5c0.4,0,0.8,0.3,0.8,0.8v55.8
+                        C131.6,61.6,131.3,61.9,130.8,61.9z M6.1,60.4h124V6.1H6.1V60.4z"/>
+                    </g>
+                    <g>
+                      <path class="st0" d="M121.4,66.5H14.8c-0.4,0-0.8-0.3-0.8-0.8c0-7.3-6-13.3-13.3-13.3c-0.4,0-0.8-0.3-0.8-0.8V14.8
+                        C0,14.4,0.3,14,0.8,14C8.1,14,14,8.1,14,0.8C14,0.3,14.4,0,14.8,0h106.6c0.4,0,0.8,0.3,0.8,0.8c0,7.3,6,13.3,13.3,13.3
+                        c0.4,0,0.8,0.3,0.8,0.8v36.9c0,0.4-0.3,0.8-0.8,0.8c-7.3,0-13.3,6-13.3,13.3C122.1,66.1,121.8,66.5,121.4,66.5z M15.5,65h105.1
+                        c0.4-7.6,6.5-13.6,14-14V15.5c-7.6-0.4-13.6-6.5-14-14H15.5c-0.4,7.6-6.5,13.6-14,14v35.4C9.1,51.3,15.1,57.4,15.5,65z"/>
+                    </g>
+                  </g>
+                </svg>
+              <a class="menuName" href="#cookie">쿠키</a>
+            </div>
+            <div class="menu 5st cuP">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
+                  <style type="text/css">
+                    .st0{fill:#775533;}
+                  </style>
+                  <g>
+                    <g>
+                      <path class="st0" d="M130.8,61.9H5.3c-0.4,0-0.8-0.3-0.8-0.8V5.3c0-0.4,0.3-0.8,0.8-0.8h125.5c0.4,0,0.8,0.3,0.8,0.8v55.8
+                        C131.6,61.6,131.3,61.9,130.8,61.9z M6.1,60.4h124V6.1H6.1V60.4z"/>
+                    </g>
+                    <g>
+                      <path class="st0" d="M121.4,66.5H14.8c-0.4,0-0.8-0.3-0.8-0.8c0-7.3-6-13.3-13.3-13.3c-0.4,0-0.8-0.3-0.8-0.8V14.8
+                        C0,14.4,0.3,14,0.8,14C8.1,14,14,8.1,14,0.8C14,0.3,14.4,0,14.8,0h106.6c0.4,0,0.8,0.3,0.8,0.8c0,7.3,6,13.3,13.3,13.3
+                        c0.4,0,0.8,0.3,0.8,0.8v36.9c0,0.4-0.3,0.8-0.8,0.8c-7.3,0-13.3,6-13.3,13.3C122.1,66.1,121.8,66.5,121.4,66.5z M15.5,65h105.1
+                        c0.4-7.6,6.5-13.6,14-14V15.5c-7.6-0.4-13.6-6.5-14-14H15.5c-0.4,7.6-6.5,13.6-14,14v35.4C9.1,51.3,15.1,57.4,15.5,65z"/>
+                    </g>
+                  </g>
+                </svg>
+              <a class="menuName" href="#pvp">PVP</a>
+            </div>
           </div>
-          <div class="menu 2st cuP">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              	 viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
-                <style type="text/css">
-                	.st0{fill:#775533;}
-                </style>
-                <g>
-                	<g>
-                		<path class="st0" d="M130.8,61.9H5.3c-0.4,0-0.8-0.3-0.8-0.8V5.3c0-0.4,0.3-0.8,0.8-0.8h125.5c0.4,0,0.8,0.3,0.8,0.8v55.8
-                			C131.6,61.6,131.3,61.9,130.8,61.9z M6.1,60.4h124V6.1H6.1V60.4z"/>
-                	</g>
-                	<g>
-                		<path class="st0" d="M121.4,66.5H14.8c-0.4,0-0.8-0.3-0.8-0.8c0-7.3-6-13.3-13.3-13.3c-0.4,0-0.8-0.3-0.8-0.8V14.8
-                			C0,14.4,0.3,14,0.8,14C8.1,14,14,8.1,14,0.8C14,0.3,14.4,0,14.8,0h106.6c0.4,0,0.8,0.3,0.8,0.8c0,7.3,6,13.3,13.3,13.3
-                			c0.4,0,0.8,0.3,0.8,0.8v36.9c0,0.4-0.3,0.8-0.8,0.8c-7.3,0-13.3,6-13.3,13.3C122.1,66.1,121.8,66.5,121.4,66.5z M15.5,65h105.1
-                			c0.4-7.6,6.5-13.6,14-14V15.5c-7.6-0.4-13.6-6.5-14-14H15.5c-0.4,7.6-6.5,13.6-14,14v35.4C9.1,51.3,15.1,57.4,15.5,65z"/>
-                	</g>
-                </g>
-              </svg>
-            <p class="menuName poXCen">모험</p>
+          <div class="sliderWarp poYCen">
+            <div class="owl-carousel owl-theme owl-loaded">
+              <img class="item" src="images/page2_battle.png" alt="" data-hash="battle">
+              <img class="item" src="images/page2_adventure.png" alt="" data-hash="adventure">
+              <img class="item" src="images/page2_kingdom.png" alt="" data-hash="kingdom">
+              <img class="item" src="images/page2_cookie.png" alt="" data-hash="cookie">
+              <img class="item" src="images/page2_pvp.png" alt="" data-hash="pvp">
+            </div>
+            <img class="sliderCover" src="images/sliderCover.png" alt="">
           </div>
-          <div class="menu 3st cuP">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              	 viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
-                <style type="text/css">
-                	.st0{fill:#775533;}
-                </style>
-                <g>
-                	<g>
-                		<path class="st0" d="M130.8,61.9H5.3c-0.4,0-0.8-0.3-0.8-0.8V5.3c0-0.4,0.3-0.8,0.8-0.8h125.5c0.4,0,0.8,0.3,0.8,0.8v55.8
-                			C131.6,61.6,131.3,61.9,130.8,61.9z M6.1,60.4h124V6.1H6.1V60.4z"/>
-                	</g>
-                	<g>
-                		<path class="st0" d="M121.4,66.5H14.8c-0.4,0-0.8-0.3-0.8-0.8c0-7.3-6-13.3-13.3-13.3c-0.4,0-0.8-0.3-0.8-0.8V14.8
-                			C0,14.4,0.3,14,0.8,14C8.1,14,14,8.1,14,0.8C14,0.3,14.4,0,14.8,0h106.6c0.4,0,0.8,0.3,0.8,0.8c0,7.3,6,13.3,13.3,13.3
-                			c0.4,0,0.8,0.3,0.8,0.8v36.9c0,0.4-0.3,0.8-0.8,0.8c-7.3,0-13.3,6-13.3,13.3C122.1,66.1,121.8,66.5,121.4,66.5z M15.5,65h105.1
-                			c0.4-7.6,6.5-13.6,14-14V15.5c-7.6-0.4-13.6-6.5-14-14H15.5c-0.4,7.6-6.5,13.6-14,14v35.4C9.1,51.3,15.1,57.4,15.5,65z"/>
-                	</g>
-                </g>
-              </svg>
-            <p class="menuName poXCen">왕국</p>
+          <div class="owl-btn">
+            <img class="prev" src="images/btn.png" alt="">
+            <img class="next" src="images/btn.png" alt="">
           </div>
-          <div class="menu 4st cuP">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              	 viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
-                <style type="text/css">
-                	.st0{fill:#775533;}
-                </style>
-                <g>
-                	<g>
-                		<path class="st0" d="M130.8,61.9H5.3c-0.4,0-0.8-0.3-0.8-0.8V5.3c0-0.4,0.3-0.8,0.8-0.8h125.5c0.4,0,0.8,0.3,0.8,0.8v55.8
-                			C131.6,61.6,131.3,61.9,130.8,61.9z M6.1,60.4h124V6.1H6.1V60.4z"/>
-                	</g>
-                	<g>
-                		<path class="st0" d="M121.4,66.5H14.8c-0.4,0-0.8-0.3-0.8-0.8c0-7.3-6-13.3-13.3-13.3c-0.4,0-0.8-0.3-0.8-0.8V14.8
-                			C0,14.4,0.3,14,0.8,14C8.1,14,14,8.1,14,0.8C14,0.3,14.4,0,14.8,0h106.6c0.4,0,0.8,0.3,0.8,0.8c0,7.3,6,13.3,13.3,13.3
-                			c0.4,0,0.8,0.3,0.8,0.8v36.9c0,0.4-0.3,0.8-0.8,0.8c-7.3,0-13.3,6-13.3,13.3C122.1,66.1,121.8,66.5,121.4,66.5z M15.5,65h105.1
-                			c0.4-7.6,6.5-13.6,14-14V15.5c-7.6-0.4-13.6-6.5-14-14H15.5c-0.4,7.6-6.5,13.6-14,14v35.4C9.1,51.3,15.1,57.4,15.5,65z"/>
-                	</g>
-                </g>
-              </svg>
-            <p class="menuName poXCen">쿠키</p>
-          </div>
-          <div class="menu 5st cuP">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              	 viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
-                <style type="text/css">
-                	.st0{fill:#775533;}
-                </style>
-                <g>
-                	<g>
-                		<path class="st0" d="M130.8,61.9H5.3c-0.4,0-0.8-0.3-0.8-0.8V5.3c0-0.4,0.3-0.8,0.8-0.8h125.5c0.4,0,0.8,0.3,0.8,0.8v55.8
-                			C131.6,61.6,131.3,61.9,130.8,61.9z M6.1,60.4h124V6.1H6.1V60.4z"/>
-                	</g>
-                	<g>
-                		<path class="st0" d="M121.4,66.5H14.8c-0.4,0-0.8-0.3-0.8-0.8c0-7.3-6-13.3-13.3-13.3c-0.4,0-0.8-0.3-0.8-0.8V14.8
-                			C0,14.4,0.3,14,0.8,14C8.1,14,14,8.1,14,0.8C14,0.3,14.4,0,14.8,0h106.6c0.4,0,0.8,0.3,0.8,0.8c0,7.3,6,13.3,13.3,13.3
-                			c0.4,0,0.8,0.3,0.8,0.8v36.9c0,0.4-0.3,0.8-0.8,0.8c-7.3,0-13.3,6-13.3,13.3C122.1,66.1,121.8,66.5,121.4,66.5z M15.5,65h105.1
-                			c0.4-7.6,6.5-13.6,14-14V15.5c-7.6-0.4-13.6-6.5-14-14H15.5c-0.4,7.6-6.5,13.6-14,14v35.4C9.1,51.3,15.1,57.4,15.5,65z"/>
-                	</g>
-                </g>
-              </svg>
-            <p class="menuName poXCen">PVP</p>
-          </div>
-        </div>
-        <div class="sliderWarp poYCen">
-          <div class="owl-carousel owl-theme owl-loaded">
-            <img class="item" src="images/page2_battle.png" alt="">
-            <img class="item" src="images/page2_adventure.png" alt="">
-            <img class="item" src="images/page2_kingdom.png" alt="">
-            <img class="item" src="images/page2_cookie.png" alt="">
-            <img class="item" src="images/page2_pvp.png" alt="">
-
-          </div>
-          <img class="sliderCover" src="images/sliderCover.png" alt="">
         </div>
       </div>
     </div>
