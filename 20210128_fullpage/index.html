@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="css/owl/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
   <script src="js/jquery-3.1.1.min.js"></script>
-  <script src="js/jquery-colorbox-min.js"></script>
   <script src="js/jquery.fullPage.js"></script>
   <script src="js/owl.carousel.min.js"></script>
 
@@ -31,20 +30,26 @@
         }
       });
 
-      $('.owl-carousel').owlCarousel({
+      $('.page2 .owl-carousel').owlCarousel({
       loop:true,
       margin:0,
-      nav:true,
-      navText:[$(".prev"),$(".next")],
-      dots:false,
+      nav:false,
+      dots:true,
       URLhashListener:true,
-      autoplay:true,
-      autoplayTimeout:5000,
-      autoplayHoverPause:false,
       responsive:{0:{items:1}}
-    });
-
-    });
+      });
+      $('.next').click(function() {
+        $('.owl-carousel').trigger('next.owl.carousel');
+      });
+      $('.prev').click(function() {
+        $('.page2 .owl-carousel').trigger('prev.owl.carousel');
+      });
+      $('.page2 .owl-carousel').on('changed.owl.carousel', function(event) {
+        var item = $(".page2 button.active").index();
+        console.log(item);
+        $(".menuWrap div").removeClass("active").eq(item).addClass("active");
+      });
+        });
   </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
@@ -69,23 +74,30 @@
     .scrollWrap .scrollLine{width: 1px; bottom: -10px;}
     /* page2 */
     .page2{background: #302A24;}
-    .page2 .container{height: 100%;}
-    .titleWrap {top: 117px; color: #C59771;}
+    .page2 .titleWrap{color: #C59771;}
+    .page2 .menuWrap{width: 146px; left: -5px;}
+    .page2 .menuWrap .menu+.menu{margin-top: 20px;}
+    .page2 .menu{width: 136px; position: relative; transition: 0.3s;}
+    .page2 .menu.active{width: 146px; background: url(images/menu_btn_hover.png) no-repeat center; background-size: cover;}
+    .page2 .menu.active a{width: 146px; line-height: 71.3px; font-size: 24px; color:white;}
+    .menu svg{display: block;}
+    .menu .menuName{position: absolute; top: 0; left: 0; width: 136px; line-height: 66.4px; font-size: 21px; font-weight: 600; text-align: center; color: #C18243; transition: 0.3s;}
+    .page2 .sliderWarp{right: 100px; width: calc(100% - 336px);}
+    .page2 .owl-dots{display: none;}
+    .page2 .owl-btn{height: 90px;width: 100%;}
+    .page2 .prev{position: absolute; top: 15px; left: 141px; width: 90px; height: 60px; transform: rotate(-90deg);}
+    .page2 .next{position: absolute; top: 15px; right: 5px; width: 90px; height: 60px; transform: rotate(90deg);}
+    .sliderCover{position: absolute;top: 0;width: calc(100% + 1px);z-index: 2;}
+    .owl-theme .owl-nav [class*=owl-]:hover {background: transparent;}
+    /* page3 */
+    .page3{background: #594D46;}
+    .page3 .titleWrap{color: #dbbf91;}
+    /* same/ */
+    .page2 .container,.page3 .container{height: 100%;}
+    .titleWrap {top: 117px;}
     .titleWrap .enTitle{font-size: 30px;}
     .titleWrap .koTitle{font-size: 60px;}
     .content{position: absolute;bottom: 0; width: 100%; height: calc(100vh - 224px);}
-    .page2 .menuWrap .menu+.menu{margin-top: 20px;}
-    .page2 .menu{width: 136px; position: relative;}
-    .menu svg{display: block;}
-    .menu .menuName{position: absolute; top: 0; left: 0; width: 136px; line-height: 66.4px; font-size: 21px; font-weight: 600; text-align: center; color: #C18243; }
-    .page2 .sliderWarp{right: 100px; width: calc(100% - 336px);}
-    .page2 .owl-theme .owl-nav{margin-top: 0; position: absolute; width: 100%; height: 90px; top: 50%; transform: translateY(-50%);}
-    .page2 .owl-nav .owl-prev{margin: 0; width: 60px; height: 90px; position: absolute; left: -80px;}
-    .page2 .owl-nav .owl-next{margin: 0; width: 60px; height: 90px; position: absolute; right: -80px;}
-    .page2 .prev{position: absolute; left: -15px; top: 15px; width: 90px; height: 60px; transform: rotate(-90deg);}
-    .page2 .next{position: absolute; left: -15px; top: 15px; width: 90px; height: 60px; transform: rotate(90deg);}
-    .sliderCover{position: absolute;top: 0;width: calc(100% + 1px);z-index: 2;}
-    .owl-theme .owl-nav [class*=owl-]:hover {background: transparent;}
   </style>
 </head>
 <body>
@@ -130,8 +142,12 @@
           <img src="" alt="">
         </div>
         <div class="content">
+          <div class="owl-btn poYCen">
+            <img class="prev cuP" src="images/btn.png" alt="">
+            <img class="next cuP" src="images/btn.png" alt="">
+          </div>
           <div class="menuWrap poYCen">
-            <div class="menu 1st cuP url">
+            <div class="menu 1st poXCen cuP active">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
                   <style type="text/css">
@@ -152,7 +168,7 @@
                 </svg>
               <a class="menuName" href="#battle">전투</a>
             </div>
-            <div class="menu 2st cuP">
+            <div class="menu 2st poXCen cuP">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
                   <style type="text/css">
@@ -173,7 +189,7 @@
                 </svg>
               <a class="menuName" href="#adventure">모험</a>
             </div>
-            <div class="menu 3st cuP">
+            <div class="menu 3st poXCen cuP">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
                   <style type="text/css">
@@ -194,7 +210,7 @@
                 </svg>
               <a class="menuName" href="#kingdom">왕국</a>
             </div>
-            <div class="menu 4st cuP">
+            <div class="menu 4st poXCen cuP">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
                   <style type="text/css">
@@ -215,7 +231,7 @@
                 </svg>
               <a class="menuName" href="#cookie">쿠키</a>
             </div>
-            <div class="menu 5st cuP">
+            <div class="menu 5st poXCen cuP">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
                   <style type="text/css">
@@ -247,15 +263,20 @@
             </div>
             <img class="sliderCover" src="images/sliderCover.png" alt="">
           </div>
-          <div class="owl-btn">
-            <img class="prev" src="images/btn.png" alt="">
-            <img class="next" src="images/btn.png" alt="">
-          </div>
+
         </div>
       </div>
     </div>
     <div class="section page3" data-anchor="m3st">
+      <div class="container">
+        <div class="titleWrap poXCen tac">
+          <p class="enTitle">COOKIERUN KINGDOM</p>
+          <h2 class="koTitle">CHARACTERS</h2>
+        </div>
+        <div class="content">
 
+        </div>
+      </div>
     </div>
     <div class="section page4" data-anchor="m4st">
 
