@@ -92,3 +92,50 @@
 	.hv_bgc1:hover{background-color: rgba(0,82,155,0.5);}
 	.hv_bgc2:hover{background-color: rgba(0,0,0,0.6);}
 	.hv_bgc3:hover{background-color: rgba(0,0,0,0.4);}
+
+	/* fullpage/ */
+	.aniP5{
+		animation-name: fadeInUp1, ch;
+		animation-duration: 2s, 6s;
+		animation-iteration-count: 1, infinite;
+		animation-timing-function: ease;
+		animation-fill-mode: both;}
+	.aniCl{
+		animation-name: fadeIn, ch, cloud;
+		animation-duration: 5s, 12s, 16s;
+		animation-iteration-count: 1, infinite, infinite;
+		animation-timing-function: ease, ease, ease-in-out;
+		animation-fill-mode: both;}
+	.aniDiCl{
+		animation-direction: normal, normal, alternate-reverse;
+		animation-timing-function: ease-in-out, ease-in-out, ease;}
+
+
+	/* ani/ */
+	.aniD01{animation-delay: 0.1s;}
+	.aniD02{animation-delay: 0.2s;}
+	.aniD03{animation-delay: 0.3s;}
+	.aniD04{animation-delay: 0.4s;}
+	.aniD05{animation-delay: 0.5s;}
+	.aniD06{animation-delay: 0.6s;}
+	.aniD08{animation-delay: 0.8s;}
+	.aniD08{animation-delay: 0.8s;}
+	.aniD10{animation-delay: 1s;}
+	.aniD15{animation-delay: 1.5s;}
+
+	.aniDu1{animation-duration: 1s !important;}
+	.aniDu2{animation-duration: 2s !important;}
+	.aniDu3{animation-duration: 3s !important;}
+	.aniDu4{animation-duration: 4s !important;}
+	.aniDu5{animation-duration: 5s !important;}
+
+	/* keyframes/ */
+	@keyframes ch{
+		from, to{margin-bottom: 0;}
+		50%{margin-bottom: 20px;}
+	}
+	@keyframes cloud{
+		from, 50%, to{margin-left: 0;}
+		25%{margin-left: -20px;}
+		75%{margin-left: 20px;}
+	}
