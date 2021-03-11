@@ -25,7 +25,20 @@
         anchors:["m1st","m2st","m3st","m4st","m5st"], //이동지정
         navigation:true,
         afterLoad:function(andchorslink,index){
-
+          $(".enTitle").removeClass("animated fadeInDown");
+          $(".page" + index + " .enTitle").addClass("animated fadeInDown");
+          $(".koTitle").removeClass("animated fadeInUp");
+          $(".page" + index + " .koTitle").addClass("animated fadeInUp");
+          $(".border img").removeClass("animated fadeIn");
+          $(".page" + index + " .border img").addClass("animated fadeIn aniD02");
+          $(".page2 .menu").removeClass("animated slideInLeft1");
+          $(".page" + index + " .menu").addClass("animated slideInLeft1");
+          $(".page3 li").removeClass("animated fadeInUp");
+          $(".page" + index + " li").addClass("animated fadeInUp aniD02");
+          $(".page4 .backCloud, .page4 .frontCloud").removeClass("aniCl");
+          $(".page" + index + " .backCloud, .page" + index + " .frontCloud").addClass("aniCl");
+          $(".page4 .ch").removeClass("aniP5");
+          $(".page" + index + " .chWrap .ch").addClass("aniP5");
         }
       });
       // owl1
@@ -128,7 +141,7 @@
                 </svg>
               <a class="menuName" href="#battle">전투</a>
             </div>
-            <div class="menu 2st poXCen cuP">
+            <div class="menu 2st poXCen cuP aniD02">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
                   <style type="text/css">
@@ -149,7 +162,7 @@
                 </svg>
               <a class="menuName" href="#adventure">모험</a>
             </div>
-            <div class="menu 3st poXCen cuP">
+            <div class="menu 3st poXCen cuP aniD04">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
                   <style type="text/css">
@@ -170,7 +183,7 @@
                 </svg>
               <a class="menuName" href="#kingdom">왕국</a>
             </div>
-            <div class="menu 4st poXCen cuP">
+            <div class="menu 4st poXCen cuP aniD06">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
                   <style type="text/css">
@@ -191,7 +204,7 @@
                 </svg>
               <a class="menuName" href="#cookie">쿠키</a>
             </div>
-            <div class="menu 5st poXCen cuP">
+            <div class="menu 5st poXCen cuP aniD08">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
                   <style type="text/css">
@@ -243,13 +256,13 @@
               <li class="cuP active">
                 <p>영웅쿠키</p>
               </li>
-              <li class="cuP">
+              <li class="cuP aniD02">
                 <p>용감한 쿠키와 친구들</p>
               </li>
-              <li class="cuP">
+              <li class="cuP aniD04">
                 <p>전설쿠키</p>
               </li>
-              <li class="cuP">
+              <li class="cuP aniD06">
                 <p>악당쿠키</p>
               </li>
             </ul>
@@ -442,7 +455,25 @@
       </div>
     </div>
     <div class="section page4" data-anchor="m4st">
-
+      <img class="backCloud poXCen" src="images/page4_backCloud.webp" alt="">
+      <div class="container">
+        <div class="titleWrap poXCen tac">
+          <p class="enTitle">COOKIERUN KINGDOM</p>
+          <h2 class="koTitle">세계관 스토리</h2>
+        </div>
+        <div class="border">
+          <img class="leftTop" src="images/frame2.svg" alt="">
+          <img class="rightTop" src="images/frame2.svg" alt="">
+        </div>
+        <div class="chWrap">
+          <img class="ch white aniD08" src="images/page4_white.png" alt="">
+          <img class="ch purple aniD04" src="images/page4_purple.png" alt="">
+          <img class="ch pink aniD04" src="images/page4_pink.png" alt="">
+          <img class="ch yellow" src="images/page4_yellow.png" alt="">
+          <img class="ch orange aniD08" src="images/page4_orange.png" alt="">
+        </div>
+      </div>
+      <img class="frontCloud poXCen aniDiCl" src="images/page4_frontCloud.webp" alt="">
     </div>
     <div class="section page5" data-anchor="m5st">
 
