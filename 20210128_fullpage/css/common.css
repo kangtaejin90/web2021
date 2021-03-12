@@ -128,14 +128,3 @@
 	.aniDu3{animation-duration: 3s !important;}
 	.aniDu4{animation-duration: 4s !important;}
 	.aniDu5{animation-duration: 5s !important;}
-
-	/* keyframes/ */
-	@keyframes ch{
-		from, to{margin-bottom: 0;}
-		50%{margin-bottom: 20px;}
-	}
-	@keyframes cloud{
-		from, 50%, to{margin-left: 0;}
-		25%{margin-left: -20px;}
-		75%{margin-left: 20px;}
-	}

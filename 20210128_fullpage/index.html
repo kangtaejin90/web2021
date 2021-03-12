@@ -8,15 +8,16 @@
   <link rel="icon" href="images/logo_icon.png" type="image/png">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/colorbox.css">
   <link rel="stylesheet" href="css/fullpage.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/owl/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
   <script src="js/jquery-3.1.1.min.js"></script>
   <script src="js/jquery.fullPage.js"></script>
   <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
   <script>
     $(function(){
       // fullpage
@@ -25,7 +26,20 @@
         anchors:["m1st","m2st","m3st","m4st","m5st"], //이동지정
         navigation:true,
         afterLoad:function(andchorslink,index){
-
+          $(".enTitle").removeClass("animated fadeInDown");
+          $(".page" + index + " .enTitle").addClass("animated fadeInDown");
+          $(".koTitle").removeClass("animated fadeInUp");
+          $(".page" + index + " .koTitle").addClass("animated fadeInUp");
+          $(".border img").removeClass("animated fadeIn");
+          $(".page" + index + " .border img").addClass("animated fadeIn aniD02");
+          $(".page2 .menu").removeClass("animated slideInLeft1");
+          $(".page" + index + " .menu").addClass("animated slideInLeft1");
+          $(".page3 li").removeClass("animated fadeInUp");
+          $(".page" + index + " li").addClass("animated fadeInUp aniD02");
+          $(".page4 .backCloud, .page4 .frontCloud").removeClass("aniCl");
+          $(".page" + index + " .backCloud, .page" + index + " .frontCloud").addClass("aniCl");
+          $(".page4 .ch").removeClass("aniP5");
+          $(".page" + index + " .chWrap .ch").addClass("aniP5");
         }
       });
       // owl1
@@ -56,6 +70,8 @@
         $(".tabMenu li").removeClass("active").eq(now).addClass("active");
         $(".cardWrap").hide().eq(now).fadeIn();
       });
+      // scroll
+      $(".storyTxt").niceScroll({});
         });
   </script>
 </head>
@@ -128,7 +144,7 @@
                 </svg>
               <a class="menuName" href="#battle">전투</a>
             </div>
-            <div class="menu 2st poXCen cuP">
+            <div class="menu 2st poXCen cuP aniD02">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
                   <style type="text/css">
@@ -149,7 +165,7 @@
                 </svg>
               <a class="menuName" href="#adventure">모험</a>
             </div>
-            <div class="menu 3st poXCen cuP">
+            <div class="menu 3st poXCen cuP aniD04">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
                   <style type="text/css">
@@ -170,7 +186,7 @@
                 </svg>
               <a class="menuName" href="#kingdom">왕국</a>
             </div>
-            <div class="menu 4st poXCen cuP">
+            <div class="menu 4st poXCen cuP aniD06">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
                   <style type="text/css">
@@ -191,7 +207,7 @@
                 </svg>
               <a class="menuName" href="#cookie">쿠키</a>
             </div>
-            <div class="menu 5st poXCen cuP">
+            <div class="menu 5st poXCen cuP aniD08">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 136 66.4" style="enable-background:new 0 0 136 66.4;" xml:space="preserve">
                   <style type="text/css">
@@ -243,182 +259,198 @@
               <li class="cuP active">
                 <p>영웅쿠키</p>
               </li>
-              <li class="cuP">
+              <li class="cuP aniD02">
                 <p>용감한 쿠키와 친구들</p>
               </li>
-              <li class="cuP">
+              <li class="cuP aniD04">
                 <p>전설쿠키</p>
               </li>
-              <li class="cuP">
+              <li class="cuP aniD06">
                 <p>악당쿠키</p>
               </li>
             </ul>
           </div>
-          <div class="cardWrap 1st poYCen clearfix">
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_hr_pure1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">HERO</h4>
-                <h4 class="main">퓨어바닐라</h4>
+          <div class="tabWrap">
+            <div class="cardWrap 1st poYCen clearfix">
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_hr_pure1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">HERO</h4>
+                  <h4 class="main">퓨어바닐라</h4>
+                </div>
+              </div>
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_hr_hollyberry1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">HERO</h4>
+                  <h4 class="main">홀리베리</h4>
+                </div>
+              </div>
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_hr_golden1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">HERO</h4>
+                  <h4 class="main">골드치즈</h4>
+                </div>
+              </div>
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_hr_dark1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">HERO</h4>
+                  <h4 class="main">다크카카오</h4>
+                </div>
+              </div>
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_hr_white1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">HERO</h4>
+                  <h4 class="main">세인트릴리</h4>
+                </div>
+              </div>
+              <div class="modalWrap">
+                <div class="modal 1st">
+                  <div class="overlay"></div>
+                  <div class="modalCont m0a clearfix">
+                    <div class="chWrap">
+                      <img class="modalBg poCen" src="images/card.png" alt="">
+                      <img class="modalCh poCen" src="images/ch_hr_pure2.png" alt="">
+                    </div>
+                    <div class="chTxtWrap">
+                      <img class="chTxtBg poCen" src="images/scroll.png" alt="">
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_hr_hollyberry1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">HERO</h4>
-                <h4 class="main">홀리베리</h4>
+            <div class="cardWrap 2st poYCen clearfix">
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_ck_brave1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">COOKIE</h4>
+                  <h4 class="main">용감한</h4>
+                </div>
+              </div>
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_ck_strawberry1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">COOKIE</h4>
+                  <h4 class="main">딸기맛</h4>
+                </div>
+              </div>
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_ck_wizard1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">COOKIE</h4>
+                  <h4 class="main">마법사맛</h4>
+                </div>
+              </div>
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_ck_chili1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">COOKIE</h4>
+                  <h4 class="main">칠리맛</h4>
+                </div>
+              </div>
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_ck_custard1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">COOKIE</h4>
+                  <h4 class="main">커스터드맛</h4>
+                </div>
               </div>
             </div>
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_hr_golden1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">HERO</h4>
-                <h4 class="main">골드치즈</h4>
+            <div class="cardWrap 3st poYCen clearfix">
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_lg_moon1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">LEGEND</h4>
+                  <h4 class="main">달빛술사</h4>
+                </div>
+              </div>
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_lg_sea1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">LEGEND</h4>
+                  <h4 class="main">바다요정</h4>
+                </div>
+              </div>
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_lg_fire1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">LEGEND</h4>
+                  <h4 class="main">불꽃정령</h4>
+                </div>
+              </div>
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_lg_wind1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">LEGEND</h4>
+                  <h4 class="main">바람궁수</h4>
+                </div>
+              </div>
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_lg_tree1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">LEGEND</h4>
+                  <h4 class="main">천년나무</h4>
+                </div>
               </div>
             </div>
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_hr_dark1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">HERO</h4>
-                <h4 class="main">다크카카오</h4>
+            <div class="cardWrap 4st poYCen clearfix">
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_vi_ench1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">VILLAIN</h4>
+                  <h4 class="main">어둠마녀</h4>
+                </div>
               </div>
-            </div>
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_hr_white1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">HERO</h4>
-                <h4 class="main">세인트릴리</h4>
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_vi_lico1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">VILLAIN</h4>
+                  <h4 class="main">감초맛</h4>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="cardWrap 2st poYCen clearfix">
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_ck_brave1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">COOKIE</h4>
-                <h4 class="main">용감한</h4>
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_vi_poison1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">VILLAIN</h4>
+                  <h4 class="main">독버섯맛</h4>
+                </div>
               </div>
-            </div>
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_ck_strawberry1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">COOKIE</h4>
-                <h4 class="main">딸기맛</h4>
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_vi_pome1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">VILLAIN</h4>
+                  <h4 class="main">석류맛</h4>
+                </div>
               </div>
-            </div>
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_ck_wizard1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">COOKIE</h4>
-                <h4 class="main">마법사맛</h4>
-              </div>
-            </div>
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_ck_chili1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">COOKIE</h4>
-                <h4 class="main">칠리맛</h4>
-              </div>
-            </div>
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_ck_custard1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">COOKIE</h4>
-                <h4 class="main">커스터드맛</h4>
-              </div>
-            </div>
-          </div>
-          <div class="cardWrap 3st poYCen clearfix">
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_lg_moon1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">LEGEND</h4>
-                <h4 class="main">달빛술사</h4>
-              </div>
-            </div>
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_lg_sea1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">LEGEND</h4>
-                <h4 class="main">바다요정</h4>
-              </div>
-            </div>
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_lg_fire1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">LEGEND</h4>
-                <h4 class="main">불꽃정령</h4>
-              </div>
-            </div>
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_lg_wind1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">LEGEND</h4>
-                <h4 class="main">바람궁수</h4>
-              </div>
-            </div>
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_lg_tree1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">LEGEND</h4>
-                <h4 class="main">천년나무</h4>
-              </div>
-            </div>
-          </div>
-          <div class="cardWrap 4st poYCen clearfix">
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_vi_ench1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">VILLAIN</h4>
-                <h4 class="main">어둠마녀</h4>
-              </div>
-            </div>
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_vi_lico1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">VILLAIN</h4>
-                <h4 class="main">감초맛</h4>
-              </div>
-            </div>
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_vi_poison1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">VILLAIN</h4>
-                <h4 class="main">독버섯맛</h4>
-              </div>
-            </div>
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_vi_pome1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">VILLAIN</h4>
-                <h4 class="main">석류맛</h4>
-              </div>
-            </div>
-            <div class="card cuP">
-              <img class="bg poCen" src="images/card.png" alt="">
-              <img class="ch poCen" src="images/ch_vi_choco1.png" alt="">
-              <div class="txtWrap poCen tac">
-                <h4 class="sub mb5">VILLAIN</h4>
-                <h4 class="main">다크초코</h4>
+              <div class="card cuP">
+                <img class="bg poCen" src="images/card.png" alt="">
+                <img class="ch poCen" src="images/ch_vi_choco1.png" alt="">
+                <div class="txtWrap poCen tac">
+                  <h4 class="sub mb5">VILLAIN</h4>
+                  <h4 class="main">다크초코</h4>
+                </div>
               </div>
             </div>
           </div>
@@ -426,7 +458,50 @@
       </div>
     </div>
     <div class="section page4" data-anchor="m4st">
-
+      <img class="backCloud poXCen" src="images/page4_backCloud.webp" alt="">
+      <div class="storyTxt tac">
+        <p><br>멀고 먼 옛날…<br>
+          철과 불과 혼돈의 시대의 열기가 가라앉고<br>
+          마녀들이 구워낸 달콤하고 바삭한 피조물들이<br>
+          세상에 가득하니<br>
+          그 중에서도 가장 빛나고 고결한 ‘소울 잼’을 지닌<br>
+          다섯 쿠키들의 등장은 마치 구원과도 같았다.<br>
+          <br>
+          고귀한 지혜와 강렬한 힘에<br>
+          쿠키들이 모여들고<br>
+          영웅들은 왕이 되어<br>
+          쿠키 문명은 대 부흥의 시대를 맞는다.<br>
+          <br>
+          하지만 찬란했던 시절도 잠시<br>
+          어둠을 자처하는 자의 등장으로<br>
+          땅엔 어둠이 스며들고 하늘엔 악이 창궐해<br>
+          온 땅에 혼돈의 그림자가 드리우기 시작하는데<br>
+          <br>
+          이에 평화를 수호하는<br>
+          다섯 쿠키들이 마침내 일어서고<br>
+          해질녘의 어느 날,<br>
+          드디어 쿠키들의 운명이 걸린<br>
+          최후의 전쟁이 시작된다.<br><br></p>
+      </div>
+      <div class="mask"></div>
+      <div class="container">
+        <div class="titleWrap poXCen tac">
+          <p class="enTitle">COOKIERUN KINGDOM</p>
+          <h2 class="koTitle">세계관 스토리</h2>
+        </div>
+        <div class="border">
+          <img class="leftTop" src="images/frame2.svg" alt="">
+          <img class="rightTop" src="images/frame2.svg" alt="">
+        </div>
+        <div class="chWrap">
+          <img class="ch white aniD08" src="images/page4_white.png" alt="">
+          <img class="ch purple aniD04" src="images/page4_purple.png" alt="">
+          <img class="ch pink aniD04" src="images/page4_pink.png" alt="">
+          <img class="ch yellow" src="images/page4_yellow.png" alt="">
+          <img class="ch orange aniD08" src="images/page4_orange.png" alt="">
+        </div>
+      </div>
+      <img class="frontCloud poXCen aniDiCl" src="images/page4_frontCloud.webp" alt="">
     </div>
     <div class="section page5" data-anchor="m5st">
 
