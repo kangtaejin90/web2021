@@ -5,6 +5,10 @@ html,body{width: 100%;height: 100%;font-family: 'Roboto', sans-serif; word-break
 
 header#main_header{}
 
+/*imgload*/
+.imgLoad{display: none;}
+.imgLoad img{width: 1px;height: 1px;}
+
 /*headerTop*/
 .header_topWrap{width: 100%;background-color: rgba(41,47,55,0); position: fixed; top: 0;z-index: 99999; transition: 0.5s;}
 #header_top{width: 100%; max-width: 1200px;}
@@ -150,7 +154,7 @@ header#main_header{}
 .personnel .section li:hover .moreBtn .bar1{width: 1.5px;height: 13px;transform: translate(15px, -5px) rotate(-45deg);}
 .personnel .section li:hover .moreBtn .bar2{width: 40px;}
 .personnel .section li:hover .moreBtn .bar3{width: 1.5px;height: 13px;transform: translate(15px, 5px) rotate(45deg);}
-.moreBtn:hover{animation: more 0.3s ease;}
+.moreBtn:hover{animation: more 0.5s ease;}
 
 
 /*subcontent*/
@@ -246,8 +250,8 @@ header#main_header{}
 @keyframes roll{
 	from{transform: translate(-50%, -50%) rotate(0);}		
 	to{transform: translate(-50%, -50%) rotate(360deg);}		
-	};
+	}
 @keyframes more{
 	from, to{margin-left: -20px;}
 	50%{margin-left: -10px;}
-	};
+	}
