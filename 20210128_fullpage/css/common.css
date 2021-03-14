@@ -110,10 +110,6 @@
 	.aniDiCl{
 		animation-direction: normal, normal, alternate-reverse;
 		animation-timing-function: ease-in-out, ease-in-out, ease;}
-	.page2.back{animation : back 0.5s ease-in-out reverse forwards;}
-	.page3.back{animation: back 0.5s ease-in-out forwards;}
-	.page5.back1{animation : back1 0.5s ease-in-out reverse forwards;}
-	.footer.back1{animation: back1 0.5s ease-in-out forwards;}
 	/* ani/ */
 	.aniD01{animation-delay: 0.1s;}
 	.aniD02{animation-delay: 0.2s;}

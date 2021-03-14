@@ -25,13 +25,33 @@
         menu:"#topMenu", //메뉴지정
         anchors:["m1st","m2st","m3st","m4st","m5st","m6st"], //이동지정
         navigation:true,
-        onLeave:function(andchorslink,index){
-          $(".page" + index - 1).addClass("back");
-          $(".page" + index - 1).addClass("back1");
-          $(".section").removeClass("back1");
-          $(".page6").addClass("back1");
+        scrollingSpeed:1000,
+        onLeave:function(origin,destination,direction,andchorslink,index){
+          console.log(direction);
+          console.log(origin);
+          console.log(destination);
+          $(".modal").hide();
+          $(".page5 .modalWrap").hide();
+          if(destination == 1){$("#fp-nav span").css("background","#FFFBDC")};
+          if(destination == 2){$("#fp-nav span").css("background","#C18243")};
+          if(destination == 3 || destination == 5){$("#fp-nav span").css("background","#FFF3CD")};
+          if(destination == 4){$("#fp-nav span").css("background","#C4A893")};
+          if(destination == 6){$("#fp-nav span").css({"background":"#191C24","transition":"1s"})};
+          if(direction == "down" && destination > 2){
+            $(".page2, .page3").css("background-color","#594D46");
+          };
+          if(direction == "up" && destination == 2){
+            $(".page2, .page3").css("background-color","#302A24");
+          };
+          if(direction == "down" && destination == 6){
+            $(".page5, .page6").css("background-color","#191c24");
+          };
+          if(direction == "up"){
+            $(".page5, .page6").css("background-color","#463E3A");
+          };
         },
         afterLoad:function(andchorslink,index){
+          // console.log(index);
           $(".enTitle").removeClass("animated fadeInDown");
           $(".page" + index + " .enTitle").addClass("animated fadeInDown");
           $(".koTitle").removeClass("animated fadeInUp");
@@ -40,9 +60,6 @@
           $(".page" + index + " .border img").addClass("animated fadeIn aniD02");
           $(".page2 .menu").removeClass("animated slideInLeft1");
           $(".page" + index + " .menu").addClass("animated slideInLeft1");
-          $(".section").removeClass("back");
-          $(".page" + index).addClass("back");
-          $(".page" + index).addClass("back1");
           $(".page3 li").removeClass("animated fadeInUp");
           $(".page" + index + " li").addClass("animated fadeInUp aniD02");
           $(".page4 .backCloud, .page4 .frontCloud").removeClass("aniCl");
@@ -72,6 +89,7 @@
         console.log(item);
         $(".menuWrap div").removeClass("active").eq(item).addClass("active");
       });
+
       // tabMenu
       $(".cardWrap").eq(0).show();
       $(".tabMenu li").click(function(){
@@ -88,9 +106,18 @@
         var scrollH = $(".cardWrap.active .modal.active .chTxtBg").height();
         console.log(scrollH);
         $(".cardWrap.active .modal.active .scrollWrap").height(scrollH);
+        $("#fp-nav").hide();
       });
       $(".xBox").click(function(){
         $(".modal").hide();
+        $(".page5 .modalWrap").hide();
+        $("#fp-nav").show();
+      });
+      // cardmodal scroll
+      $(window).resize(function(){
+        var scrollH = $(".cardWrap.active .modal.active .chTxtBg").height();
+        console.log(scrollH);
+        $(".cardWrap.active .modal.active .scrollWrap").height(scrollH);
       });
 
       // scroll
@@ -100,11 +127,13 @@
         scrollspeed: 400
       });
 
-      // scrollWrap
-      $(window).resize(function(){
-        var scrollH = $(".cardWrap.active .modal.active .chTxtBg").height();
-        console.log(scrollH);
-        $(".cardWrap.active .modal.active .scrollWrap").height(scrollH);
+      // mediamodal
+      $(".media").click(function(){
+        var mediaNum = $(this).index();
+        console.log(mediaNum);
+        $(".page5 .modalWrap").show();
+        $(".page5 .modal").eq(mediaNum).fadeIn();
+        $("#fp-nav").hide();
       });
 
         });
@@ -127,6 +156,7 @@
     <div class="section page1" data-anchor="m1st">
       <video class="bgv" src="images/cookierun.mp4" loop muted data-autoplay draggable="true"></video>
       <div class="overlayer poCen"></div>
+      <img class="logo poCen" src="images/logo_ko.png" alt="">
       <div class="storeWrap poXCen tac clearfix">
         <a class="storeLink" target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.devsisters.ck" class="css-1mgotue"><img src="images/store_googleplay.svg"></a>
         <a class="storeLink" target="_blank" rel="noopener" href="https://onesto.re/0000751155" class="css-1mgotue"><img src="images/store_one.svg"></a>
@@ -868,35 +898,31 @@
     </div>
     <div class="section page4" data-anchor="m4st">
       <img class="backCloud poXCen" src="images/page4_backCloud.webp" alt="">
-      <div class="storyTxt tac">
-        <p><br><br>멀고 먼 옛날…<br>
-          철과 불과 혼돈의 시대의 열기가 가라앉고<br>
-          마녀들이 구워낸 달콤하고 바삭한 피조물들이<br>
-          세상에 가득하니<br>
-          그 중에서도 가장 빛나고 고결한 ‘소울 잼’을 지닌<br>
-          다섯 쿠키들의 등장은 마치 구원과도 같았다.<br>
-          <br>
-          고귀한 지혜와 강렬한 힘에<br>
-          쿠키들이 모여들고<br>
-          영웅들은 왕이 되어<br>
-          쿠키 문명은 대 부흥의 시대를 맞는다.<br>
-          <br>
-          하지만 찬란했던 시절도 잠시<br>
-          어둠을 자처하는 자의 등장으로<br>
-          땅엔 어둠이 스며들고 하늘엔 악이 창궐해<br>
-          온 땅에 혼돈의 그림자가 드리우기 시작하는데<br>
-          <br>
-          이에 평화를 수호하는<br>
-          다섯 쿠키들이 마침내 일어서고<br>
-          해질녘의 어느 날,<br>
-          드디어 쿠키들의 운명이 걸린<br>
-          최후의 전쟁이 시작된다.<br><br><br><br><br></p>
-      </div>
-      <div class="maskWrap top">
-        <div class="mask"></div>
-      </div>
-      <div class="maskWrap bottom">
-        <div class="mask"></div>
+      <div class="mask">
+        <div class="storyTxt tac">
+          <p><br><br>멀고 먼 옛날…<br>
+            철과 불과 혼돈의 시대의 열기가 가라앉고<br>
+            마녀들이 구워낸 달콤하고 바삭한 피조물들이<br>
+            세상에 가득하니<br>
+            그 중에서도 가장 빛나고 고결한 ‘소울 잼’을 지닌<br>
+            다섯 쿠키들의 등장은 마치 구원과도 같았다.<br>
+            <br>
+            고귀한 지혜와 강렬한 힘에<br>
+            쿠키들이 모여들고<br>
+            영웅들은 왕이 되어<br>
+            쿠키 문명은 대 부흥의 시대를 맞는다.<br>
+            <br>
+            하지만 찬란했던 시절도 잠시<br>
+            어둠을 자처하는 자의 등장으로<br>
+            땅엔 어둠이 스며들고 하늘엔 악이 창궐해<br>
+            온 땅에 혼돈의 그림자가 드리우기 시작하는데<br>
+            <br>
+            이에 평화를 수호하는<br>
+            다섯 쿠키들이 마침내 일어서고<br>
+            해질녘의 어느 날,<br>
+            드디어 쿠키들의 운명이 걸린<br>
+            최후의 전쟁이 시작된다.<br><br><br><br><br><br></p>
+        </div>
       </div>
       <div class="chWrap poXCen">
         <img class="ch white aniD08" src="images/page4_white.png" alt="">
@@ -969,6 +995,44 @@
               <a target="_blank" href="https://www.youtube.com/channel/UCAOTbNctDD0Hg5MG0enQpMQ">YouTube</a>
             </div>
           </ul>
+        </div>
+      </div>
+      <div class="modalWrap poCen">
+        <div class="modal n1st">
+          <div class="playerCover">
+            <iframe class="poCen" width="940" height="528.75" src="https://www.youtube.com/embed/c8zQXKk7DeI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="xBox"></div>
+        </div>
+        <div class="modal n2st">
+          <div class="playerCover">
+            <iframe class="poCen" width="940" height="528.75" src="https://www.youtube.com/embed/1S-yEwkS84c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="xBox"></div>
+        </div>
+        <div class="modal n3st">
+          <div class="playerCover">
+            <iframe class="poCen" width="940" height="528.75" src="https://www.youtube.com/embed/KPztqYEvS20" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="xBox"></div>
+        </div>
+        <div class="modal n4st">
+          <div class="playerCover">
+            <iframe class="poCen" width="940" height="528.75" src="https://www.youtube.com/embed/18k8Q7eWPL4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="xBox"></div>
+        </div>
+        <div class="modal n5st">
+          <div class="playerCover">
+            <iframe class="poCen" width="940" height="528.75" src="https://www.youtube.com/embed/the4S9AGHGE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="xBox"></div>
+        </div>
+        <div class="modal n6st">
+          <div class="playerCover">
+            <iframe class="poCen" width="940" height="528.75" src="https://www.youtube.com/embed/ENEGexiBsrA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="xBox"></div>
         </div>
       </div>
     </div>
