@@ -18,6 +18,7 @@
   <script src="js/jquery.fullPage.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script>
     $(function(){
       // fullpage
@@ -32,6 +33,10 @@
           console.log(destination);
           $(".modal").hide();
           $(".page5 .modalWrap").hide();
+          var iframeSrc = $(".page5 .modal.active iframe").attr("src");
+          $(".page5 .modal.active iframe").attr("src",iframeSrc);
+          console.log(iframeSrc);
+          $(".page5 .modal").removeClass("active");
           if(destination == 1){$("#fp-nav span").css("background","#FFFBDC")};
           if(destination == 2){$("#fp-nav span").css("background","#C18243")};
           if(destination == 3 || destination == 5){$("#fp-nav span").css("background","#FFF3CD")};
@@ -40,7 +45,7 @@
           if(direction == "down" && destination > 2){
             $(".page2, .page3").css("background-color","#594D46");
           };
-          if(direction == "up" && destination == 2){
+          if(direction == "up" && destination < 3){
             $(".page2, .page3").css("background-color","#302A24");
           };
           if(direction == "down" && destination == 6){
@@ -108,10 +113,16 @@
         $(".cardWrap.active .modal.active .scrollWrap").height(scrollH);
         $("#fp-nav").hide();
       });
+
+      // modal close
       $(".xBox").click(function(){
         $(".modal").hide();
         $(".page5 .modalWrap").hide();
         $("#fp-nav").show();
+        var iframeSrc = $(".page5 .modal.active iframe").attr("src");
+        $(".page5 .modal.active iframe").attr("src",iframeSrc);
+        console.log(iframeSrc);
+        $(".page5 .modal").removeClass("active");
       });
       // cardmodal scroll
       $(window).resize(function(){
@@ -132,9 +143,11 @@
         var mediaNum = $(this).index();
         console.log(mediaNum);
         $(".page5 .modalWrap").show();
-        $(".page5 .modal").eq(mediaNum).fadeIn();
+        $(".page5 .modal").eq(mediaNum).fadeIn().addClass("active");
         $("#fp-nav").hide();
       });
+
+
 
         });
   </script>
@@ -1000,7 +1013,7 @@
       <div class="modalWrap poCen">
         <div class="modal n1st">
           <div class="playerCover">
-            <iframe class="poCen" width="940" height="528.75" src="https://www.youtube.com/embed/c8zQXKk7DeI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="poCen" width="940" height="528.75" src="https://www.youtube.com/embed/c8zQXKk7DeI?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="xBox"></div>
         </div>
