@@ -20,6 +20,9 @@
   <script src="js/jquery.nicescroll.min.js"></script>
   <script src="https://www.youtube.com/iframe_api"></script>
   <script>
+    window.onload = function(){
+    var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+    }
     $(function(){
       // fullpage
       $("#fullpage").fullpage({
@@ -33,6 +36,7 @@
           console.log(destination);
           $(".modal").hide();
           $(".page5 .modalWrap").hide();
+          // jquery modal close
           var iframeSrc = $(".page5 .modal.active iframe").attr("src");
           $(".page5 .modal.active iframe").attr("src",iframeSrc);
           console.log(iframeSrc);
@@ -56,7 +60,6 @@
           };
         },
         afterLoad:function(andchorslink,index){
-          // console.log(index);
           $(".enTitle").removeClass("animated fadeInDown");
           $(".page" + index + " .enTitle").addClass("animated fadeInDown");
           $(".koTitle").removeClass("animated fadeInUp");
@@ -71,7 +74,6 @@
           $(".page" + index + " .backCloud, .page" + index + " .frontCloud").addClass("aniCl");
           $(".page4 .ch").removeClass("aniP5");
           $(".page" + index + " .chWrap .ch").addClass("aniP5");
-
         }
       });
       // owl1
@@ -119,9 +121,12 @@
         $(".modal").hide();
         $(".page5 .modalWrap").hide();
         $("#fp-nav").show();
-        var iframeSrc = $(".page5 .modal.active iframe").attr("src");
-        $(".page5 .modal.active iframe").attr("src",iframeSrc);
-        console.log(iframeSrc);
+        // var iframeSrc = $(".page5 .modal.active iframe").attr("src");
+        // $(".page5 .modal.active iframe").attr("src",iframeSrc);
+        // console.log(iframeSrc);
+        var x = $(".page5 .modal.active iframe").get(0);
+        console.log(x);
+        x.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
         $(".page5 .modal").removeClass("active");
       });
       // cardmodal scroll
